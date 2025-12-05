@@ -57,11 +57,11 @@
   </script>
 </head>
 
-<body>
+<body data-page="home">
   <a href="#main" class="skip-link" data-i18n="skip">Zum Inhalt springen</a>
   <header class="header" role="banner">
     <div class="container header__inner">
-      <a class="brand" href="#hero" aria-label="AquaSense Start">
+      <a class="brand" href="index.html#hero" aria-label="AquaSense Start">
         <svg aria-hidden="true" focusable="false" width="120" height="32" viewBox="0 0 160 40">
           <rect x="0" y="0" width="40" height="40" rx="10" fill="currentColor" opacity="0.1"></rect>
           <path d="M20 8c-4 5-8 9-8 13a8 8 0 1 0 16 0c0-4-4-8-8-13Z" fill="currentColor"></path>
@@ -71,12 +71,11 @@
       </a>
       <nav aria-label="Hauptnavigation">
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" data-i18n="menu">Menü</button>
+        
         <ul id="nav-links" class="nav__list">
-          <li><a href="#features" data-i18n="navFeatures">Funktionen</a></li>
-          <li><a href="#steps" data-i18n="navSteps">So funktioniert’s</a></li>
-          <li><a href="#use-cases" data-i18n="navUseCases">Anwendungsfälle</a></li>
-          <li><a href="#app" data-i18n="navApp">App</a></li>
-          <li><a href="#faq" data-i18n="navFaq">FAQ</a></li>
+          <li><a href="#hero" data-home="index.html#hero" data-nav="home" data-i18n="navStart">Start</a></li>
+          <li><a href="app.html" data-nav="app" data-i18n="navApp">App</a></li>
+          <li><a href="shop.html" data-nav="shop" data-i18n="navShop">Shop</a></li>
           <li><button class="lang-toggle" type="button" aria-label="Sprache umschalten">DE / EN</button></li>
         </ul>
       </nav>
@@ -104,8 +103,8 @@
       <div class="hero__visual reveal">
         <figure aria-label="AquaSense Gerät und App Mockup">
           <picture>
-            <source srcset="assets/product_picture.png 1024w" type="image/png">
-            <img class="product-image" src="assets/product_picture.png" srcset="assets/product_picture.png 1024w"
+            <source srcset="assets/productII.png 1024w" type="image/png">
+            <img class="product-image" src="assets/productII.png" srcset="assets/productII.png 1024w"
               sizes="(min-width: 960px) 520px, 100vw" width="1024" height="1024" loading="lazy" decoding="async"
               alt="AquaSense Produktabbildung" data-i18n-alt="heroImgAlt" />
           </picture>
@@ -206,97 +205,9 @@
       </div>
     </section>
 
-    <section id="app" class="section container">
-      <header class="section__header">
-        <h2 data-i18n="appTitle">Die App – klar, schnell, hilfreich</h2>
-        <p data-i18n="appSub">Alle relevanten Daten, Alerts und Profile in einer modernen Oberfläche.</p>
-      </header>
-      <div class="app-layout">
-        <div class="app__screens reveal">
-          <div class="screen-mockup">
-            <div class="screen-header">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-              <p data-i18n="screenLive">Live-Werte</p>
-            </div>
-            <div class="screen-body">
-              <p class="metric" data-i18n="metricPh">pH 7.2</p>
-              <p class="metric-muted" data-i18n="metricCond">Leitfähigkeit 320 µS/cm</p>
-              <p class="metric-muted" data-i18n="metricTemp">Temperatur 18.4 °C</p>
-              <svg class="mini-chart" viewBox="0 0 220 80" aria-hidden="true">
-                <rect x="10" y="40" width="24" height="30" rx="6" fill="#1E90FF" opacity="0.4" />
-                <rect x="46" y="30" width="24" height="40" rx="6" fill="#00C2FF" opacity="0.7" />
-                <rect x="82" y="20" width="24" height="50" rx="6" fill="#1E90FF" />
-                <rect x="118" y="32" width="24" height="38" rx="6" fill="#00C2FF" opacity="0.6" />
-                <rect x="154" y="16" width="24" height="54" rx="6" fill="#1E90FF" opacity="0.8" />
-                <rect x="190" y="28" width="24" height="42" rx="6" fill="#00C2FF" />
-              </svg>
-            </div>
-          </div>
-          <div class="screen-mockup">
-            <div class="screen-header">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-              <p data-i18n="screenDevices">Geräteverwaltung</p>
-            </div>
-            <div class="screen-body">
-              <p class="metric-muted" data-i18n="deviceAquarium">Aquarium • ok</p>
-              <p class="metric-muted" data-i18n="deviceCoffee">Kaffee • Warnung</p>
-              <p class="metric-muted" data-i18n="deviceBaby">Babywasser • ok</p>
-              <svg class="mini-chart" viewBox="0 0 220 80" aria-hidden="true">
-                <rect x="12" y="20" width="40" height="12" rx="6" fill="#1E90FF" />
-                <rect x="12" y="40" width="60" height="12" rx="6" fill="#00C2FF" opacity="0.7" />
-                <rect x="12" y="60" width="44" height="12" rx="6" fill="#1E90FF" opacity="0.6" />
-                <rect x="120" y="20" width="80" height="12" rx="6" fill="#1E90FF" opacity="0.5" />
-                <rect x="120" y="40" width="60" height="12" rx="6" fill="#00C2FF" />
-                <rect x="120" y="60" width="52" height="12" rx="6" fill="#1E90FF" opacity="0.8" />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="app__chart reveal">
-          <div class="chart-header">
-            <h3 data-i18n="chartTitle">Live-Chart</h3>
-            <div class="chart-switch">
-              <button type="button" class="chip" data-metric="ph" aria-pressed="true" data-i18n="chipPh">pH</button>
-              <button type="button" class="chip" data-metric="conductivity" aria-pressed="false"
-                data-i18n="chipCond">Leitfähigkeit</button>
-            </div>
-          </div>
-          <canvas id="chart" width="640" height="360" role="img" aria-label="Zeitverlauf der Wasserwerte"
-            data-i18n-aria="chartAria"></canvas>
-          <ul class="app__points">
-            <li data-i18n="pointLive">Live-Werte</li>
-            <li data-i18n="pointAlert">Grenzwert-Alarm</li>
-            <li data-i18n="pointHistory">Historie &amp; Export</li>
-            <li data-i18n="pointProfiles">Profile</li>
-            <li data-i18n="pointDevices">Geräteverwaltung</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    
 
-    <section id="use-cases" class="section container">
-      <header class="section__header">
-        <h2 data-i18n="casesTitle">Für wen ist AquaSense ideal?</h2>
-      </header>
-      <div class="grid cases__grid">
-        <article class="card reveal">
-          <h3 data-i18n="case1Title">Baby &amp; Familie</h3>
-          <p data-i18n="case1Text">Sicherheit beim Wasser für die Kleinsten.</p>
-        </article>
-        <article class="card reveal">
-          <h3 data-i18n="case2Title">Kaffee &amp; Tee</h3>
-          <p data-i18n="case2Text">Konstante Wasserwerte für besseren Geschmack.</p>
-        </article>
-        <article class="card reveal">
-          <h3 data-i18n="case3Title">Aquaristik</h3>
-          <p data-i18n="case3Text">Stabilität für empfindliche Ökosysteme.</p>
-        </article>
-        <article class="card reveal">
-          <h3 data-i18n="case4Title">Mieter &amp; Vermieter</h3>
-          <p data-i18n="case4Text">Transparenz im Mehrfamilienhaus.</p>
-        </article>
-      </div>
-    </section>
+    
 
     <section id="specs" class="section container">
       <header class="section__header">
@@ -377,18 +288,14 @@
         <p data-i18n="waitlistSub">Trage dich ein und erhalte Updates zur Entwicklung, Beta-Einladungen und das
           Whitepaper.</p>
       </header>
-      <form class="form" action="https://formsubmit.co/REPLACE_WITH_EMAIL" method="POST" aria-live="polite">
-        <!-- REPLACE_WITH_EMAIL austauschen -->
+      <form class="form" data-form="waitlist" action="https://formsubmit.co/service.aquasense@gmail.com" method="POST" aria-live="polite">
+        <input type="hidden" name="_subject" value="AquaSense Waitlist">
         <input type="hidden" name="_next" value="#thank-you">
         <input type="text" name="_honey" class="visually-hidden" tabindex="-1" aria-hidden="true">
         <div class="form__grid">
           <label data-i18n="labelEmail"> E-Mail *
             <input type="email" name="email" required aria-required="true" placeholder="dein@email.de"
               data-i18n-placeholder="placeholderEmail" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}" />
-          </label>
-          <label data-i18n="labelName"> Name (optional)
-            <input type="text" name="name" placeholder="Vorname Nachname" data-i18n-placeholder="placeholderName"
-              autocomplete="name" />
           </label>
         </div>
         <label class="checkbox">
@@ -409,11 +316,14 @@
       <p data-i18n="thanksText">Wir melden uns bald mit Neuigkeiten zu AquaSense.</p>
       <a class="button" href="#hero" data-i18n="thanksBack">Zurück zur Startseite</a>
     </section>
+
+    
+
   </main>
 
   <footer class="footer" role="contentinfo">
     <div class="container footer__inner">
-      <p data-i18n="footerContact">Kontakt: [PLATZHALTER-E-MAIL]</p>
+      <p data-i18n="footerContact">Kontakt: service.aquasense@gmail.com</p>
       <div class="footer__links">
         <button type="button" class="link-button" data-modal="imprint" data-i18n="footerImprint">Impressum</button>
         <button type="button" class="link-button" data-modal="privacy" data-i18n="footerPrivacy">Datenschutz</button>

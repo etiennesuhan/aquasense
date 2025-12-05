@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AquaSense Produktdetails</title>
+  <meta name="description" content="Alle Details zu AquaSense – wähle dein Design, prüfe Lieferzeiten und lege es in den Warenkorb.">
+  <link rel="preload" as="style" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="product">
+  <a href="#main" class="skip-link" data-i18n="skip">Zum Inhalt springen</a>
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <a class="brand" href="index.html#hero" aria-label="AquaSense Start">
+        <svg aria-hidden="true" focusable="false" width="120" height="32" viewBox="0 0 160 40">
+          <rect x="0" y="0" width="40" height="40" rx="10" fill="currentColor" opacity="0.1"></rect>
+          <path d="M20 8c-4 5-8 9-8 13a8 8 0 1 0 16 0c0-4-4-8-8-13Z" fill="currentColor"></path>
+          <text x="48" y="27" font-size="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+            fill="currentColor">AquaSense</text>
+        </svg>
+      </a>
+      <nav aria-label="Hauptnavigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" data-i18n="menu">Menü</button>
+        <ul id="nav-links" class="nav__list">
+          <li><a href="index.html#hero" data-home="index.html#hero" data-nav="home" data-i18n="navStart">Start</a></li>
+          <li><a href="app.html" data-nav="app" data-i18n="navApp">App</a></li>
+          <li><a href="shop.html" data-nav="shop" data-i18n="navShop">Shop</a></li>
+          <li><button class="lang-toggle" type="button" aria-label="Sprache umschalten">DE / EN</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section class="container product-detail">
+      <div class="product-detail__breadcrumbs">
+        <a href="shop.html" data-i18n="navShop">Shop</a> <span aria-hidden="true">/</span> <span id="breadcrumb-product">AquaSense</span>
+      </div>
+      <div class="product-detail__grid">
+        <div class="product-detail__gallery card">
+          <div class="product-detail__badge" id="detail-color">Weiß</div>
+          <div class="product-detail__image-wrap">
+            <img id="detail-image" src="assets/color3/white.png" alt="AquaSense – Weiß" loading="lazy">
+          </div>
+          <p class="product-detail__note">Tippen oder klicken zum Vergrößern</p>
+        </div>
+
+        <div class="product-detail__info">
+          <h1 id="detail-title">AquaSense – Weiß</h1>
+          <div class="product-detail__meta">
+            <div class="rating" aria-label="Bewertung 4,8 von 5">
+              <span class="rating__stars">★★★★☆</span>
+              <span class="rating__count">(128)</span>
+            </div>
+            <span class="detail-sku" id="detail-sku">AS-C1</span>
+          </div>
+          <p class="product-detail__description" id="detail-desc">
+            Helle, puristische Variante für moderne Küchen und Labor-Setups.
+          </p>
+          <ul class="detail-list" id="detail-highlights">
+            <li>Live-Messungen (pH, Leitfähigkeit, Temperatur, Trübung)</li>
+            <li>Schwellenalarme und Trend-Insights in der App</li>
+            <li>USB-C Stromversorgung, WLAN 2.4 GHz/BLE</li>
+          </ul>
+          <div class="detail-price-line">
+            <span class="detail-price" id="detail-price">ab 249 €</span>
+            <span class="detail-uvp" id="detail-uvp">UVP: 299 €</span>
+          </div>
+          <div class="detail-shipping">
+            <strong class="detail-stock" id="detail-stock">Auf Lager</strong>
+            <p id="detail-delivery">Lieferung in 2–3 Werktagen bei heutiger Bestellung.</p>
+            <p class="detail-seller">Verkauf und Versand durch AquaSense.</p>
+          </div>
+        </div>
+
+        <aside class="product-detail__buy card">
+          <div class="detail-price-main">
+            <div class="detail-price" id="detail-box-price">249 €</div>
+            <div class="detail-uvp" id="detail-box-uvp">UVP: 299 €</div>
+            <p class="detail-saving" id="detail-saving">Du sparst 50 € (17%)</p>
+          </div>
+          <p class="detail-delivery" id="detail-box-delivery">Versand: gratis Standardversand.</p>
+          <p class="detail-stock" id="detail-box-stock">Auf Lager.</p>
+          <button class="button" id="add-to-cart-detail" type="button"
+            data-add-to-cart
+            data-product-name="AquaSense – Color 1"
+            data-price="249"
+            data-color="Color 1"
+            aria-label="Color 1 in den Warenkorb legen">In den Warenkorb</button>
+          <a class="button button--ghost" href="shop.html">Zurück zum Shop</a>
+        </aside>
+      </div>
+    </section>
+
+    <div class="cart-panel" id="cart-panel" hidden>
+      <div class="cart-panel__backdrop" data-close-cart></div>
+      <aside class="cart-panel__body" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+        <header class="cart-panel__header">
+          <h2 id="cart-title" data-i18n="cartTitle">Warenkorb</h2>
+          <button class="icon-button" type="button" data-close-cart aria-label="Warenkorb schließen" data-i18n-aria="closeLabel">×</button>
+        </header>
+        <ul class="cart-items" id="cart-items"></ul>
+        <div class="cart-summary">
+          <span data-i18n="cartSumLabel">Summe</span>
+          <strong id="cart-total">0 €</strong>
+        </div>
+        <div class="cart-actions">
+          <button class="button button--ghost" type="button" data-close-cart data-i18n="cartContinue">Weiter einkaufen</button>
+          <button class="button" type="button" id="checkout-btn" data-i18n="cartCheckout">Zur Kasse</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <p data-i18n="footerContact">Kontakt: service.aquasense@gmail.com</p>
+      <div class="footer__links">
+        <button type="button" class="link-button" data-modal="imprint" data-i18n="footerImprint">Impressum</button>
+        <button type="button" class="link-button" data-modal="privacy" data-i18n="footerPrivacy">Datenschutz</button>
+        <span aria-label="Aktuelles Jahr" id="year"></span>
+      </div>
+    </div>
+    <p class="footer__note" data-i18n="footerNote">Diese Seite verwendet keine Cookies.</p>
+  </footer>
+
+  <div class="modal" id="imprint" role="dialog" aria-modal="true" aria-labelledby="imprint-title" hidden>
+    <div class="modal__backdrop" data-close="imprint"></div>
+    <div class="modal__dialog" role="document" tabindex="-1">
+      <header class="modal__header">
+        <h2 id="imprint-title">Impressum</h2>
+        <button type="button" class="icon-button" data-close="imprint" aria-label="Schließen">×</button>
+      </header>
+      <div class="modal__body">
+        <p>[Firma/Name]</p>
+        <p>[Straße Hausnummer]</p>
+        <p>[PLZ Ort]</p>
+        <p>[E-Mail: placeholder@example.com]</p>
+        <p>Vertretungsberechtigte: [Platzhalter]</p>
+        <p>USt-IdNr.: [Platzhalter]</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="privacy" role="dialog" aria-modal="true" aria-labelledby="privacy-title" hidden>
+    <div class="modal__backdrop" data-close="privacy"></div>
+    <div class="modal__dialog" role="document" tabindex="-1">
+      <header class="modal__header">
+        <h2 id="privacy-title">Datenschutz</h2>
+        <button type="button" class="icon-button" data-close="privacy" aria-label="Schließen">×</button>
+      </header>
+      <div class="modal__body">
+        <p>Verantwortlich: [Firma/Name, Adresse, E-Mail].</p>
+        <p>Newsletter-Daten: E-Mail (Pflicht), Name (optional). Rechtsgrundlage Einwilligung Art. 6 Abs.1 lit. a DSGVO. Double-Opt-In; Widerruf jederzeit möglich.</p>
+        <p>Speicherdauer: bis Widerruf. Keine Weitergabe ohne Einwilligung. Übertragung via TLS.</p>
+        <p>Betroffenenrechte: Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Beschwerde bei Aufsichtsbehörde.</p>
+        <p>Opt-in Cloud-Sync: deaktiviert per Default, aktivierbar in der App.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

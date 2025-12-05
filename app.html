@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJ352WJJ05"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-EJ352WJJ05');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AquaSense App – dein Wasser im Blick</title>
+  <meta name="description" content="Erlebe die AquaSense App: Live-Werte, Warnungen, Verlaufsdaten und Profile in einer modernen Oberfläche.">
+  <link rel="preload" as="style" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="app">
+  <a href="#main" class="skip-link" data-i18n="skip">Zum Inhalt springen</a>
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <a class="brand" href="index.html#hero" aria-label="AquaSense Start">
+        <svg aria-hidden="true" focusable="false" width="120" height="32" viewBox="0 0 160 40">
+          <rect x="0" y="0" width="40" height="40" rx="10" fill="currentColor" opacity="0.1"></rect>
+          <path d="M20 8c-4 5-8 9-8 13a8 8 0 1 0 16 0c0-4-4-8-8-13Z" fill="currentColor"></path>
+          <text x="48" y="27" font-size="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+            fill="currentColor">AquaSense</text>
+        </svg>
+      </a>
+      <nav aria-label="Hauptnavigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" data-i18n="menu">Menü</button>
+        
+        <ul id="nav-links" class="nav__list">
+          <li><a href="index.html#hero" data-home="index.html#hero" data-nav="home" data-i18n="navStart">Start</a></li>
+          <li><a href="app.html" data-nav="app" data-i18n="navApp">App</a></li>
+          <li><a href="shop.html" data-nav="shop" data-i18n="navShop">Shop</a></li>
+          <li><button class="lang-toggle" type="button" aria-label="Sprache umschalten">DE / EN</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section id="hero" class="hero container">
+      <div class="hero__content">
+        <p class="eyebrow" data-i18n="appHeroEyebrow">App & Dashboard</p>
+        <h1 data-i18n="appHeroTitle">AquaSense App – dein Wasser, immer im Blick</h1>
+        <p class="lead" data-i18n="appHeroLead">Überwache pH, Leitfähigkeit, Temperatur und mehr in Echtzeit, erhalte Warnungen bei Grenzwerten und teile Profile mit deinem Setup.</p>
+        <div class="hero__actions">
+          <a class="button" href="#waitlist" data-home="index.html#waitlist" data-i18n="appHeroCta">Zur Warteliste</a>
+          <a class="button button--ghost" href="shop.html" data-i18n="appHeroSecondary">Shop ansehen</a>
+        </div>
+      </div>
+      <div class="hero__visual reveal">
+        <figure aria-label="AquaSense App">
+          <picture>
+            <source srcset="assets/productII.png 1024w" type="image/png">
+            <img class="product-image" src="assets/productII.png" loading="lazy" decoding="async" alt="AquaSense Produktabbildung">
+          </picture>
+        </figure>
+      </div>
+    </section>
+
+    <section id="app" class="section container">
+      <header class="section__header">
+        <h2 data-i18n="appTitle">Die App – klar, schnell, hilfreich</h2>
+        <p data-i18n="appSub">Alle relevanten Daten, Alerts und Profile in einer modernen Oberfläche.</p>
+      </header>
+      <div class="app-layout">
+        <div class="app__screens reveal">
+          <div class="screen-mockup">
+            <div class="screen-header">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <p data-i18n="screenLive">Live-Werte</p>
+            </div>
+            <div class="screen-body">
+              <p class="metric" data-i18n="metricPh">pH 7.2</p>
+              <p class="metric-muted" data-i18n="metricCond">Leitfähigkeit 320 μS/cm</p>
+              <p class="metric-muted" data-i18n="metricTemp">Temperatur 18.4 °C</p>
+              <svg class="mini-chart" viewBox="0 0 220 80" aria-hidden="true">
+                <rect x="10" y="40" width="24" height="30" rx="6" fill="#1E90FF" opacity="0.4" />
+                <rect x="46" y="30" width="24" height="40" rx="6" fill="#00C2FF" opacity="0.7" />
+                <rect x="82" y="20" width="24" height="50" rx="6" fill="#1E90FF" />
+                <rect x="118" y="32" width="24" height="38" rx="6" fill="#00C2FF" opacity="0.6" />
+                <rect x="154" y="16" width="24" height="54" rx="6" fill="#1E90FF" opacity="0.8" />
+                <rect x="190" y="28" width="24" height="42" rx="6" fill="#00C2FF" />
+              </svg>
+            </div>
+          </div>
+          <div class="screen-mockup">
+            <div class="screen-header">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <p data-i18n="screenDevices">Geräteverwaltung</p>
+            </div>
+            <div class="screen-body">
+              <p class="metric-muted" data-i18n="deviceAquarium">Aquarium – ok</p>
+              <p class="metric-muted" data-i18n="deviceCoffee">Kaffee – Warnung</p>
+              <p class="metric-muted" data-i18n="deviceBaby">Babywasser – ok</p>
+              <svg class="mini-chart" viewBox="0 0 220 80" aria-hidden="true">
+                <rect x="12" y="20" width="40" height="12" rx="6" fill="#1E90FF" />
+                <rect x="12" y="40" width="60" height="12" rx="6" fill="#00C2FF" opacity="0.7" />
+                <rect x="12" y="60" width="44" height="12" rx="6" fill="#1E90FF" opacity="0.6" />
+                <rect x="120" y="20" width="80" height="12" rx="6" fill="#1E90FF" opacity="0.5" />
+                <rect x="120" y="40" width="60" height="12" rx="6" fill="#00C2FF" />
+                <rect x="120" y="60" width="52" height="12" rx="6" fill="#1E90FF" opacity="0.8" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="app__chart reveal">
+          <div class="chart-header">
+            <h3 data-i18n="chartTitle">Live-Chart</h3>
+            <div class="chart-switch">
+              <button type="button" class="chip" data-metric="ph" aria-pressed="true" data-i18n="chipPh">pH</button>
+              <button type="button" class="chip" data-metric="conductivity" aria-pressed="false" data-i18n="chipCond">Leitfähigkeit</button>
+            </div>
+          </div>
+          <canvas id="chart" width="640" height="360" role="img" aria-label="Zeitverlauf der Wasserwerte" data-i18n-aria="chartAria"></canvas>
+          <ul class="app__points">
+            <li data-i18n="pointLive">Live-Werte</li>
+            <li data-i18n="pointAlert">Grenzwert-Alarm</li>
+            <li data-i18n="pointHistory">Historie &amp; Export</li>
+            <li data-i18n="pointProfiles">Profile</li>
+            <li data-i18n="pointDevices">Geräteverwaltung</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container section--muted">
+      <div class="section__header">
+        <h2 data-i18n="appCtaTitle">Alles vorbereitet?</h2>
+        <p data-i18n="appCtaSub">Sichere dir frühen Zugang zur App und den nächsten Prototypen.</p>
+      </div>
+      <div class="hero__actions">
+        <a class="button" href="#waitlist" data-home="index.html#waitlist" data-i18n="appHeroCta">Zur Warteliste</a>
+        <a class="button button--ghost" href="request.html" data-i18n="appRequestCta">Individuelle Anfrage</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <p data-i18n="footerContact">Kontakt: service.aquasense@gmail.com</p>
+      <div class="footer__links">
+        <button type="button" class="link-button" data-modal="imprint" data-i18n="footerImprint">Impressum</button>
+        <button type="button" class="link-button" data-modal="privacy" data-i18n="footerPrivacy">Datenschutz</button>
+        <span aria-label="Aktuelles Jahr" id="year"></span>
+      </div>
+    </div>
+    <p class="footer__note" data-i18n="footerNote">Diese Seite verwendet keine Cookies.</p>
+  </footer>
+
+  <section id="whitepaper" hidden aria-hidden="true">
+    <article class="whitepaper">
+      <h1 data-i18n="wpTitle">AquaSense – Technisches Konzept (Kurzfassung)</h1>
+      <h2 data-i18n="wpProblemTitle">Problem &amp; Motivation</h2>
+      <p data-i18n="wpProblemText">Wasserwerte schwanken oft unbemerkt. Haushalte, Kaffee-Setups und Aquarien benötigen
+        Transparenz, um Geschmack, Sicherheit und Langlebigkeit zu sichern.</p>
+      <h2 data-i18n="wpArchTitle">Architekturüberblick</h2>
+      <ul>
+        <li data-i18n="wpArch1">Sensorik: pH, Leitfähigkeit, Temperatur, Trübung.</li>
+        <li data-i18n="wpArch2">Firmware: Edge-Analytics, Grenzwertlogik, sichere Updates.</li>
+        <li data-i18n="wpArch3">App: Live-Werte, Warnungen, Profile, Historie.</li>
+        <li data-i18n="wpArch4">Optionale Cloud: Opt-in Sync, Team-Shares, Remote-Alerts.</li>
+      </ul>
+      <h2 data-i18n="wpPrivacyTitle">Datenschutzprinzipien</h2>
+      <p data-i18n="wpPrivacyText">Privacy by Design, lokale Speicherung, verschlüsselte Verbindungen, transparente
+        Einwilligungen.</p>
+      <h2 data-i18n="wpSpecsTitle">Vorläufige Spezifikationen</h2>
+      <p data-i18n="wpSpecsText">USB-C 5V, WLAN 2.4 GHz/BLE, IPX4-Ziel, 90 × 45 mm Prototyp, modulare Sensor-Slots.</p>
+      <h2 data-i18n="wpRoadmapTitle">Roadmap &amp; Validierung</h2>
+      <ol>
+        <li data-i18n="wpRoadmap1">Laborvalidierung der Sensoren</li>
+        <li data-i18n="wpRoadmap2">Beta mit ausgewählten Haushalten</li>
+        <li data-i18n="wpRoadmap3">App-Iterationen &amp; Export</li>
+        <li data-i18n="wpRoadmap4">Cloud-Opt-in Tests</li>
+      </ol>
+      <svg viewBox="0 0 500 200" aria-hidden="true">
+        <rect x="30" y="60" width="100" height="60" rx="12" fill="#1E90FF" opacity="0.8" />
+        <rect x="190" y="60" width="100" height="60" rx="12" fill="#00C2FF" opacity="0.8" />
+        <rect x="350" y="60" width="100" height="60" rx="12" fill="#0B1220" opacity="0.1" stroke="#1E90FF"
+          stroke-width="3" />
+        <path d="M130 90h60" stroke="#1E90FF" stroke-width="6" marker-end="url(#arrow)" />
+        <path d="M290 90h60" stroke="#1E90FF" stroke-width="6" marker-end="url(#arrow)" />
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto">
+            <path d="M0 0l10 5-10 5z" fill="#1E90FF" />
+          </marker>
+        </defs>
+        <text x="50" y="100" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+          font-size="14">Sensor</text>
+        <text x="208" y="100" fill="#0B1220" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+          font-size="14">Firmware</text>
+        <text x="366" y="100" fill="#0B1220" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+          font-size="14">App/Cloud</text>
+      </svg>
+    </article>
+  </section>
+
+  <div class="modal" id="imprint" role="dialog" aria-modal="true" aria-labelledby="imprint-title" hidden>
+    <div class="modal__backdrop" data-close="imprint"></div>
+    <div class="modal__dialog" role="document" tabindex="-1">
+      <header class="modal__header">
+        <h2 id="imprint-title" data-i18n="imprintTitle">Impressum</h2>
+        <button type="button" class="icon-button" data-close="imprint" aria-label="Schließen"
+          data-i18n-aria="closeLabel">✕</button>
+      </header>
+      <div class="modal__body">
+        <p data-i18n="imprintLine1">[Firma/Name]</p>
+        <p data-i18n="imprintLine2">[Straße Hausnummer]</p>
+        <p data-i18n="imprintLine3">[PLZ Ort]</p>
+        <p data-i18n="imprintLine4">[E-Mail: placeholder@example.com]</p>
+        <p data-i18n="imprintLine5">Vertretungsberechtigte: [Platzhalter]</p>
+        <p data-i18n="imprintLine6">USt-IdNr.: [Platzhalter]</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="privacy" role="dialog" aria-modal="true" aria-labelledby="privacy-title" hidden>
+    <div class="modal__backdrop" data-close="privacy"></div>
+    <div class="modal__dialog" role="document" tabindex="-1">
+      <header class="modal__header">
+        <h2 id="privacy-title" data-i18n="privacyTitle">Datenschutz</h2>
+        <button type="button" class="icon-button" data-close="privacy" aria-label="Schließen"
+          data-i18n-aria="closeLabel">✕</button>
+      </header>
+      <div class="modal__body">
+        <p data-i18n="privacyLine1">Verantwortlich: [Firma/Name, Adresse, E-Mail].</p>
+        <p data-i18n="privacyLine2">Newsletter-Daten: E-Mail (Pflicht), Name (optional). Rechtsgrundlage Einwilligung
+          Art. 6 Abs.1 lit. a DSGVO. Double-Opt-In; Widerruf jederzeit möglich.</p>
+        <p data-i18n="privacyLine3">Speicherdauer: bis Widerruf. Keine Weitergabe ohne Einwilligung. Übertragung via
+          TLS.</p>
+        <p data-i18n="privacyLine4">Betroffenenrechte: Auskunft, Berichtigung, Löschung, Einschränkung,
+          Datenübertragbarkeit, Beschwerde bei Aufsichtsbehörde.</p>
+        <p data-i18n="privacyLine5">Opt-in Cloud-Sync: deaktiviert per Default, aktivierbar in der App.</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="script.js" defer></script>
+</body>
+</html>
