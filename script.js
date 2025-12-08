@@ -21,11 +21,18 @@
   const cartTotalEl = document.getElementById('cart-total');
   const checkoutBtn = document.getElementById('checkout-btn');
   const addToCartButtons = document.querySelectorAll('[data-add-to-cart]');
+  const productLinks = document.querySelectorAll('a[href*="product.html"][href*="variant="]');
   const navTargets = document.querySelectorAll('[data-nav]');
   const revealEls = document.querySelectorAll('.reveal');
   const accordionItems = document.querySelectorAll('.accordion__item');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const LANG_KEY = 'as-lang';
+  const GA_ID = 'G-EJ352WJJ05';
+  const CONSENT_KEY = 'as-cookie-consent';
+  const cookieBanner = document.querySelector('.cookie-banner');
+  const cookieAcceptBtn = document.getElementById('cookie-accept');
+  const cookieDeclineBtn = document.getElementById('cookie-decline');
+  let analyticsLoaded = false;
 
   const baseTexts = { text: {}, html: {}, placeholder: {}, alt: {}, aria: {} };
   document.querySelectorAll('[data-i18n]').forEach((el) => { baseTexts.text[el.dataset.i18n] = el.textContent; });
@@ -42,6 +49,51 @@
   const baseDocTitle = document.title;
   const baseDocDesc = metaDescEl?.getAttribute('content') || '';
 
+  const loadAnalytics = () => {
+    if (analyticsLoaded) return;
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+    document.head.appendChild(script);
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+    analyticsLoaded = true;
+  };
+
+  const handleConsent = (state) => {
+    const accepted = state === 'accepted';
+    window[`ga-disable-${GA_ID}`] = !accepted;
+    if (accepted) loadAnalytics();
+    cookieBanner?.classList.remove('visible');
+  };
+
+  const consentState = localStorage.getItem(CONSENT_KEY);
+  if (consentState) {
+    handleConsent(consentState);
+  } else {
+    window[`ga-disable-${GA_ID}`] = true;
+    cookieBanner?.classList.add('visible');
+  }
+
+  cookieAcceptBtn?.addEventListener('click', () => {
+    localStorage.setItem(CONSENT_KEY, 'accepted');
+    handleConsent('accepted');
+  });
+  cookieDeclineBtn?.addEventListener('click', () => {
+    localStorage.setItem(CONSENT_KEY, 'declined');
+    handleConsent('declined');
+  });
+
+  productLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      const targetUrl = new URL(link.href, window.location.href);
+      const variant = targetUrl.searchParams.get('variant');
+      if (variant) localStorage.setItem('as-last-variant', variant.toLowerCase());
+    });
+  });
+
   const translations = {
     en: {
       skip: 'Skip to content',
@@ -54,6 +106,8 @@
       docDescShop: 'Explore AquaSense in three color variants and add your favourite design to the cart.',
       docTitleRequest: 'AquaSense – Custom request',
       docDescRequest: 'Send us your custom AquaSense request for projects or collaborations.',
+      docTitleFaq: 'AquaSense – Frequently asked questions',
+      docDescFaq: 'Answers to the most common questions about AquaSense, availability, privacy and features.',
       navStart: 'Start',
       navFeatures: 'Features',
       navSteps: 'How it works',
@@ -205,10 +259,23 @@
       requestEmail: 'Email *',
       requestMessage: 'Your request',
       requestSubmit: 'Send request',
-      footerContact: 'Contact: service.aquasense@gmail.com',
-      footerImprint: 'Imprint',
-      footerPrivacy: 'Privacy',
-      footerNote: 'This site uses no cookies.',
+      footerTagline: 'AquaSense · Water quality in view',
+      footerSummary: 'Real-time monitoring for pH, conductivity, temperature and more for homes, coffee bars and aquatics.',
+      footerContactTitle: 'Contact',
+      footerContactMail: 'service.aquasense@gmail.com',
+      footerContactHours: 'Mon–Fri, 9am–5pm CET',
+      footerLinksTitle: 'Shortcuts',
+      footerLinkHome: 'Start',
+      footerLinkApp: 'App',
+      footerLinkShop: 'Shop',
+      footerLinkFaq: 'FAQ',
+      footerAnalyticsTitle: 'Transparency',
+      footerAnalyticsText: 'We use Google Analytics to measure usage anonymously and improve the site.',
+      footerRights: 'All rights reserved.',
+      cookieTitle: 'Cookies & analytics',
+      cookieText: 'We use Google Analytics (cookies) to evaluate usage anonymously. Please consent if that is okay for you.',
+      cookieAccept: 'Accept',
+      cookieDecline: 'Decline',
       closeLabel: 'Close'
     }
   };
@@ -241,8 +308,24 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     document.documentElement.lang = lang;
     localStorage.setItem(LANG_KEY, lang);
     langToggle && (langToggle.textContent = lang === 'de' ? 'DE / EN' : 'EN / DE');
-    const titleKey = page === 'app' ? 'docTitleApp' : page === 'shop' ? 'docTitleShop' : page === 'request' ? 'docTitleRequest' : 'docTitle';
-    const descKey = page === 'app' ? 'docDescApp' : page === 'shop' ? 'docDescShop' : page === 'request' ? 'docDescRequest' : 'docDesc';
+    const titleKey = page === 'app'
+      ? 'docTitleApp'
+      : page === 'shop'
+        ? 'docTitleShop'
+        : page === 'request'
+          ? 'docTitleRequest'
+          : page === 'faq'
+            ? 'docTitleFaq'
+            : 'docTitle';
+    const descKey = page === 'app'
+      ? 'docDescApp'
+      : page === 'shop'
+        ? 'docDescShop'
+        : page === 'request'
+          ? 'docDescRequest'
+          : page === 'faq'
+            ? 'docDescFaq'
+            : 'docDesc';
     const translatedTitle = dict[titleKey] || baseDocTitle;
     const translatedDesc = dict[descKey] || baseDocDesc;
     document.title = translatedTitle;
@@ -551,12 +634,102 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     }
   };
 
+  const variantOverrides = {
+    color1: {
+      title: { de: 'AquaSense - Weiss', en: 'AquaSense - White' },
+      color: { de: 'Weiss', en: 'White' },
+      desc: {
+        de: 'Intelligent gesteuertes Wasseraufbereitungs- und Analysegerät für Hygiene, Geschmack und Sicherheit im Haushalt.',
+        en: 'Intelligent water treatment and analysis device for hygiene, taste and safety at home.'
+      },
+      highlights: {
+        de: [
+          'Echtzeit-Wasseranalyse (Trübung, Leitfähigkeit, Temperatur, Verunreinigungen)',
+          'Modulare Filtration gegen Mikroplastik, Chlor, Sedimente u. a.',
+          'Smarte App mit Live-Daten, Warnungen und Empfehlungen',
+          'Energieeffizientes Design mit langlebigen Materialien',
+          'Zwei Eingänge und zwei Ausgänge für flexible Installation'
+        ],
+        en: [
+          'Real-time water analysis (turbidity, conductivity, temperature, impurities)',
+          'Modular filtration for microplastics, chlorine, sediment and more',
+          'Smart app with live data, alerts and recommendations',
+          'Energy-efficient design with durable materials',
+          'Two inputs and two outputs for flexible installs'
+        ]
+      }
+    },
+    color2: {
+      title: { de: 'AquaSense - Obsidian', en: 'AquaSense - Obsidian' },
+      desc: {
+        de: 'Premium-Variante mit dunkler Optik, identischer Sensorik und modularer Filtration für maximale Wasserqualität.',
+        en: 'Premium dark look with the same sensing and modular filtration for top water quality.'
+      },
+      highlights: {
+        de: [
+          'Echtzeit-Wasseranalyse (Trübung, Leitfähigkeit, Temperatur, Verunreinigungen)',
+          'Modulare Filtration gegen Mikroplastik, Chlor, Sedimente u. a.',
+          'Smarte App mit Live-Daten, Warnungen und Empfehlungen',
+          'Energieeffizientes Design mit LED-Statusring',
+          'Zwei Eingänge und zwei Ausgänge für flexible Installation'
+        ],
+        en: [
+          'Real-time water analysis (turbidity, conductivity, temperature, impurities)',
+          'Modular filtration for microplastics, chlorine, sediment and more',
+          'Smart app with live data, alerts and recommendations',
+          'Energy-efficient build with LED status ring',
+          'Two inputs and two outputs for flexible installs'
+        ]
+      },
+      delivery: {
+        de: 'Lieferung in 3-4 Werktagen bei heutiger Bestellung.',
+        en: 'Delivery in 3-4 business days if you order today.'
+      }
+    },
+    color3: {
+      title: { de: 'AquaSense - Graphit', en: 'AquaSense - Graphite' },
+      desc: {
+        de: 'Robuste Graphit-Optik mit vollständiger Sensorik und smarter Filtration für anspruchsvolle Umgebungen.',
+        en: 'Robust graphite look with full sensing and smart filtration for demanding environments.'
+      },
+      highlights: {
+        de: [
+          'Echtzeit-Wasseranalyse (Trübung, Leitfähigkeit, Temperatur, Verunreinigungen)',
+          'Modulare Filtration gegen Mikroplastik, Chlor, Sedimente u. a.',
+          'Smarte App mit Live-Daten, Warnungen und Empfehlungen',
+          'Energieeffizientes, robustes Gehäuse',
+          'Zwei Eingänge und zwei Ausgänge für flexible Installation'
+        ],
+        en: [
+          'Real-time water analysis (turbidity, conductivity, temperature, impurities)',
+          'Modular filtration for microplastics, chlorine, sediment and more',
+          'Smart app with live data, alerts and recommendations',
+          'Energy-efficient, robust housing',
+          'Two inputs and two outputs for flexible installs'
+        ]
+      }
+    }
+  };
+
   function populateProductDetail(langOverride) {
     if (page !== 'product') return;
     const lang = langOverride || currentLang || 'de';
     const params = new URLSearchParams(window.location.search);
-    const variantKey = (params.get('variant') || 'color1').toLowerCase();
-    const variant = productVariants[variantKey] || productVariants.color1;
+    const storedVariant = localStorage.getItem('as-last-variant');
+    const variantKey = (params.get('variant') || storedVariant || 'color1').toLowerCase();
+    const baseVariant = productVariants[variantKey] || productVariants.color1;
+    const override = variantOverrides[variantKey];
+    const variant = override ? {
+      ...baseVariant,
+      ...override,
+      title: { ...baseVariant.title, ...(override.title || {}) },
+      color: { ...baseVariant.color, ...(override.color || {}) },
+      desc: { ...baseVariant.desc, ...(override.desc || {}) },
+      highlights: { ...baseVariant.highlights, ...(override.highlights || {}) },
+      delivery: { ...baseVariant.delivery, ...(override.delivery || {}) },
+      stock: { ...baseVariant.stock, ...(override.stock || {}) }
+    } : baseVariant;
+    localStorage.setItem('as-last-variant', variantKey);
     const pick = (obj) => (typeof obj === 'string' ? obj : obj?.[lang] || obj?.de || '');
     const priceFmt = (value) => {
       try {
@@ -679,21 +852,21 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
       total += item.price * item.quantity;
       const li = document.createElement('li');
       li.className = 'cart-item';
-      li.innerHTML = 
+      li.innerHTML = `
         <div class="cart-item__info">
-          <p class="cart-item__title"></p>
-          <p class="cart-item__meta"></p>
+          <p class="cart-item__title">${item.name}</p>
+          <p class="cart-item__meta">${item.color || ''}</p>
         </div>
         <div class="cart-item__controls">
           <div class="cart-qty">
-            <button type="button" class="icon-button" data-action="dec" data-index="" aria-label="Menge verringern">-</button>
-            <span></span>
-            <button type="button" class="icon-button" data-action="inc" data-index="" aria-label="Menge erhöhen">+</button>
+            <button type="button" class="icon-button" data-action="dec" data-index="${index}" aria-label="${currentLang === 'en' ? 'Decrease quantity' : 'Menge verringern'}">-</button>
+            <span>${item.quantity}</span>
+            <button type="button" class="icon-button" data-action="inc" data-index="${index}" aria-label="${currentLang === 'en' ? 'Increase quantity' : 'Menge erhöhen'}">+</button>
           </div>
-          <p class="cart-item__price"></p>
-          <button type="button" class="link-button cart-remove" data-action="remove" data-index="">Entfernen</button>
+          <p class="cart-item__price">${formatCurrency(item.price * item.quantity)}</p>
+          <button type="button" class="link-button cart-remove" data-action="remove" data-index="${index}">${currentLang === 'en' ? 'Remove' : 'Entfernen'}</button>
         </div>
-      ;
+      `;
       cartItemsEl.appendChild(li);
     });
     cartItemsEl.querySelectorAll('button[data-index]').forEach((btn) => {

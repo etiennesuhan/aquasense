@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJ352WJJ05"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-EJ352WJJ05');
-  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AquaSense App – dein Wasser im Blick</title>
@@ -20,21 +12,17 @@
   <a href="#main" class="skip-link" data-i18n="skip">Zum Inhalt springen</a>
   <header class="header" role="banner">
     <div class="container header__inner">
-      <a class="brand" href="index.html#hero" aria-label="AquaSense Start">
-        <svg aria-hidden="true" focusable="false" width="120" height="32" viewBox="0 0 160 40">
-          <rect x="0" y="0" width="40" height="40" rx="10" fill="currentColor" opacity="0.1"></rect>
-          <path d="M20 8c-4 5-8 9-8 13a8 8 0 1 0 16 0c0-4-4-8-8-13Z" fill="currentColor"></path>
-          <text x="48" y="27" font-size="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-            fill="currentColor">AquaSense</text>
-        </svg>
+      <a class="brand" href="index.html#top" aria-label="AquaSense Start">
+        <img src="assets/logo.png" alt="AquaSense Logo" width="160" height="40">
       </a>
       <nav aria-label="Hauptnavigation">
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" data-i18n="menu">Menü</button>
         
         <ul id="nav-links" class="nav__list">
-          <li><a href="index.html#hero" data-home="index.html#hero" data-nav="home" data-i18n="navStart">Start</a></li>
+          <li><a href="index.html#top" data-home="index.html#top" data-nav="home" data-i18n="navStart">Start</a></li>
           <li><a href="app.html" data-nav="app" data-i18n="navApp">App</a></li>
           <li><a href="shop.html" data-nav="shop" data-i18n="navShop">Shop</a></li>
+          <li><a href="faq.html" data-nav="faq" data-i18n="navFaq">FAQ</a></li>
           <li><button class="lang-toggle" type="button" aria-label="Sprache umschalten">DE / EN</button></li>
         </ul>
       </nav>
@@ -141,16 +129,46 @@
   </main>
 
   <footer class="footer" role="contentinfo">
-    <div class="container footer__inner">
-      <p data-i18n="footerContact">Kontakt: service.aquasense@gmail.com</p>
-      <div class="footer__links">
-        <button type="button" class="link-button" data-modal="imprint" data-i18n="footerImprint">Impressum</button>
-        <button type="button" class="link-button" data-modal="privacy" data-i18n="footerPrivacy">Datenschutz</button>
-        <span aria-label="Aktuelles Jahr" id="year"></span>
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <p class="footer__eyebrow" data-i18n="footerTagline">AquaSense · Wasserqualität im Blick</p>
+        <p class="footer__text" data-i18n="footerSummary">Echtzeit-Monitoring für pH, Leitfähigkeit, Temperatur und mehr
+          für Haushalte, Coffee Bars und Aquaristik.</p>
+      </div>
+      <div class="footer__col">
+        <h3 data-i18n="footerContactTitle">Kontakt</h3>
+        <a class="footer__link" href="mailto:service.aquasense@gmail.com" data-i18n="footerContactMail">service.aquasense@gmail.com</a>
+        <p class="footer__text" data-i18n="footerContactHours">Mo-Fr, 9-17 Uhr</p>
+      </div>
+      <div class="footer__col">
+        <h3 data-i18n="footerLinksTitle">Direktlinks</h3>
+        <a class="footer__link" href="index.html#top" data-i18n="footerLinkHome">Start</a>
+        <a class="footer__link" href="app.html" data-i18n="footerLinkApp">App</a>
+        <a class="footer__link" href="shop.html" data-i18n="footerLinkShop">Shop</a>
+        <a class="footer__link" href="faq.html" data-i18n="footerLinkFaq">FAQ</a>
+      </div>
+      <div class="footer__col footer__col--highlight">
+        <h3 data-i18n="footerAnalyticsTitle">Transparenz</h3>
+        <p class="footer__text" data-i18n="footerAnalyticsText">Wir nutzen Google Analytics, um die Nutzung anonymisiert
+          zu messen und die Seite zu verbessern.</p>
       </div>
     </div>
-    <p class="footer__note" data-i18n="footerNote">Diese Seite verwendet keine Cookies.</p>
+    <div class="footer__bottom">
+      <p class="footer__note"><span id="year"></span> &copy; AquaSense. <span data-i18n="footerRights">Alle Rechte vorbehalten.</span></p>
+    </div>
   </footer>
+
+  <div class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie Hinweis">
+    <div class="cookie-banner__text">
+      <p class="cookie-banner__title" data-i18n="cookieTitle">Cookies &amp; Analytics</p>
+      <p class="cookie-banner__body" data-i18n="cookieText">Wir verwenden Google Analytics (Cookies), um die Nutzung der
+        Website anonymisiert auszuwerten. Bitte stimme zu, wenn das fuer dich in Ordnung ist.</p>
+    </div>
+    <div class="cookie-banner__actions">
+      <button class="button button--ghost" type="button" id="cookie-decline" data-i18n="cookieDecline">Ablehnen</button>
+      <button class="button" type="button" id="cookie-accept" data-i18n="cookieAccept">Akzeptieren</button>
+    </div>
+  </div>
 
   <section id="whitepaper" hidden aria-hidden="true">
     <article class="whitepaper">
