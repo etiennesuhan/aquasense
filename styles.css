@@ -820,6 +820,52 @@ textarea:focus-visible {
 .form__actions { display: flex; align-items: center; gap: var(--space-3); }
 .status { min-height: 24px; color: var(--muted); font-weight: 600; }
 
+.pricing-form .field { display: grid; gap: 8px; }
+.pricing-form .field + .field { margin-top: var(--space-3); }
+.pricing-form select,
+.pricing-form input[type="number"] {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #d6e4f5;
+  background: #fff;
+  color: var(--text);
+  box-shadow: inset 0 1px 2px rgba(10, 31, 68, 0.05);
+}
+.pricing-form .field-inline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pricing-form .field-inline span {
+  min-width: 24px;
+  font-weight: 700;
+}
+.pricing-form .privacy-hint {
+  margin: var(--space-2) 0 var(--space-3);
+  color: var(--muted);
+}
+
+.cta-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  background: linear-gradient(120deg, color-mix(in srgb, var(--brand) 12%, var(--surface) 88%), var(--surface));
+  border: 1px solid color-mix(in srgb, var(--muted) 18%, transparent);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  box-shadow: var(--shadow);
+}
+.cta-banner .eyebrow { margin: 0 0 6px; color: color-mix(in srgb, var(--brand) 60%, var(--text)); }
+.cta-banner .lead { margin: 0; color: var(--text); }
+.cta-banner .button { white-space: nowrap; }
+@media (max-width: 720px) {
+  .cta-banner { flex-direction: column; align-items: flex-start; }
+  .cta-banner .button { width: 100%; justify-content: center; }
+}
+
 .newsletter__form {
   background: var(--surface);
   padding: var(--space-4);
