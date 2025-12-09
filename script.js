@@ -128,7 +128,7 @@
       badgeMade: 'Made in Germany',
       badgeUsecases: 'Home • Aquatics • Coffee & Tea',
       featuresTitle: 'Features for clarity and peace of mind',
-      featuresSub: 'Real-time data, alerts, history, profiles, live dashboard and privacy by design.',
+      featuresSub: 'Real-time data, alerts, dashboard, history & trends.',
       feat1Title: 'Real-time monitoring',
       feat1Text: 'pH, conductivity (uS/cm), temperature, turbidity; expandable sensor platform.',
       feat2Title: 'Intelligent alerts',
