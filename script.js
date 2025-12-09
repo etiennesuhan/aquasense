@@ -272,14 +272,17 @@
       productColor3: 'Graphite',
       product1Title: 'AquaSense – White',
       product1Desc: 'Bright, minimal look for modern kitchens and labs.',
-      product1Price: 'from €249',
+      product1Price: 'Pricing to be announced',
       product2Title: 'AquaSense – Obsidian',
       product2Desc: 'Obsidian look with bold accents, ideal for coffee bars.',
-      product2Price: 'from €259',
+      product2Price: 'Pricing to be announced',
       product3Title: 'AquaSense – Graphite',
       product3Desc: 'Graphite grey, robust and timeless for workshop or utility rooms.',
-      product3Price: 'from €269',
+      product3Price: 'Pricing to be announced',
       productCta: 'Select',
+      priceTbd: 'Pricing to be announced',
+      deliveryTbd: 'Delivery timing will be announced.',
+      stockNote: 'Pre-orders are being prepared.',
       cartTitle: 'Cart',
       cartSumLabel: 'Total',
       cartContinue: 'Continue shopping',
@@ -575,8 +578,8 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
       title: { de: 'AquaSense – Weiß', en: 'AquaSense – White' },
       color: { de: 'Weiß', en: 'White' },
       image: 'assets/color3/white.png',
-      price: 249,
-      uvp: 299,
+      price: null,
+      uvp: null,
       sku: 'AS-C1',
       desc: {
         de: 'Helle, puristische Variante für moderne Küchen und Labor-Setups.',
@@ -594,10 +597,7 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
           'USB-C power, Wi-Fi 2.4 GHz/BLE'
         ]
       },
-      delivery: {
-        de: 'Lieferung in 2–3 Werktagen bei heutiger Bestellung.',
-        en: 'Delivery in 2–3 business days if you order today.'
-      },
+      delivery: { de: 'Lieferzeit wird noch bekanntgegeben.', en: 'Delivery timing will be announced.' },
       stock: { de: 'Auf Lager', en: 'In stock' },
       rating: 4.8,
       reviews: 128
@@ -606,8 +606,8 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
       title: { de: 'AquaSense – Obsidian', en: 'AquaSense – Obsidian' },
       color: { de: 'Obsidian', en: 'Obsidian' },
       image: 'assets/color2/obsidian.png',
-      price: 259,
-      uvp: 329,
+      price: null,
+      uvp: null,
       sku: 'AS-C2',
       desc: {
         de: 'Obsidian-Look mit markanten Akzenten, ideal für Coffee- und Bar-Umgebungen.',
@@ -625,10 +625,7 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
           'Adjustable thresholds for specialty coffee'
         ]
       },
-      delivery: {
-        de: 'Lieferung in 3–4 Werktagen bei heutiger Bestellung.',
-        en: 'Delivery in 3–4 business days if you order today.'
-      },
+      delivery: { de: 'Lieferzeit wird noch bekanntgegeben.', en: 'Delivery timing will be announced.' },
       stock: { de: 'Begrenzt auf Lager', en: 'Limited stock' },
       rating: 4.7,
       reviews: 96
@@ -637,8 +634,8 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
       title: { de: 'AquaSense – Graphit', en: 'AquaSense – Graphite' },
       color: { de: 'Graphit', en: 'Graphite' },
       image: 'assets/color1/graphit.png',
-      price: 269,
-      uvp: 339,
+      price: null,
+      uvp: null,
       sku: 'AS-C3',
       desc: {
         de: 'Graphitgrau, robust und zeitlos – perfekt für Werkstatt, Labor oder Utility-Raum.',
@@ -656,10 +653,7 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
           'Optional cloud sync (opt-in) for teams'
         ]
       },
-      delivery: {
-        de: 'Lieferung in 4–6 Werktagen bei heutiger Bestellung.',
-        en: 'Delivery in 4–6 business days if you order today.'
-      },
+      delivery: { de: 'Lieferzeit wird noch bekanntgegeben.', en: 'Delivery timing will be announced.' },
       stock: { de: 'Auf Lager', en: 'In stock' },
       rating: 4.9,
       reviews: 142
@@ -713,10 +707,7 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
           'Two inputs and two outputs for flexible installs'
         ]
       },
-      delivery: {
-        de: 'Lieferung in 3-4 Werktagen bei heutiger Bestellung.',
-        en: 'Delivery in 3-4 business days if you order today.'
-      }
+      delivery: { de: 'Lieferzeit wird noch bekanntgegeben.', en: 'Delivery timing will be announced.' }
     },
     color3: {
       title: { de: 'AquaSense - Graphit', en: 'AquaSense - Graphite' },
@@ -763,12 +754,16 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     } : baseVariant;
     localStorage.setItem('as-last-variant', variantKey);
     const pick = (obj) => (typeof obj === 'string' ? obj : obj?.[lang] || obj?.de || '');
-    const priceFmt = (value) => {
+        const priceFmt = (value) => {
       try {
-        return new Intl.NumberFormat(lang === 'en' ? 'en-US' : 'de-DE', { style: 'currency', currency: 'EUR' }).format(value);
+        return new Intl.NumberFormat(lang === "en" ? "en-US" : "de-DE", { style: "currency", currency: "EUR" }).format(value);
       } catch (err) {
-        return `${value.toFixed(2)} €`;
+        return `${value?.toFixed ? value.toFixed(2) : value} �`;
       }
+    };
+    const priceText = (value) => {
+      if (typeof value === "number" && value > 0) return priceFmt(value);
+      return translations[currentLang]?.priceTbd || "Preis wird noch festgelegt";
     };
 
     document.title = `${pick(variant.title)} | AquaSense`;
@@ -803,10 +798,10 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     if (badge) badge.textContent = pick(variant.color);
     if (titleEl) titleEl.textContent = pick(variant.title);
     if (descEl) descEl.textContent = pick(variant.desc);
-    if (priceEl) priceEl.textContent = priceFmt(variant.price);
-    if (uvpEl) uvpEl.textContent = `UVP: ${priceFmt(variant.uvp)}`;
+    if (priceEl) priceEl.textContent = priceText(variant.price);
+    if (uvpEl) uvpEl.hidden = true;
     if (stockEl) stockEl.textContent = pick(variant.stock);
-    if (deliveryEl) deliveryEl.textContent = pick(variant.delivery);
+    if (deliveryEl) deliveryEl.textContent = pick(variant.delivery) || (translations[currentLang]?.deliveryTbd || "Lieferzeit wird noch bekanntgegeben.");
     if (skuEl) skuEl.textContent = variant.sku;
     if (imageEl) {
       imageEl.src = variant.image;
@@ -824,25 +819,12 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     if (ratingStarsEl) ratingStarsEl.textContent = '★★★★★'.slice(0, Math.round(variant.rating)) + '☆'.repeat(5 - Math.round(variant.rating));
     if (ratingCountEl) ratingCountEl.textContent = `(${variant.reviews})`;
 
-    if (boxPriceEl) boxPriceEl.textContent = priceFmt(variant.price);
-    if (boxUvpEl) boxUvpEl.textContent = `UVP: ${priceFmt(variant.uvp)}`;
+    if (boxPriceEl) boxPriceEl.textContent = priceText(variant.price);
+    if (boxUvpEl) boxUvpEl.hidden = true;
     if (boxStockEl) boxStockEl.textContent = pick(variant.stock);
-    if (boxDeliveryEl) boxDeliveryEl.textContent = pick(variant.delivery);
-    if (boxSavingEl) {
-      if (saving > 0) {
-        boxSavingEl.textContent = lang === 'en'
-          ? `You save ${priceFmt(saving)} (${savingPct}%)`
-          : `Du sparst ${priceFmt(saving)} (${savingPct}%)`;
-        boxSavingEl.hidden = false;
-      } else {
-        boxSavingEl.hidden = true;
-      }
-    }
-    if (addBtn) {
-      addBtn.dataset.productName = pick(variant.title);
-      addBtn.dataset.price = String(variant.price);
-      addBtn.dataset.color = pick(variant.color);
-      addBtn.setAttribute('aria-label', `${pick(variant.color)} in den Warenkorb legen`);
+    if (boxDeliveryEl) boxDeliveryEl.textContent = pick(variant.delivery) || (translations[currentLang]?.deliveryTbd || 'Lieferzeit wird noch bekanntgegeben.');
+    if (boxSavingEl) boxSavingEl.hidden = true;
+    if (addBtn) addBtn.hidden = true;
     }
   }
 
@@ -1110,3 +1092,14 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     link.remove();
   });
 })();
+
+
+
+
+
+
+
+
+
+
+

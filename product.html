@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AquaSense Produktdetails</title>
-  <meta name="description" content="Alle Details zu AquaSense – wähle dein Design, prüfe Lieferzeiten und lege es in den Warenkorb.">
+    <meta name="description" content="Alle Details zu AquaSense - w�hle dein Design. Preise und Lieferzeiten werden noch bekanntgegeben.">
   <link rel="preload" as="style" href="styles.css">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -63,31 +63,22 @@
           <li>Energieeffizientes Premium-Design mit LED-Statusring</li>
           <li>Zwei Eingänge und zwei Ausgänge für flexible Installation</li>
         </ul>
-          <div class="detail-price-line">
-            <span class="detail-price" id="detail-price">ab 249 EUR</span>
-            <span class="detail-uvp" id="detail-uvp">UVP: 299 EUR</span>
+                    <div class="detail-price-line">
+            <span class="detail-price" id="detail-price" data-i18n="priceTbd">Preis wird noch festgelegt</span>
           </div>
           <div class="detail-shipping">
-            <strong class="detail-stock" id="detail-stock">Auf Lager</strong>
-            <p id="detail-delivery">Lieferung in 2-3 Werktagen bei heutiger Bestellung.</p>
-            <p class="detail-seller">Verkauf und Versand durch AquaSense.</p>
+            <p id="detail-delivery" data-i18n="deliveryTbd">Lieferzeit wird noch bekanntgegeben.</p>
+            <p class="detail-seller" data-i18n="stockNote">Vorbestellungen werden vorbereitet.</p>
           </div>
         </div>
 
         <aside class="product-detail__buy card">
           <div class="detail-price-main">
-            <div class="detail-price" id="detail-box-price">249 EUR</div>
-            <div class="detail-uvp" id="detail-box-uvp">UVP: 299 EUR</div>
-            <p class="detail-saving" id="detail-saving">Du sparst 50 EUR (17%)</p>
-          </div>
-          <p class="detail-delivery" id="detail-box-delivery">Versand: gratis Standardversand.</p>
-          <p class="detail-stock" id="detail-box-stock">Auf Lager.</p>
-          <button class="button" id="add-to-cart-detail" type="button"
-            data-add-to-cart
-            data-product-name="AquaSense - Weiss"
-            data-price="249"
-            data-color="Weiss"
-            aria-label="Weiss in den Warenkorb legen">In den Warenkorb</button>
+            <div class="detail-price" id="detail-box-price" data-i18n="priceTbd">Preis wird noch festgelegt</div>
+            </div>
+          <p class="detail-delivery" id="detail-box-delivery" data-i18n="deliveryTbd">Lieferzeit wird noch bekanntgegeben.</p>
+          <p class="detail-stock" id="detail-box-stock" data-i18n="stockNote">Vorbestellungen werden vorbereitet.</p>
+          <a class="button" href="index.html#waitlist" data-i18n="heroPrimaryCta">Auf die Warteliste</a>
           <a class="button button--ghost" href="shop.html">Zurück zum Shop</a>
         </aside>
       </div>
@@ -255,26 +246,7 @@
           </tbody>
         </table>
       </div>
-    </section>
-
-    <div class="cart-panel" id="cart-panel" hidden>
-      <div class="cart-panel__backdrop" data-close-cart></div>
-      <aside class="cart-panel__body" role="dialog" aria-modal="true" aria-labelledby="cart-title">
-        <header class="cart-panel__header">
-          <h2 id="cart-title" data-i18n="cartTitle">Warenkorb</h2>
-          <button class="icon-button" type="button" data-close-cart aria-label="Warenkorb schließen" data-i18n-aria="closeLabel">×</button>
-        </header>
-        <ul class="cart-items" id="cart-items"></ul>
-        <div class="cart-summary">
-          <span data-i18n="cartSumLabel">Summe</span>
-          <strong id="cart-total">0 €</strong>
-        </div>
-        <div class="cart-actions">
-          <button class="button button--ghost" type="button" data-close-cart data-i18n="cartContinue">Weiter einkaufen</button>
-          <button class="button" type="button" id="checkout-btn" data-i18n="cartCheckout">Zur Kasse</button>
-        </div>
-      </aside>
-    </div>
+    </section>
   </main>
 
   <footer class="footer" role="contentinfo">
@@ -359,3 +331,7 @@
   <script src="script.js" defer></script>
 </body>
 </html>
+
+
+
+
