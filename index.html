@@ -100,6 +100,12 @@
       </div>
     </section>
 
+    <section class="section container">
+      <p class="lead">
+        AquaSense misst die Qualität deines Leitungswassers in Echtzeit und macht sichtbar, was du sonst nicht sehen kannst – von Wasserhärte, Temperatur und Trübung bis hin zu Leitfähigkeit und weiteren wichtigen Qualitätsparametern. Im Inneren des Geräts erfasst ein präziser Sensorstrom kontinuierlich die Daten, wertet sie intelligent aus und stellt dir übersichtliche Auswertungen sowie Warnhinweise bei Auffälligkeiten zur Verfügung. Der Einbau erfolgt durch einen Fachinstallateur direkt in deine bestehende Hauswasserleitung und ist ohne große Umbauten möglich – so erhältst du maximale Transparenz über deine Wasserqualität, ohne deinen Alltag zu verändern.
+      </p>
+    </section>
+
     <section id="features" class="section container">
       <header class="section__header">
         <h2 data-i18n="featuresTitle">Funktionen für Klarheit und Sicherheit</h2>
@@ -114,7 +120,8 @@
             </svg>
           </div>
           <h3 data-i18n="feat1Title">Echtzeit-Monitoring</h3>
-          <p data-i18n="feat1Text">pH, Leitfähigkeit (uS/cm), Temperatur, Trübung; Sensor-Plattform erweiterbar.</p>
+          <p data-i18n="feat1Text">pH, Leitfähigkeit (µS/cm), Temperatur, Trübung, gelöster Sauerstoff, ORP; Plattform erweiterbar.</p>
+          <button class="card__link" type="button" data-modal="feature-modal" data-feature-target="feature-monitoring" data-feature-title="Echtzeit-Monitoring" data-i18n="featMore">Mehr erfahren</button>
         </article>
         <article class="card reveal">
           <div class="icon-circle" aria-hidden="true">
@@ -125,6 +132,7 @@
           </div>
           <h3 data-i18n="feat2Title">Intelligente Alerts</h3>
           <p data-i18n="feat2Text">Push und E-Mail, sobald ein Wert deine definierten Schwellen über- oder unterschreitet.</p>
+          <button class="card__link" type="button" data-modal="feature-modal" data-feature-target="feature-alerts" data-feature-title="Intelligente Alerts" data-i18n="featMore">Mehr erfahren</button>
         </article>
         <article class="card reveal">
           <div class="icon-circle" aria-hidden="true">
@@ -137,6 +145,7 @@
           </div>
           <h3 data-i18n="feat3Title">Live-Dashboard</h3>
           <p data-i18n="feat3Text">Alle Werte und Trends zentral dargestellt, inklusive Export.</p>
+          <button class="card__link" type="button" data-modal="feature-modal" data-feature-target="feature-dashboard" data-feature-title="Live-Dashboard" data-i18n="featMore">Mehr erfahren</button>
         </article>
         <article class="card reveal">
           <div class="icon-circle" aria-hidden="true">
@@ -147,8 +156,25 @@
           </div>
           <h3 data-i18n="feat4Title">Historie &amp; Trends</h3>
           <p data-i18n="feat4Text">Verläufe mit Wochen- und Monatsreports, damit du Veränderungen früh erkennst.</p>
+          <button class="card__link" type="button" data-modal="feature-modal" data-feature-target="feature-history" data-feature-title="Historie &amp; Trends" data-i18n="featMore">Mehr erfahren</button>
         </article>
       </div>
+    </section>
+
+    <section class="visually-hidden" aria-hidden="true">
+      <h2>Feature-Details</h2>
+      <p id="feature-monitoring" data-feature-content>
+        Echtzeit-Monitoring: kontinuierliche Messung von pH, Leitfähigkeit (µS/cm), Temperatur, Trübung, gelöstem Sauerstoff und Redox (ORP) direkt in der Leitung. Sensor-Plattform modular erweiterbar für weitere Parameter. Messungen laufen lokal, latenzarm und werden sofort visualisiert.
+      </p>
+      <p id="feature-alerts" data-feature-content>
+        Intelligente Alerts: Push/E-Mail, sobald ein Wert deine Schwellen über- oder unterschreitet. Schwellen pro Profil oder Anwendung definierbar (z. B. Kaffee, Aquarium, Babywasser). Warnungen enthalten Kontext und Empfehlungen, damit du sofort handeln kannst.
+      </p>
+      <p id="feature-dashboard" data-feature-content>
+        Live-Dashboard: zentrale Ansicht für alle Werte, Trends und Status pro Anwendung. Inline-Charting, Quick-Filter für Zeiträume, Export (CSV/JSON) für Dokumentation oder Sharing. Geräte- und Profil-Übersicht, damit du immer weißt, was wo passiert.
+      </p>
+      <p id="feature-history" data-feature-content>
+        Historie &amp; Trends: Wochen- und Monatsreports, Ereignis-Markierungen (z. B. Filterwechsel), Trend-Alerts bei schleichenden Veränderungen. Export und Vergleich von Zeiträumen, um Muster zu erkennen und rechtzeitig gegenzusteuern.
+      </p>
     </section>
 
     <section id="steps" class="section container">
@@ -178,36 +204,26 @@
         <p data-i18n="waitlistSub">Erhalte Updates zur Entwicklung, Beta-Einladungen und das Produkt-PDF.</p>
       </header>
       <form class="form" data-form="waitlist" action="https://formsubmit.co/service.aquasense@gmail.com" method="POST" aria-live="polite">
-        <input type="hidden" name="_subject" value="AquaSense Waitlist">
-        <input type="hidden" name="_next" value="#thank-you">
-        <input type="text" name="_honey" class="visually-hidden" tabindex="-1" aria-hidden="true">
+        <input type="hidden" name="_subject" value="AquaSense Newsletter">
+        <input type="hidden" name="_next" value="index.html#thank-you">
+        <input type="text" name="_honey" aria-hidden="true" tabindex="-1" autocomplete="off" style="display:none">
         <div class="form__grid">
-          <label data-i18n="labelEmail"> E-Mail *
-            <input type="email" name="email" required aria-required="true" placeholder="dein@email.de"
-              data-i18n-placeholder="placeholderEmail" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}" />
+          <label for="waitlist-email">
+            <span data-i18n="labelEmail">E-Mail-Adresse *</span>
+            <input type="email" id="waitlist-email" name="email" placeholder="du@example.de" data-i18n-placeholder="placeholderEmail" required autocomplete="email">
           </label>
-        </div>
-        <label class="checkbox">
-          <input type="checkbox" name="consent" required aria-required="true">
-          <span data-i18n-html="consentText">Ich stimme der Verarbeitung meiner Angaben gemäß <button type="button"
-              class="link-button" data-modal="privacy">Datenschutz</button> zu.</span>
-        </label>
-        <p class="form__hint" data-i18n="doubleOpt">Double-Opt-In: Du erhältst eine Bestätigung per E-Mail.</p>
-        <div class="form__actions">
-          <button type="submit" class="button" data-i18n="submitBtn">Absenden</button>
-          <div class="status" role="status" aria-live="polite"></div>
+          <label class="checkbox">
+            <input type="checkbox" id="waitlist-consent" name="consent" required>
+            <span data-i18n-html="consentText">Ich stimme der Verarbeitung meiner Daten laut <button type="button" class="link-button" data-modal="privacy">Datenschutzhinweis</button> zu.</span>
+          </label>
+          <p class="form__hint" data-i18n="doubleOpt">Double-Opt-In: Du erhältst eine Bestätigung per E-Mail.</p>
+          <div class="form__actions">
+            <button class="button" type="submit" data-i18n="submitBtn">Zum Newsletter anmelden</button>
+            <p class="status" role="status" aria-live="polite"></p>
+          </div>
         </div>
       </form>
     </section>
-
-    <section id="thank-you" class="section container section--muted" hidden>
-      <h2 data-i18n="thanksTitle">Danke für deine Anmeldung!</h2>
-      <p data-i18n="thanksText">Wir melden uns bald mit Neuigkeiten zu AquaSense.</p>
-        <a class="button" href="#top" data-i18n="thanksBack">Zurück zur Startseite</a>
-    </section>
-
-    
-
   </main>
 
   <footer class="footer" role="contentinfo">
@@ -248,6 +264,20 @@
     <div class="cookie-banner__actions">
       <button class="button button--ghost" type="button" id="cookie-decline" data-i18n="cookieDecline">Ablehnen</button>
       <button class="button" type="button" id="cookie-accept" data-i18n="cookieAccept">Akzeptieren</button>
+    </div>
+  </div>
+
+  <div class="modal" id="feature-modal" role="dialog" aria-modal="true" aria-labelledby="feature-modal-title" hidden>
+    <div class="modal__backdrop" data-close="feature-modal"></div>
+    <div class="modal__dialog" role="document" tabindex="-1">
+      <header class="modal__header">
+        <h2 id="feature-modal-title" data-feature-title>Mehr erfahren</h2>
+        <button type="button" class="icon-button" data-close="feature-modal" aria-label="Schließen"
+          data-i18n-aria="closeLabel">✕</button>
+      </header>
+      <div class="modal__body">
+        <div class="feature-modal__content"></div>
+      </div>
     </div>
   </div>
 
@@ -321,17 +351,15 @@
       <header class="modal__header">
         <h2 id="privacy-title" data-i18n="privacyTitle">Datenschutz</h2>
         <button type="button" class="icon-button" data-close="privacy" aria-label="Schließen"
-          data-i18n-aria="closeLabel">✕</button>
+          data-i18n-aria="closeLabel">&times;</button>
       </header>
       <div class="modal__body">
-        <p data-i18n="privacyLine1">Verantwortlich: [Firma/Name, Adresse, E-Mail].</p>
-        <p data-i18n="privacyLine2">Newsletter-Daten: E-Mail (Pflicht), Name (optional). Rechtsgrundlage Einwilligung
-          Art. 6 Abs.1 lit. a DSGVO. Double-Opt-In; Widerruf jederzeit möglich.</p>
-        <p data-i18n="privacyLine3">Speicherdauer: bis Widerruf. Keine Weitergabe ohne Einwilligung. Übertragung via
-          TLS.</p>
-        <p data-i18n="privacyLine4">Betroffenenrechte: Auskunft, Berichtigung, Löschung, Einschränkung,
-          Datenübertragbarkeit, Beschwerde bei Aufsichtsbehörde.</p>
-        <p data-i18n="privacyLine5">Opt-in Cloud-Sync: deaktiviert per Default, aktivierbar in der App.</p>
+        <p data-i18n="privacyLine1"><strong>Verantwortlich</strong>: AquaSense, E-Mail: service.aquasense@gmail.com.</p>
+        <p data-i18n="privacyLine2"><strong>Zweck und Umfang</strong>: Wir erheben deine E-Mail-Adresse (und ggf. freiwillige Angaben), um dir unseren Newsletter zuzusenden und dich über Neuigkeiten zu AquaSense zu informieren.</p>
+        <p data-i18n="privacyLine3"><strong>Einsatz von FormSubmit</strong>: Wir nutzen FormSubmit (FormSubmit.co) für die technische Bereitstellung und Übermittlung. FormSubmit leitet deine Eingaben per E-Mail an uns weiter und verarbeitet sie nur zur Übermittlung. Details: <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener">https://formsubmit.co/privacy.pdf</a></p>
+        <p data-i18n="privacyLine4"><strong>Rechtsgrundlage</strong>: Deine Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO durch Ankreuzen der Checkbox und Absenden des Formulars.</p>
+        <p data-i18n="privacyLine5"><strong>Speicherdauer</strong>: Wir speichern deine Daten, bis du den Newsletter abbestellst oder deine Einwilligung widerrufst, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+        <p data-i18n="privacyLine6"><strong>Widerruf &amp; Rechte</strong>: Du kannst deine Einwilligung jederzeit widerrufen (z. B. über den Abmeldelink oder per E-Mail an uns). Du hast Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Beschwerde bei einer Aufsichtsbehörde.</p>
       </div>
     </div>
   </div>

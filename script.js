@@ -32,6 +32,10 @@
   const cookieBanner = document.querySelector('.cookie-banner');
   const cookieAcceptBtn = document.getElementById('cookie-accept');
   const cookieDeclineBtn = document.getElementById('cookie-decline');
+  const featureModal = document.getElementById('feature-modal');
+  const featureModalTitle = featureModal?.querySelector('[data-feature-title]');
+  const featureModalContent = featureModal?.querySelector('.feature-modal__content');
+  const featureContentEls = document.querySelectorAll('[data-feature-content]');
   let analyticsLoaded = false;
 
   const baseTexts = { text: {}, html: {}, placeholder: {}, alt: {}, aria: {} };
@@ -94,6 +98,16 @@
     });
   });
 
+  document.querySelectorAll('[data-feature-target]').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = btn.dataset.featureTarget;
+      const source = targetId ? document.getElementById(targetId) : null;
+      if (featureModalContent) featureModalContent.innerHTML = source?.innerHTML || '';
+      if (featureModalTitle) featureModalTitle.textContent = btn.dataset.featureTitle || btn.textContent || '';
+    });
+  });
+
   const translations = {
     en: {
       skip: 'Skip to content',
@@ -129,8 +143,9 @@
       badgeUsecases: 'Home • Aquatics • Coffee & Tea',
       featuresTitle: 'Features for clarity and peace of mind',
       featuresSub: 'Real-time data, alerts, dashboard, history & trends.',
+      featMore: 'Learn more',
       feat1Title: 'Real-time monitoring',
-      feat1Text: 'pH, conductivity (uS/cm), temperature, turbidity; expandable sensor platform.',
+      feat1Text: 'pH, conductivity (µS/cm), temperature, turbidity, dissolved oxygen, ORP; expandable platform.',
       feat2Title: 'Intelligent alerts',
       feat2Text: 'Push/email the moment a value crosses your thresholds.',
       feat3Title: 'Live dashboard',
