@@ -1066,20 +1066,15 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
   // Initial befüllen der Detailseite (falls aktiv)
   populateProductDetail();
 
-  // Whitepaper popup
+  // Whitepaper download
   whitepaperBtn?.addEventListener('click', () => {
-    const whitepaper = document.getElementById('whitepaper');
-    if (!whitepaper) return;
-    const win = window.open('', '_blank');
-    if (!win) return;
-    const style = `
-      <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 24px; line-height: 1.6; color: #0b1220; background: #ffffff; }
-        h1, h2 { color: #0b1220; }
-        svg { max-width: 100%; height: auto; margin-top: 12px; }
-      </style>
-    `;
-    win.document.write(`<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"><title>AquaSense Whitepaper</title>${style}</head><body>${whitepaper.innerHTML}</body></html>`);
-    win.document.close();
+    const link = document.createElement('a');
+    link.href = 'assets/Whitepaper.pdf';
+    link.download = 'AquaSense-Whitepaper.pdf';
+    link.target = '_blank';
+    link.rel = 'noopener';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
   });
 })();
