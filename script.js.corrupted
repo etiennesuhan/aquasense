@@ -1,4 +1,4 @@
-// AquaSense interactions and accessibility
+﻿// AquaSense interactions and accessibility
 (function () {
   const root = document.body;
   const page = document.body.dataset.page || 'home';
@@ -128,15 +128,15 @@
     en: {
       skip: 'Skip to content',
       menu: 'Menu',
-      docTitle: 'AquaSense – Clean water. Clearly in sight.',
+      docTitle: 'AquaSense â€“ Clean water. Clearly in sight.',
       docDesc: 'AquaSense measures your water quality (pH, conductivity, temperature, turbidity) in real time and sends smart alerts. Concept phase, Made in Germany.',
-      docTitleApp: 'AquaSense App – your water in view',
+      docTitleApp: 'AquaSense App â€“ your water in view',
       docDescApp: 'Experience the AquaSense app: live values, alerts, history and profiles in a modern interface.',
-      docTitleShop: 'AquaSense Shop – choose your design',
+      docTitleShop: 'AquaSense Shop â€“ choose your design',
       docDescShop: 'Explore AquaSense in three color variants and add your favourite design to the cart.',
-      docTitleRequest: 'AquaSense – Custom request',
+      docTitleRequest: 'AquaSense â€“ Custom request',
       docDescRequest: 'Send us your custom AquaSense request for projects or collaborations.',
-      docTitleFaq: 'AquaSense – Frequently asked questions',
+      docTitleFaq: 'AquaSense â€“ Frequently asked questions',
       docDescFaq: 'Answers to the most common questions about AquaSense, availability, privacy and features.',
       navStart: 'Start',
       navFeatures: 'Features',
@@ -147,21 +147,21 @@
       navShop: 'Shop',
       navCart: 'Cart',
       navCta: 'Join the waitlist',
-      heroEyebrow: 'Concept phase • Made in Germany',
+      heroEyebrow: 'Concept phase â€¢ Made in Germany',
       heroTitle: 'Clean water. Clearly in sight.',
-      heroLead: 'AquaSense measures your water quality at the line in real time – with smart alerts when values shift.',
+      heroLead: 'AquaSense measures your water quality at the line in real time â€“ with smart alerts when values shift.',
       heroPrimaryCta: 'Join the waitlist',
       heroRequestCta: 'Send custom request',
       heroSecondaryCta: 'Download product whitepaper',
       heroImgAlt: 'AquaSense product image',
       badgeConcept: 'Concept phase',
       badgeMade: 'Made in Germany',
-      badgeUsecases: 'Home • Aquatics • Coffee & Tea',
+      badgeUsecases: 'Home â€¢ Aquatics â€¢ Coffee & Tea',
       featuresTitle: 'Features for clarity and peace of mind',
       featuresSub: 'Real-time data, alerts, dashboard, history & trends.',
       featMore: 'Learn more',
       feat1Title: 'Real-time monitoring',
-      feat1Text: 'pH, conductivity (µS/cm), temperature, turbidity, dissolved oxygen, ORP; expandable platform.',
+      feat1Text: 'pH, conductivity (ÂµS/cm), temperature, turbidity, dissolved oxygen, ORP; expandable platform.',
       feat2Title: 'Intelligent alerts',
       feat2Text: 'Push/email the moment a value crosses your thresholds.',
       feat3Title: 'Live dashboard',
@@ -180,16 +180,16 @@
       step2Text: 'Pair with the app via Wi-Fi or Bluetooth in seconds.',
       step3Title: '3. Monitor',
       step3Text: 'See live values, get alerts, act on recommendations.',
-      appTitle: 'The app – clear, fast, helpful',
+      appTitle: 'The app â€“ clear, fast, helpful',
       appSub: 'All relevant data, alerts and profiles in one modern interface.',
       screenLive: 'Live values',
       metricPh: 'pH 7.2',
-      metricCond: 'Conductivity 320 µS/cm',
-      metricTemp: 'Temperature 18.4 °C',
+      metricCond: 'Conductivity 320 ÂµS/cm',
+      metricTemp: 'Temperature 18.4 Â°C',
       screenDevices: 'Device management',
-      deviceAquarium: 'Aquarium – ok',
-      deviceCoffee: 'Coffee – alert',
-      deviceBaby: 'Baby water – ok',
+      deviceAquarium: 'Aquarium â€“ ok',
+      deviceCoffee: 'Coffee â€“ alert',
+      deviceBaby: 'Baby water â€“ ok',
       chartTitle: 'Live chart',
       chipPh: 'pH',
       chipCond: 'Conductivity',
@@ -217,12 +217,12 @@
       specPowerLabel: 'Power',
       specPower: '5V USB-C',
       specOpLabel: 'Operation',
-      specOp: '0–50°C',
+      specOp: '0â€“50Â°C',
       specIpLabel: 'Protection',
       specIp: 'IPX4 (target)',
       specSizeLabel: 'Dimensions',
-      specSize: '90 × 45 mm (prototype)',
-      wpTitle: 'AquaSense – Product overview (snapshot)',
+      specSize: '90 Ã— 45 mm (prototype)',
+      wpTitle: 'AquaSense â€“ Product overview (snapshot)',
       wpProblemTitle: 'Problem & motivation',
       wpProblemText: 'Home water quality shifts due to treatment, pipes or filter age. Invisible changes in pH, minerals and clarity affect taste, safety, appliances and aquariums.',
       wpArchTitle: 'Architecture overview',
@@ -233,7 +233,7 @@
       wpPrivacyTitle: 'Privacy principles',
       wpPrivacyText: 'Local first: data stays on the device. Cloud sync is optional, encrypted and consent-based.',
       wpSpecsTitle: 'Preliminary specifications',
-      wpSpecsText: 'Wi-Fi 2.4 GHz, Bluetooth LE, 5V USB-C, 0–50°C, IPX4 target, 90 × 45 mm (current prototype).',
+      wpSpecsText: 'Wi-Fi 2.4 GHz, Bluetooth LE, 5V USB-C, 0â€“50Â°C, IPX4 target, 90 Ã— 45 mm (current prototype).',
       wpRoadmapTitle: 'Roadmap & validation',
       wpRoadmap1: 'Phase 1: Lab validation of sensors',
       wpRoadmap2: 'Phase 2: Private beta with households and enthusiasts',
@@ -248,7 +248,7 @@
       faq3A: 'No, AquaSense works without the optional filter.',
       faq4Q: 'How are thresholds defined?',
       faq4A: 'Standard recommendations + personal adjustments in the app.',
-      faq5Q: 'Waitlist – what happens next?',
+      faq5Q: 'Waitlist â€“ what happens next?',
       faq5A: 'We share prototype tests, early access and updates.',
       faq6Q: 'How do I get alerts?',
       faq6A: 'Push notifications and email when thresholds are hit.',
@@ -269,7 +269,7 @@
       newsletterLabel: 'Email address',
       newsletterCta: 'Subscribe',
       appHeroEyebrow: 'App & dashboard',
-      appHeroTitle: 'AquaSense app – your water, always in view',
+      appHeroTitle: 'AquaSense app â€“ your water, always in view',
       appHeroLead: 'Monitor pH, conductivity, temperature and more in real time, get alerts and share profiles.',
       appHeroCta: 'Join the waitlist',
       appHeroSecondary: 'View shop',
@@ -277,22 +277,22 @@
       appCtaSub: 'Get early access to the app and the next prototypes.',
       appRequestCta: 'Custom request',
       shopEyebrow: 'Variants',
-      shopTitle: 'AquaSense variants – choose your design',
+      shopTitle: 'AquaSense variants â€“ choose your design',
       shopLead: 'Three colorways, the same sensing. Pick your favourite.',
       shopWaitlist: 'Join the waitlist',
       shopRequest: 'Custom request',
       shopGridTitle: 'All colors at a glance',
-      shopGridSub: 'Click “Select” to save your preferred design.',
+      shopGridSub: 'Click â€œSelectâ€ to save your preferred design.',
       productColor1: 'White',
       productColor2: 'Obsidian',
       productColor3: 'Graphite',
-      product1Title: 'AquaSense – White',
+      product1Title: 'AquaSense â€“ White',
       product1Desc: 'Bright, minimal look for modern kitchens and labs.',
       product1Price: 'Pricing to be announced',
-      product2Title: 'AquaSense – Obsidian',
+      product2Title: 'AquaSense â€“ Obsidian',
       product2Desc: 'Obsidian look with bold accents, ideal for coffee bars.',
       product2Price: 'Pricing to be announced',
-      product3Title: 'AquaSense – Graphite',
+      product3Title: 'AquaSense â€“ Graphite',
       product3Desc: 'Graphite grey, robust and timeless for workshop or utility rooms.',
       product3Price: 'Pricing to be announced',
       productCta: 'Select',
@@ -310,11 +310,11 @@
       requestEmail: 'Email *',
       requestMessage: 'Your request',
       requestSubmit: 'Send request',
-      footerTagline: 'AquaSense · Clean water. Clearly in sight.',
+      footerTagline: 'AquaSense Â· Clean water. Clearly in sight.',
       footerSummary: 'Real-time monitoring with alerts, trends and profiles for home, coffee & tea and aquatics. Privacy by design.',
       footerContactTitle: 'Contact',
       footerContactMail: 'service.aquasense@gmail.com',
-      footerContactHours: 'Mon–Fri, 9am–5pm CET',
+      footerContactHours: 'Monâ€“Fri, 9amâ€“5pm CET',
       footerLinksTitle: 'Shortcuts',
       footerLinkHome: 'Start',
       footerLinkApp: 'App',
@@ -333,9 +333,9 @@
 
 const statusTexts = {
     de: {
-      statusInvalid: 'Bitte E-Mail und Zustimmung prüfen.',
+      statusInvalid: 'Bitte E-Mail und Zustimmung prÃ¼fen.',
       statusSending: 'Sende...',
-      statusSuccess: 'Danke! Du erhältst gleich eine Bestätigung.',
+      statusSuccess: 'Danke! Du erhÃ¤ltst gleich eine BestÃ¤tigung.',
       statusError: 'Fehler beim Senden. Bitte erneut versuchen.'
     },
     en: {
@@ -518,7 +518,7 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
   // Canvas chart (simple render)
   const datasets = {
     ph: { label: 'pH', color: '#1E90FF', data: mockSeries(7.1, 0.25) },
-    conductivity: { label: 'Leitfähigkeit', color: '#00C2FF', data: mockSeries(320, 40) }
+    conductivity: { label: 'LeitfÃ¤higkeit', color: '#00C2FF', data: mockSeries(320, 40) }
   };
   let currentMetric = 'ph';
 
@@ -600,22 +600,22 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     drawChart();
   }
 
-  // Produktdetail: Varianten-Daten und Befüllung
+  // Produktdetail: Varianten-Daten und BefÃ¼llung
   const productVariants = {
     color1: {
-      title: { de: 'AquaSense – Weiß', en: 'AquaSense – White' },
-      color: { de: 'Weiß', en: 'White' },
+      title: { de: 'AquaSense â€“ WeiÃŸ', en: 'AquaSense â€“ White' },
+      color: { de: 'WeiÃŸ', en: 'White' },
       image: 'assets/color3/white.png',
       price: null,
       uvp: null,
       sku: 'AS-C1',
       desc: {
-        de: 'Helle, puristische Variante für moderne Küchen und Labor-Setups.',
+        de: 'Helle, puristische Variante fÃ¼r moderne KÃ¼chen und Labor-Setups.',
         en: 'Bright, minimal look for modern kitchens and labs.'
       },
       highlights: {
         de: [
-          'Live-Messungen (pH, Leitfähigkeit, Temperatur, Trübung)',
+          'Live-Messungen (pH, LeitfÃ¤higkeit, Temperatur, TrÃ¼bung)',
           'Schwellenalarme und Trend-Insights in der App',
           'USB-C Stromversorgung, WLAN 2.4 GHz/BLE'
         ],
@@ -631,21 +631,21 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
       reviews: 128
     },
     color2: {
-      title: { de: 'AquaSense – Obsidian', en: 'AquaSense – Obsidian' },
+      title: { de: 'AquaSense â€“ Obsidian', en: 'AquaSense â€“ Obsidian' },
       color: { de: 'Obsidian', en: 'Obsidian' },
       image: 'assets/color2/obsidian.png',
       price: null,
       uvp: null,
       sku: 'AS-C2',
       desc: {
-        de: 'Obsidian-Look mit markanten Akzenten, ideal für Coffee- und Bar-Umgebungen.',
+        de: 'Obsidian-Look mit markanten Akzenten, ideal fÃ¼r Coffee- und Bar-Umgebungen.',
         en: 'Obsidian look with bold accents, ideal for coffee and bar setups.'
       },
       highlights: {
         de: [
-          'Robustes Gehäuse, leicht zu reinigen',
-          'App-Profile für Espresso, Pour-Over und Tee',
-          'Grenzwerte anpassbar für Specialty Coffee'
+          'Robustes GehÃ¤use, leicht zu reinigen',
+          'App-Profile fÃ¼r Espresso, Pour-Over und Tee',
+          'Grenzwerte anpassbar fÃ¼r Specialty Coffee'
         ],
         en: [
           'Durable housing, easy to wipe clean',
@@ -659,21 +659,21 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
       reviews: 96
     },
     color3: {
-      title: { de: 'AquaSense – Graphit', en: 'AquaSense – Graphite' },
+      title: { de: 'AquaSense â€“ Graphit', en: 'AquaSense â€“ Graphite' },
       color: { de: 'Graphit', en: 'Graphite' },
       image: 'assets/color1/graphit.png',
       price: null,
       uvp: null,
       sku: 'AS-C3',
       desc: {
-        de: 'Graphitgrau, robust und zeitlos – perfekt für Werkstatt, Labor oder Utility-Raum.',
-        en: 'Graphite gray, robust and timeless – perfect for workshop, lab or utility room.'
+        de: 'Graphitgrau, robust und zeitlos â€“ perfekt fÃ¼r Werkstatt, Labor oder Utility-Raum.',
+        en: 'Graphite gray, robust and timeless â€“ perfect for workshop, lab or utility room.'
       },
       highlights: {
         de: [
-          'IPX4-Ziel, spritzwassergeschützt für raue Umgebungen',
+          'IPX4-Ziel, spritzwassergeschÃ¼tzt fÃ¼r raue Umgebungen',
           'Kalibrierhinweise in der App',
-          'Optionale Cloud-Sync (Opt-in) für Teams'
+          'Optionale Cloud-Sync (Opt-in) fÃ¼r Teams'
         ],
         en: [
           'Targeting IPX4 splash resistance for tougher spaces',
@@ -693,16 +693,16 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
       title: { de: 'AquaSense - Weiss', en: 'AquaSense - White' },
       color: { de: 'Weiss', en: 'White' },
       desc: {
-        de: 'Intelligent gesteuertes Wasseraufbereitungs- und Analysegerät für Hygiene, Geschmack und Sicherheit im Haushalt.',
+        de: 'Intelligent gesteuertes Wasseraufbereitungs- und AnalysegerÃ¤t fÃ¼r Hygiene, Geschmack und Sicherheit im Haushalt.',
         en: 'Intelligent water treatment and analysis device for hygiene, taste and safety at home.'
       },
       highlights: {
         de: [
-          'Echtzeit-Wasseranalyse (Trübung, Leitfähigkeit, Temperatur, Verunreinigungen)',
+          'Echtzeit-Wasseranalyse (TrÃ¼bung, LeitfÃ¤higkeit, Temperatur, Verunreinigungen)',
           'Modulare Filtration gegen Mikroplastik, Chlor, Sedimente u. a.',
           'Smarte App mit Live-Daten, Warnungen und Empfehlungen',
           'Energieeffizientes Design mit langlebigen Materialien',
-          'Zwei Eingänge und zwei Ausgänge für flexible Installation'
+          'Zwei EingÃ¤nge und zwei AusgÃ¤nge fÃ¼r flexible Installation'
         ],
         en: [
           'Real-time water analysis (turbidity, conductivity, temperature, impurities)',
@@ -716,16 +716,16 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     color2: {
       title: { de: 'AquaSense - Obsidian', en: 'AquaSense - Obsidian' },
       desc: {
-        de: 'Premium-Variante mit dunkler Optik, identischer Sensorik und modularer Filtration für maximale Wasserqualität.',
+        de: 'Premium-Variante mit dunkler Optik, identischer Sensorik und modularer Filtration fÃ¼r maximale WasserqualitÃ¤t.',
         en: 'Premium dark look with the same sensing and modular filtration for top water quality.'
       },
       highlights: {
         de: [
-          'Echtzeit-Wasseranalyse (Trübung, Leitfähigkeit, Temperatur, Verunreinigungen)',
+          'Echtzeit-Wasseranalyse (TrÃ¼bung, LeitfÃ¤higkeit, Temperatur, Verunreinigungen)',
           'Modulare Filtration gegen Mikroplastik, Chlor, Sedimente u. a.',
           'Smarte App mit Live-Daten, Warnungen und Empfehlungen',
           'Energieeffizientes Design mit LED-Statusring',
-          'Zwei Eingänge und zwei Ausgänge für flexible Installation'
+          'Zwei EingÃ¤nge und zwei AusgÃ¤nge fÃ¼r flexible Installation'
         ],
         en: [
           'Real-time water analysis (turbidity, conductivity, temperature, impurities)',
@@ -740,16 +740,16 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     color3: {
       title: { de: 'AquaSense - Graphit', en: 'AquaSense - Graphite' },
       desc: {
-        de: 'Robuste Graphit-Optik mit vollständiger Sensorik und smarter Filtration für anspruchsvolle Umgebungen.',
+        de: 'Robuste Graphit-Optik mit vollstÃ¤ndiger Sensorik und smarter Filtration fÃ¼r anspruchsvolle Umgebungen.',
         en: 'Robust graphite look with full sensing and smart filtration for demanding environments.'
       },
       highlights: {
         de: [
-          'Echtzeit-Wasseranalyse (Trübung, Leitfähigkeit, Temperatur, Verunreinigungen)',
+          'Echtzeit-Wasseranalyse (TrÃ¼bung, LeitfÃ¤higkeit, Temperatur, Verunreinigungen)',
           'Modulare Filtration gegen Mikroplastik, Chlor, Sedimente u. a.',
           'Smarte App mit Live-Daten, Warnungen und Empfehlungen',
-          'Energieeffizientes, robustes Gehäuse',
-          'Zwei Eingänge und zwei Ausgänge für flexible Installation'
+          'Energieeffizientes, robustes GehÃ¤use',
+          'Zwei EingÃ¤nge und zwei AusgÃ¤nge fÃ¼r flexible Installation'
         ],
         en: [
           'Real-time water analysis (turbidity, conductivity, temperature, impurities)',
@@ -762,12 +762,12 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     }
   };
 
-  function populateProductDetail(langOverride) {
-    if (page !== 'product') return;
-    const lang = langOverride || currentLang || 'de';
+    function populateProductDetail(langOverride) {
+    if (page !== "product") return;
+    const lang = langOverride || currentLang || "de";
     const params = new URLSearchParams(window.location.search);
-    const storedVariant = localStorage.getItem('as-last-variant');
-    const variantKey = (params.get('variant') || storedVariant || 'color1').toLowerCase();
+    const storedVariant = localStorage.getItem("as-last-variant");
+    const variantKey = (params.get("variant") || storedVariant || "color1").toLowerCase();
     const baseVariant = productVariants[variantKey] || productVariants.color1;
     const override = variantOverrides[variantKey];
     const variant = override ? {
@@ -780,252 +780,12 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
       delivery: { ...baseVariant.delivery, ...(override.delivery || {}) },
       stock: { ...baseVariant.stock, ...(override.stock || {}) }
     } : baseVariant;
-    localStorage.setItem('as-last-variant', variantKey);
-    const pick = (obj) => (typeof obj === 'string' ? obj : obj?.[lang] || obj?.de || '');
-        const priceFmt = (value) => {
-      try {
-        return new Intl.NumberFormat(lang === "en" ? "en-US" : "de-DE", { style: "currency", currency: "EUR" }).format(value);
-      } catch (err) {
-        return `${value?.toFixed ? value.toFixed(2) : value} �`;
-      }
-    };
-    const priceText = (value) => {
-      if (typeof value === "number" && value > 0) return priceFmt(value);
-      return translations[currentLang]?.priceTbd || "Preis wird noch festgelegt";
-    };
-
-    document.title = `${pick(variant.title)} | AquaSense`;
-    if (metaDescEl) metaDescEl.setAttribute('content', pick(variant.desc));
-
-    const breadcrumb = document.getElementById('breadcrumb-product');
-    const badge = document.getElementById('detail-color');
-    const titleEl = document.getElementById('detail-title');
-    const descEl = document.getElementById('detail-desc');
-    const priceEl = document.getElementById('detail-price');
-    const uvpEl = document.getElementById('detail-uvp');
-    const stockEl = document.getElementById('detail-stock');
-    const deliveryEl = document.getElementById('detail-delivery');
-    const highlightsEl = document.getElementById('detail-highlights');
-    const skuEl = document.getElementById('detail-sku');
-    const imageEl = document.getElementById('detail-image');
-    const ratingEl = document.querySelector('.rating');
-    const ratingStarsEl = document.querySelector('.rating__stars');
-    const ratingCountEl = document.querySelector('.rating__count');
-
-    const boxPriceEl = document.getElementById('detail-box-price');
-    const boxUvpEl = document.getElementById('detail-box-uvp');
-    const boxStockEl = document.getElementById('detail-box-stock');
-    const boxDeliveryEl = document.getElementById('detail-box-delivery');
-    const boxSavingEl = document.getElementById('detail-saving');
-    const addBtn = document.getElementById('add-to-cart-detail');
-
-    const saving = variant.uvp > variant.price ? variant.uvp - variant.price : 0;
-    const savingPct = variant.uvp > variant.price ? Math.round((saving / variant.uvp) * 100) : 0;
-
-    if (breadcrumb) breadcrumb.textContent = pick(variant.title);
-    if (badge) badge.textContent = pick(variant.color);
-    if (titleEl) titleEl.textContent = pick(variant.title);
-    if (descEl) descEl.textContent = pick(variant.desc);
-    if (priceEl) priceEl.textContent = priceText(variant.price);
-    if (uvpEl) uvpEl.hidden = true;
-    if (stockEl) stockEl.textContent = pick(variant.stock);
-    if (deliveryEl) deliveryEl.textContent = pick(variant.delivery) || (translations[currentLang]?.deliveryTbd || "Lieferzeit wird noch bekanntgegeben.");
-    if (skuEl) skuEl.textContent = variant.sku;
-    if (imageEl) {
-      imageEl.src = variant.image;
-      imageEl.alt = pick(variant.title);
-    }
-    if (highlightsEl) {
-      highlightsEl.innerHTML = '';
-      (variant.highlights?.[lang] || []).forEach((item) => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        highlightsEl.appendChild(li);
-      });
-    }
-    if (ratingEl) ratingEl.setAttribute('aria-label', `${lang === 'en' ? 'Rating' : 'Bewertung'} ${variant.rating} / 5`);
-    if (ratingStarsEl) ratingStarsEl.textContent = '★★★★★'.slice(0, Math.round(variant.rating)) + '☆'.repeat(5 - Math.round(variant.rating));
-    if (ratingCountEl) ratingCountEl.textContent = `(${variant.reviews})`;
-
-    if (boxPriceEl) boxPriceEl.textContent = priceText(variant.price);
-    if (boxUvpEl) boxUvpEl.hidden = true;
-    if (boxStockEl) boxStockEl.textContent = pick(variant.stock);
-    if (boxDeliveryEl) boxDeliveryEl.textContent = pick(variant.delivery) || (translations[currentLang]?.deliveryTbd || 'Lieferzeit wird noch bekanntgegeben.');
-    if (boxSavingEl) boxSavingEl.hidden = true;
-    if (addBtn) addBtn.hidden = true;
-    }
-  }
-
-    // Cart (shop)
-  const cart = [];
-  const cartUIAvailable = Boolean(cartPanel || addToCartButtons.length);
-  const currencyLocale = currentLang === 'en' ? 'en-US' : 'de-DE';
-
-  const formatCurrency = (value) => {
-    try {
-      return new Intl.NumberFormat(currencyLocale, { style: 'currency', currency: 'EUR' }).format(value);
-    } catch (err) {
-      return `${value.toFixed(2)} €`;
-    }
-  };
-
-  function updateCartCount() {
-    if (!cartCountEl) return;
-    const count = cart.reduce((sum, item) => sum + item.quantity, 0);
-    cartCountEl.textContent = String(count);
-  }
-
-  function renderCart() {
-    if (!cartUIAvailable) return;
-    updateCartCount();
-    if (!cartItemsEl || !cartTotalEl) return;
-    cartItemsEl.innerHTML = '';
-    if (!cart.length) {
-      const empty = document.createElement('li');
-      empty.className = 'cart-empty';
-      empty.textContent = translations[currentLang]?.cartEmpty || 'Dein Warenkorb ist noch leer.';
-      cartItemsEl.appendChild(empty);
-      cartTotalEl.textContent = formatCurrency(0);
-      return;
-    }
-
-    let total = 0;
-    cart.forEach((item, index) => {
-      total += item.price * item.quantity;
-      const li = document.createElement('li');
-      li.className = 'cart-item';
-      li.innerHTML = `
-        <div class="cart-item__info">
-          <p class="cart-item__title">${item.name}</p>
-          <p class="cart-item__meta">${item.color || ''}</p>
-        </div>
-        <div class="cart-item__controls">
-          <div class="cart-qty">
-            <button type="button" class="icon-button" data-action="dec" data-index="${index}" aria-label="${currentLang === 'en' ? 'Decrease quantity' : 'Menge verringern'}">-</button>
-            <span>${item.quantity}</span>
-            <button type="button" class="icon-button" data-action="inc" data-index="${index}" aria-label="${currentLang === 'en' ? 'Increase quantity' : 'Menge erhöhen'}">+</button>
-          </div>
-          <p class="cart-item__price">${formatCurrency(item.price * item.quantity)}</p>
-          <button type="button" class="link-button cart-remove" data-action="remove" data-index="${index}">${currentLang === 'en' ? 'Remove' : 'Entfernen'}</button>
-        </div>
-      `;
-      cartItemsEl.appendChild(li);
-    });
-    cartItemsEl.querySelectorAll('button[data-index]').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const idx = Number(btn.dataset.index);
-        const action = btn.dataset.action;
-        if (action === 'inc') changeQuantity(idx, 1);
-        else if (action === 'dec') changeQuantity(idx, -1);
-        else if (action === 'remove') removeItem(idx);
-      });
-    });
-    cartTotalEl.textContent = formatCurrency(total);
-  }
-
-  function addToCart(item) {
-    const existing = cart.find((entry) => entry.name === item.name && entry.color === item.color);
-    if (existing) existing.quantity += 1;
-    else cart.push({ ...item, quantity: 1 });
-    renderCart();
-  }
-
-  function changeQuantity(index, delta) {
-    const entry = cart[index];
-    if (!entry) return;
-    entry.quantity += delta;
-    if (entry.quantity <= 0) cart.splice(index, 1);
-    renderCart();
-  }
-
-  function removeItem(index) {
-    cart.splice(index, 1);
-    renderCart();
-  }
-
-  function openCart() {
-    if (!cartPanel) {
-      window.location.href = 'shop.html';
-      return;
-    }
-    renderCart();
-    cartPanel.hidden = false;
-    document.body.classList.add('cart-open');
-  }
-
-  function closeCart() {
-    if (!cartPanel) return;
-    cartPanel.hidden = true;
-    document.body.classList.remove('cart-open');
-  }
-
-  if (cartUIAvailable) {
-    renderCart();
-    addToCartButtons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const name = btn.dataset.productName || 'AquaSense';
-        const price = Number(btn.dataset.price) || 0;
-        const color = btn.dataset.color || '';
-        addToCart({ name, price, color });
-        openCart();
-      });
-    });
-    cartToggle?.addEventListener('click', () => openCart());
-    checkoutBtn?.addEventListener('click', () => {
-      const emptyMsg = currentLang === 'en' ? 'Cart is empty. Please add a product.' : 'Warenkorb ist leer. Bitte ein Produkt hinzufügen.';
-      const placeholderMsg = currentLang === 'en' ? 'Checkout coming soon – placeholder for now.' : 'Checkout folgt in Kürze – aktuell Platzhalter.';
-      if (!cart.length) {
-        alert(emptyMsg);
-        return;
-      }
-      alert(placeholderMsg);
-    });
-    document.querySelectorAll('[data-close-cart]').forEach((btn) => btn.addEventListener('click', closeCart));
-    cartPanel?.addEventListener('click', (e) => {
-      if (e.target.classList?.contains('cart-panel__backdrop') || e.target.dataset.closeCart) closeCart();
-    });
-  } else {
-    cartToggle?.addEventListener('click', () => { window.location.href = 'shop.html'; });
-  }
-
-// Form handling (uses formsubmit.co endpoint)
-  if (waitlistForm && window.fetch) {
-    waitlistForm.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      const honeypot = waitlistForm.querySelector('input[name="_honey"]');
-      if (honeypot?.value) return;
-
-      const emailField = waitlistForm.querySelector('input[name="email"]');
-      const consent = waitlistForm.querySelector('input[name="consent"]');
-      const submitBtn = waitlistForm.querySelector('button[type="submit"]');
+    localStorage.setItem("as-last-variant", variantKey);
+    const pick = (obj) => (typeof obj === "string" ? obj : obj?.[lang] || obj?.de || "");
+    const priceFmt = (value) => {
+      // Native Submit, damit FormSubmit sicher einen POST erh lt
       waitlistForm.method = 'POST';
-
-      if (!emailField.checkValidity() || !consent?.checked) {
-        if (statusEl) statusEl.textContent = t('statusInvalid') || 'Bitte E-Mail und Zustimmung prüfen.';
-        emailField?.focus();
-        return;
-      }
-
-      submitBtn.disabled = true;
-      if (statusEl) statusEl.textContent = t('statusSending') || 'Sende...';
-
-      try {
-        const formData = new FormData(waitlistForm);
-        const res = await fetch(waitlistForm.action, {
-          method: 'POST',
-          body: formData
-        });
-        if (!res.ok) throw new Error('Netzwerkproblem');
-        if (statusEl) statusEl.textContent = t('statusSuccess') || 'Danke! Du erhältst gleich eine Bestätigung.';
-        waitlistForm.reset();
-        submitBtn.disabled = false;
-        const thank = document.getElementById('thank-you');
-        if (thank) thank.hidden = false;
-      } catch (err) {
-        if (statusEl) statusEl.textContent = t('statusError') || 'Fehler beim Senden. Bitte erneut versuchen.';
-        submitBtn.disabled = false;
-        submitBtn.focus();
-      }
+      waitlistForm.submit();
     });
   }
 
@@ -1106,7 +866,7 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     lastFocus?.focus();
   }
 
-  // Initial befüllen der Detailseite (falls aktiv)
+  // Initial befÃ¼llen der Detailseite (falls aktiv)
   populateProductDetail();
 
   // Whitepaper download
@@ -1121,6 +881,13 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     link.remove();
   });
 })();
+
+
+
+
+
+
+
 
 
 

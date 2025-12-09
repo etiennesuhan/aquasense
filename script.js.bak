@@ -998,7 +998,6 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
       const emailField = waitlistForm.querySelector('input[name="email"]');
       const consent = waitlistForm.querySelector('input[name="consent"]');
       const submitBtn = waitlistForm.querySelector('button[type="submit"]');
-      waitlistForm.method = 'POST';
 
       if (!emailField.checkValidity() || !consent?.checked) {
         if (statusEl) statusEl.textContent = t('statusInvalid') || 'Bitte E-Mail und Zustimmung prüfen.';
@@ -1121,6 +1120,7 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     link.remove();
   });
 })();
+
 
 
 
