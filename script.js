@@ -11,6 +11,7 @@
   const yearEl = document.getElementById('year');
   const modals = document.querySelectorAll('.modal');
   const whitepaperBtn = document.getElementById('whitepaper-btn');
+  const heroWaitlistLink = document.querySelector('.hero__actions a[href="#waitlist"]');
   const chartCanvas = document.getElementById('chart');
   const chartCtx = chartCanvas ? chartCanvas.getContext('2d') : null;
   const chartButtons = document.querySelectorAll('.chip');
@@ -37,6 +38,21 @@
   const featureModalContent = featureModal?.querySelector('.feature-modal__content');
   const featureContentEls = document.querySelectorAll('[data-feature-content]');
   let analyticsLoaded = false;
+  const smoothScrollTo = (targetY, duration = 900) => {
+    const startY = window.scrollY;
+    const delta = targetY - startY;
+    let start = null;
+    const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+    const step = (ts) => {
+      if (start === null) start = ts;
+      const elapsed = ts - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeOut(progress);
+      window.scrollTo(0, startY + delta * eased);
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
 
   const baseTexts = { text: {}, html: {}, placeholder: {}, alt: {}, aria: {} };
   document.querySelectorAll('[data-i18n]').forEach((el) => { baseTexts.text[el.dataset.i18n] = el.textContent; });
@@ -399,6 +415,18 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
   }
 
   // Smooth scrolling with offset for sticky header
+  if (heroWaitlistLink) {
+    heroWaitlistLink.addEventListener('click', (e) => {
+      const target = document.getElementById('waitlist');
+      if (!target) return;
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      const headerHeight = header?.getBoundingClientRect().height || 0;
+      const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - 8;
+      smoothScrollTo(top, 1100);
+    }, { passive: false });
+  }
+
   document.documentElement.style.scrollBehavior = prefersReducedMotion ? 'auto' : 'smooth';
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', (e) => {
