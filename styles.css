@@ -103,9 +103,12 @@ a:hover, a:focus { color: var(--brand); }
 
 .brand { display: inline-flex; align-items: center; color: var(--text); font-weight: 800; }
 .brand img {
-  height: 36px;
+  height: clamp(44px, 6vw, 60px);
   width: auto;
   display: block;
+  transform: scale(1.6);
+  transform-origin: left center;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.55)) contrast(1.2) saturate(1.1);
 }
 
 nav {
