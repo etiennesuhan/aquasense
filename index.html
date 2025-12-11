@@ -213,29 +213,27 @@
         <h2 data-i18n="waitlistTitle">Warteliste &amp; Updates</h2>
         <p data-i18n="waitlistSub">Erhalte Updates zur Entwicklung, Beta-Einladungen und das Produkt-PDF.</p>
       </header>
-      <section class="contact reveal waitlist-card" aria-label="Newsletter">
-        <form id="notify-form" class="waitlist-form" data-form="waitlist" action="https://formsubmit.co/service.aquasense@gmail.com" method="POST" aria-live="polite">
-          <input type="hidden" name="_subject" value="AquaSense Newsletter">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="index.html#waitlist">
-          <input type="text" name="_honey" aria-hidden="true" tabindex="-1" autocomplete="off" style="display:none">
+      <form class="form" data-form="waitlist" action="https://formsubmit.co/service.aquasense@gmail.com" method="POST" aria-live="polite">
+        <input type="hidden" name="_subject" value="AquaSense Newsletter">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="index.html#waitlist">
+        <input type="text" name="_honey" aria-hidden="true" tabindex="-1" autocomplete="off" style="display:none">
+        <div class="form__grid">
           <label for="waitlist-email">
-            <span>E-Mail-Adresse *</span>
-            <input type="email" id="waitlist-email" name="email" placeholder="du@example.de" required aria-label="E-Mail-Adresse" autocomplete="email">
+            <span data-i18n="labelEmail">E-Mail-Adresse *</span>
+            <input type="email" id="waitlist-email" name="email" placeholder="du@example.de" data-i18n-placeholder="placeholderEmail" required autocomplete="email">
           </label>
-          <label class="waitlist-checkbox">
+          <label class="checkbox">
             <input type="checkbox" id="waitlist-consent" name="consent" required>
-            <span>Ich stimme der Verarbeitung meiner Daten laut <button type="button" class="link-button" data-modal="privacy">Datenschutzhinweis</button> zu.</span>
+            <span data-i18n-html="consentText">Ich stimme der Verarbeitung meiner Daten laut <button type="button" class="link-button" data-modal="privacy">Datenschutzhinweis</button> zu.</span>
           </label>
-          <p class="waitlist-hint">Double-Opt-In: Du erhältst eine Bestätigung per E-Mail.</p>
-          <div class="waitlist-row">
-            <button class="button" type="submit" id="cta-submit">
-              <span data-i18n="submitBtn">Zum Newsletter anmelden</span>
-            </button>
+          <p class="form__hint" data-i18n="doubleOpt">Double-Opt-In: Du erhältst eine Bestätigung per E-Mail.</p>
+          <div class="form__actions">
+            <button class="button" type="submit" data-i18n="submitBtn">Zum Newsletter anmelden</button>
+            <p class="status" role="status" aria-live="polite"></p>
           </div>
-          <p class="status" role="status" aria-live="polite"></p>
-        </form>
-      </section>
+        </div>
+      </form>
     </section>
   </main>
 
