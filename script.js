@@ -990,41 +990,55 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
 
 // Form handling (uses formsubmit.co endpoint)
   if (waitlistForm && window.fetch) {
+    const emailField = waitlistForm.querySelector('input[name="email"]');
+    const consent = waitlistForm.querySelector('input[name="consent"]');
+    const submitBtn = waitlistForm.querySelector('button[type="submit"]');
+    const defaultSubmitLabel = submitBtn?.textContent || '';
+
+    const submitLabel = (lang) => {
+      if (lang === 'en') return translations.en?.submitBtn || defaultSubmitLabel;
+      return baseTexts.text?.submitBtn || defaultSubmitLabel;
+    };
+
+    const setSubmitState = (sending) => {
+      if (!submitBtn) return;
+      submitBtn.disabled = sending;
+      submitBtn.textContent = sending ? (t('statusSending') || defaultSubmitLabel) : submitLabel(currentLang);
+    };
+
+    const setStatus = (key, fallback) => {
+      if (!statusEl) return;
+      statusEl.dataset.state = key;
+      statusEl.textContent = t(key) || fallback;
+    };
+
     waitlistForm.addEventListener('submit', async (event) => {
       event.preventDefault();
       const honeypot = waitlistForm.querySelector('input[name="_honey"]');
       if (honeypot?.value) return;
 
-      const emailField = waitlistForm.querySelector('input[name="email"]');
-      const consent = waitlistForm.querySelector('input[name="consent"]');
-      const submitBtn = waitlistForm.querySelector('button[type="submit"]');
-      waitlistForm.method = 'POST';
-
-      if (!emailField.checkValidity() || !consent?.checked) {
-        if (statusEl) statusEl.textContent = t('statusInvalid') || 'Bitte E-Mail und Zustimmung prüfen.';
+      if (!emailField?.checkValidity() || !consent?.checked) {
+        setStatus('statusInvalid', 'Bitte E-Mail und Zustimmung pruefen.');
         emailField?.focus();
         return;
       }
 
-      submitBtn.disabled = true;
-      if (statusEl) statusEl.textContent = t('statusSending') || 'Sende...';
+      setSubmitState(true);
+      setStatus('statusSending', 'Sende...');
 
       try {
-        const formData = new FormData(waitlistForm);
         const res = await fetch(waitlistForm.action, {
           method: 'POST',
-          body: formData
+          headers: { Accept: 'application/json' },
+          body: new FormData(waitlistForm)
         });
-        if (!res.ok) throw new Error('Netzwerkproblem');
-        if (statusEl) statusEl.textContent = t('statusSuccess') || 'Danke! Du erhältst gleich eine Bestätigung.';
+        if (!res.ok) throw new Error('Request failed');
+        setStatus('statusSuccess', 'Danke! Du erhaeltst gleich eine Bestaetigung.');
         waitlistForm.reset();
-        submitBtn.disabled = false;
-        const thank = document.getElementById('thank-you');
-        if (thank) thank.hidden = false;
       } catch (err) {
-        if (statusEl) statusEl.textContent = t('statusError') || 'Fehler beim Senden. Bitte erneut versuchen.';
-        submitBtn.disabled = false;
-        submitBtn.focus();
+        setStatus('statusError', 'Fehler beim Senden. Bitte erneut versuchen.');
+      } finally {
+        setSubmitState(false);
       }
     });
   }
@@ -1121,7 +1135,6 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     link.remove();
   });
 })();
-
 
 
 
