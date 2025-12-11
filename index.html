@@ -1,429 +1,858 @@
 <!DOCTYPE html>
+
 <html lang="de">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AquaSense â Sauberes Wasser. Klar im Blick.</title>
+
+  <title>AquaSense - Sauberes Wasser. Klar im Blick.</title>
+
   <meta name="description"
-    content="AquaSense misst deine WasserqualitÃ¤t (pH, LeitfÃ¤higkeit, Temperatur, TrÃ¼bung) in Echtzeit und meldet Abweichungen. Konzeptphase, Made in Germany.">
-  <meta property="og:title" content="AquaSense â Sauberes Wasser. Klar im Blick.">
+
+    content="AquaSense misst deine Wasserqualität (pH, Leitfähigkeit, Temperatur, Trübung) in Echtzeit und meldet Abweichungen. Konzeptphase, Made in Germany.">
+
+  <meta property="og:title" content="AquaSense - Sauberes Wasser. Klar im Blick.">
+
   <meta property="og:description"
-    content="AquaSense misst deine WasserqualitÃ¤t (pH, LeitfÃ¤higkeit, Temperatur, TrÃ¼bung) in Echtzeit und meldet Abweichungen. Konzeptphase, Made in Germany.">
+
+    content="AquaSense misst deine Wasserqualität (pH, Leitfähigkeit, Temperatur, Trübung) in Echtzeit und meldet Abweichungen. Konzeptphase, Made in Germany.">
+
   <meta property="og:type" content="website">
+
   <meta property="og:image"
+
     content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0%25' x2='100%25' y1='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%231E90FF'/%3E%3Cstop offset='100%25' stop-color='%2300C2FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='630' fill='%230B0D0F'/%3E%3Crect x='80' y='120' rx='40' ry='40' width='440' height='390' fill='%23F5F8FC' opacity='0.95'/%3E%3Crect x='660' y='100' rx='30' ry='30' width='300' height='430' fill='url(%23a)' opacity='0.9'/%3E%3Ccircle cx='810' cy='210' r='80' fill='%23fff' opacity='0.2'/%3E%3Crect x='720' y='150' width='180' height='40' rx='20' fill='%23fff' opacity='0.8'/%3E%3Crect x='720' y='220' width='180' height='140' rx='24' fill='%23fff' opacity='0.9'/%3E%3Crect x='720' y='380' width='180' height='80' rx='16' fill='%230B0D0F' opacity='0.15'/%3E%3Ctext x='120' y='180' font-family='Segoe UI, Arial' font-size='48' fill='%2300C2FF'%3EAquaSense%3C/text%3E%3Ctext x='120' y='240' font-family='Segoe UI, Arial' font-size='28' fill='%23EAF2FF'%3ESmart Water Monitoring%3C/text%3E%3C/&#115;&#118;&#103;%3E">
+
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AquaSense â Sauberes Wasser. Klar im Blick.">
+
+  <meta name="twitter:title" content="AquaSense - Sauberes Wasser. Klar im Blick.">
+
   <meta name="twitter:description"
-    content="AquaSense misst deine WasserqualitÃ¤t (pH, LeitfÃ¤higkeit, Temperatur, TrÃ¼bung) in Echtzeit und meldet Abweichungen. Konzeptphase, Made in Germany.">
+
+    content="AquaSense misst deine Wasserqualität (pH, Leitfähigkeit, Temperatur, Trübung) in Echtzeit und meldet Abweichungen. Konzeptphase, Made in Germany.">
+
   <meta name="twitter:image"
+
     content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0%25' x2='100%25' y1='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%231E90FF'/%3E%3Cstop offset='100%25' stop-color='%2300C2FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='630' fill='%230B0D0F'/%3E%3Crect x='80' y='120' rx='40' ry='40' width='440' height='390' fill='%23F5F8FC' opacity='0.95'/%3E%3Crect x='660' y='100' rx='30' ry='30' width='300' height='430' fill='url(%23a)' opacity='0.9'/%3E%3Ccircle cx='810' cy='210' r='80' fill='%23fff' opacity='0.2'/%3E%3Crect x='720' y='150' width='180' height='40' rx='20' fill='%23fff' opacity='0.8'/%3E%3Crect x='720' y='220' width='180' height='140' rx='24' fill='%23fff' opacity='0.9'/%3E%3Crect x='720' y='380' width='180' height='80' rx='16' fill='%230B0D0F' opacity='0.15'/%3E%3Ctext x='120' y='180' font-family='Segoe UI, Arial' font-size='48' fill='%2300C2FF'%3EAquaSense%3C/text%3E%3Ctext x='120' y='240' font-family='Segoe UI, Arial' font-size='28' fill='%23EAF2FF'%3ESmart Water Monitoring%3C/text%3E%3C/&#115;&#118;&#103;%3E">
+
   <link rel="icon" type="image/svg+xml"
+
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231E90FF'/%3E%3Cpath d='M16 6c-3 4-6 7-6 10a6 6 0 1 0 12 0c0-3-3-6-6-10Z' fill='%23fff'/%3E%3C/&#115;&#118;&#103;%3E">
+
   <link rel="alternate icon" media="(prefers-color-scheme: dark)" type="image/svg+xml"
+
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B0D0F'/%3E%3Cpath d='M16 6c-3 4-6 7-6 10a6 6 0 1 0 12 0c0-3-3-6-6-10Z' fill='%2300C2FF'/%3E%3C/&#115;&#118;&#103;%3E">
+
   <link rel="preload" as="style" href="styles.css">
+
   <link rel="stylesheet" href="styles.css">
+
   <script type="application/ld+json">
+
     {
+
       "@context": "https://schema.org",
+
       "@graph": [
+
         {
+
           "@type": "Organization",
+
           "name": "AquaSense",
+
           "url": "https://example.com",
+
           "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Ctext x='8' y='28' font-family='Segoe UI, Arial' font-size='24' fill='%231E90FF'%3EAquaSense%3C/text%3E%3C/&#115;&#118;&#103;%3E",
+
           "sameAs": []
+
         },
+
         {
+
           "@type": "Product",
+
           "name": "AquaSense",
-          "description": "Smartes WasserqualitÃ¤ts-Monitoring fÃ¼r Zuhause mit Echtzeitwarnungen und klaren Messwerten.",
+
+          "description": "Smartes Wasserqualitäts-Monitoring für Zuhause mit Echtzeitwarnungen und klaren Messwerten.",
+
           "brand": "AquaSense",
+
           "category": "Haushaltselektronik"
+
         }
+
       ]
+
     }
+
   </script>
+
 </head>
+
 <body data-page="home">
+
   <div id="top"></div>
+
   <a href="#main" class="skip-link" data-i18n="skip">Zum Inhalt springen</a>
+
   <header class="header" role="banner">
+
     <div class="container header__inner">
+
       <a class="brand" href="index.html#top" aria-label="AquaSense Start">
+
         <img src="assets/logo.png" alt="AquaSense Logo" width="200" height="50">
+
       </a>
+
       <nav aria-label="Hauptnavigation">
+
         <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+
           <span class="nav-toggle__icon" aria-hidden="true"><span></span></span>
+
           <span class="visually-hidden" data-i18n="menu">Men&uuml;</span>
+
         </button>
+
         
+
         <ul id="nav-links" class="nav__list">
+
           <li><a href="#top" data-home="index.html#top" data-nav="home" data-i18n="navStart">Start</a></li>
+
           <li><a href="app.html" data-nav="app" data-i18n="navApp">App</a></li>
+
           <li><a href="shop.html" data-nav="shop" data-i18n="navShop">Shop</a></li>
+
           <li><a href="faq.html" data-nav="faq" data-i18n="navFaq">FAQ</a></li>
+
           <li><button class="lang-toggle" type="button" aria-label="Sprache umschalten">DE / EN</button></li>
+
         </ul>
+
       </nav>
+
     </div>
+
   </header>
+
   <main id="main" role="main">
+
     <section id="hero" class="hero container">
+
       <div class="hero__content">
-        <p class="eyebrow" data-i18n="heroEyebrow">Konzeptphase â¢ Made in Germany</p>
+
+        <p class="eyebrow" data-i18n="heroEyebrow">Konzeptphase • Made in Germany</p>
+
         <h1 data-i18n="heroTitle">Sauberes Wasser. Klar im Blick.</h1>
-        <p class="lead" data-i18n="heroLead">AquaSense misst die WasserqualitÃ¤t direkt in deiner Leitung â in Echtzeit,
+
+        <p class="lead" data-i18n="heroLead">AquaSense misst die Wasserqualität direkt in deiner Leitung – in Echtzeit,
+
           mit intelligenten Warnungen bei Abweichungen.</p>
+
         <div class="hero__actions">
+
           <a class="button" href="#waitlist" data-i18n="heroPrimaryCta">Jetzt auf die Warteliste</a>
+
           <button class="button button--ghost" type="button" id="whitepaper-btn"
+
             data-i18n="heroSecondaryCta">Produkt-Whitepaper herunterladen</button>
+
         </div>
+
         <div class="badges" aria-label="Social Proof">
+
           <span class="badge" data-i18n="badgeConcept">Konzeptphase</span>
+
           <span class="badge" data-i18n="badgeMade">Made in Germany</span>
-          <span class="badge" data-i18n="badgeUsecases">Haushalt â¢ Aquaristik â¢ Kaffee &amp; Tee</span>
+
+          <span class="badge" data-i18n="badgeUsecases">Haushalt • Aquaristik • Kaffee &amp; Tee</span>
+
         </div>
+
       </div>
+
       <div class="hero__visual reveal">
-        <figure aria-label="AquaSense GerÃ¤t und App Mockup">
+
+        <figure aria-label="AquaSense Gerät und App Mockup">
+
           <picture>
+
             <source srcset="assets/productII.png 1024w" type="image/png">
+
             <img class="product-image" src="assets/productII.png" srcset="assets/productII.png 1024w"
+
               sizes="(min-width: 960px) 520px, 100vw" width="1024" height="1024" loading="lazy" decoding="async"
+
               alt="AquaSense Produktabbildung" data-i18n-alt="heroImgAlt" />
+
           </picture>
+
         </figure>
+
       </div>
+
     </section>
+
     <section class="section container">
+
       <p class="lead">
-        AquaSense misst die QualitÃ¤t deines Leitungswassers in Echtzeit und macht sichtbar, was du sonst nicht sehen kannst â von WasserhÃ¤rte, Temperatur und TrÃ¼bung bis hin zu LeitfÃ¤higkeit und weiteren wichtigen QualitÃ¤tsparametern. Im Inneren des GerÃ¤ts erfasst ein prÃ¤ziser Sensorstrom kontinuierlich die Daten, wertet sie intelligent aus und stellt dir Ã¼bersichtliche Auswertungen sowie Warnhinweise bei AuffÃ¤lligkeiten zur VerfÃ¼gung. Der Einbau erfolgt durch einen Fachinstallateur direkt in deine bestehende Hauswasserleitung und ist ohne groÃe Umbauten mÃ¶glich â so erhÃ¤ltst du maximale Transparenz Ã¼ber deine WasserqualitÃ¤t, ohne deinen Alltag zu verÃ¤ndern.
+
+        AquaSense misst die Qualität deines Leitungswassers in Echtzeit und macht sichtbar, was du sonst nicht sehen kannst – von Wasserhärte, Temperatur und Trübung bis hin zu Leitfähigkeit und weiteren wichtigen Qualitätsparametern. Im Inneren des Geräts erfasst ein präziser Sensorstrom kontinuierlich die Daten, wertet sie intelligent aus und stellt dir übersichtliche Auswertungen sowie Warnhinweise bei Auffälligkeiten zur Verfügung. Der Einbau erfolgt durch einen Fachinstallateur direkt in deine bestehende Hauswasserleitung und ist ohne große Umbauten möglich – so erhältst du maximale Transparenz über deine Wasserqualität, ohne deinen Alltag zu verändern.
+
       </p>
+
     </section>
+
     <section id="features" class="section container">
+
       <header class="section__header">
-        <h2 data-i18n="featuresTitle">Funktionen fÃ¼r Klarheit und Sicherheit</h2>
+
+        <h2 data-i18n="featuresTitle">Funktionen für Klarheit und Sicherheit</h2>
+
         <p data-i18n="featuresSub">Echtzeitdaten, Alerts, Dashboard und Historie &amp; Trends.</p>
+
       </header>
+
       <div class="grid features__grid">
+
         <article class="card reveal">
+
           <div class="icon-circle" aria-hidden="true">
+
             <svg viewBox="0 0 32 32">
+
               <path d="M16 4c-4 6-8 10-8 14a8 8 0 1 0 16 0c0-4-4-8-8-14Z" fill="currentColor" />
+
               <circle cx="16" cy="18" r="3" fill="#fff" />
+
             </svg>
+
           </div>
+
           <h3 data-i18n="feat1Title">Echtzeit-Monitoring</h3>
-          <p data-i18n="feat1Text">pH, LeitfÃ¤higkeit (ÂµS/cm), Temperatur, TrÃ¼bung, gelÃ¶ster Sauerstoff, ORP; Plattform erweiterbar.</p>
+
+          <p data-i18n="feat1Text">pH, Leitfähigkeit (µS/cm), Temperatur, Trübung, gelöster Sauerstoff, ORP; Plattform erweiterbar.</p>
+
           <button class="card__link" type="button" data-modal="feature-modal" data-feature-target="feature-monitoring" data-feature-title="Echtzeit-Monitoring" data-i18n="featMore">Mehr erfahren</button>
+
         </article>
+
         <article class="card reveal">
+
           <div class="icon-circle" aria-hidden="true">
+
             <svg viewBox="0 0 32 32">
+
               <path d="M6 8h20v16H6z" stroke="currentColor" stroke-width="2" fill="none" />
+
               <path d="M10 18l4 4 8-10" stroke="currentColor" stroke-width="2" fill="none" />
+
             </svg>
+
           </div>
+
           <h3 data-i18n="feat2Title">Intelligente Alerts</h3>
-          <p data-i18n="feat2Text">Push und E-Mail, sobald ein Wert deine definierten Schwellen Ã¼ber- oder unterschreitet.</p>
+
+          <p data-i18n="feat2Text">Push und E-Mail, sobald ein Wert deine definierten Schwellen über- oder unterschreitet.</p>
+
           <button class="card__link" type="button" data-modal="feature-modal" data-feature-target="feature-alerts" data-feature-title="Intelligente Alerts" data-i18n="featMore">Mehr erfahren</button>
+
         </article>
+
         <article class="card reveal">
+
           <div class="icon-circle" aria-hidden="true">
+
             <svg viewBox="0 0 32 32">
+
               <path d="M8 10h16v12H8z" stroke="currentColor" stroke-width="2" fill="none" />
+
               <path d="M8 14h16" stroke="currentColor" stroke-width="2" />
+
               <circle cx="12" cy="22" r="1.5" fill="currentColor" />
+
               <circle cx="20" cy="22" r="1.5" fill="currentColor" />
+
             </svg>
+
           </div>
+
           <h3 data-i18n="feat3Title">Live-Dashboard</h3>
+
           <p data-i18n="feat3Text">Alle Werte und Trends zentral dargestellt, inklusive Export.</p>
+
           <button class="card__link" type="button" data-modal="feature-modal" data-feature-target="feature-dashboard" data-feature-title="Live-Dashboard" data-i18n="featMore">Mehr erfahren</button>
+
         </article>
+
         <article class="card reveal">
+
           <div class="icon-circle" aria-hidden="true">
+
             <svg viewBox="0 0 32 32">
+
               <path d="M6 24c4-6 8-8 10-8s6 2 10 8" stroke="currentColor" stroke-width="2" fill="none" />
+
               <circle cx="16" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none" />
+
             </svg>
+
           </div>
+
           <h3 data-i18n="feat4Title">Historie &amp; Trends</h3>
-          <p data-i18n="feat4Text">VerlÃ¤ufe mit Wochen- und Monatsreports, damit du VerÃ¤nderungen frÃ¼h erkennst.</p>
+
+          <p data-i18n="feat4Text">Verläufe mit Wochen- und Monatsreports, damit du Veränderungen früh erkennst.</p>
+
           <button class="card__link" type="button" data-modal="feature-modal" data-feature-target="feature-history" data-feature-title="Historie &amp; Trends" data-i18n="featMore">Mehr erfahren</button>
+
         </article>
+
       </div>
+
     </section>
+
     <section class="visually-hidden" aria-hidden="true">
+
       <h2>Feature-Details</h2>
+
       <p id="feature-monitoring" data-feature-content>
-        Echtzeit-Monitoring: kontinuierliche Messung von pH, LeitfÃ¤higkeit (ÂµS/cm), Temperatur, TrÃ¼bung, gelÃ¶stem Sauerstoff und Redox (ORP) direkt in der Leitung. Sensor-Plattform modular erweiterbar fÃ¼r weitere Parameter. Messungen laufen lokal, latenzarm und werden sofort visualisiert.
+
+        Echtzeit-Monitoring: kontinuierliche Messung von pH, Leitfähigkeit (µS/cm), Temperatur, Trübung, gelöstem Sauerstoff und Redox (ORP) direkt in der Leitung. Sensor-Plattform modular erweiterbar für weitere Parameter. Messungen laufen lokal, latenzarm und werden sofort visualisiert.
+
       </p>
+
       <p id="feature-alerts" data-feature-content>
-        Intelligente Alerts: Push/E-Mail, sobald ein Wert deine Schwellen Ã¼ber- oder unterschreitet. Schwellen pro Profil oder Anwendung definierbar (z. B. Kaffee, Aquarium, Babywasser). Warnungen enthalten Kontext und Empfehlungen, damit du sofort handeln kannst.
+
+        Intelligente Alerts: Push/E-Mail, sobald ein Wert deine Schwellen über- oder unterschreitet. Schwellen pro Profil oder Anwendung definierbar (z. B. Kaffee, Aquarium, Babywasser). Warnungen enthalten Kontext und Empfehlungen, damit du sofort handeln kannst.
+
       </p>
+
       <p id="feature-dashboard" data-feature-content>
-        Live-Dashboard: zentrale Ansicht fÃ¼r alle Werte, Trends und Status pro Anwendung. Inline-Charting, Quick-Filter fÃ¼r ZeitrÃ¤ume, Export (CSV/JSON) fÃ¼r Dokumentation oder Sharing. GerÃ¤te- und Profil-Ãbersicht, damit du immer weiÃt, was wo passiert.
+
+        Live-Dashboard: zentrale Ansicht für alle Werte, Trends und Status pro Anwendung. Inline-Charting, Quick-Filter für Zeiträume, Export (CSV/JSON) für Dokumentation oder Sharing. Geräte- und Profil-Übersicht, damit du immer weißt, was wo passiert.
+
       </p>
+
       <p id="feature-history" data-feature-content>
-        Historie &amp; Trends: Wochen- und Monatsreports, Ereignis-Markierungen (z. B. Filterwechsel), Trend-Alerts bei schleichenden VerÃ¤nderungen. Export und Vergleich von ZeitrÃ¤umen, um Muster zu erkennen und rechtzeitig gegenzusteuern.
+
+        Historie &amp; Trends: Wochen- und Monatsreports, Ereignis-Markierungen (z. B. Filterwechsel), Trend-Alerts bei schleichenden Veränderungen. Export und Vergleich von Zeiträumen, um Muster zu erkennen und rechtzeitig gegenzusteuern.
+
       </p>
+
     </section>
+
     <section id="steps" class="section container">
+
       <header class="section__header">
+
         <h2 data-i18n="stepsTitle">Bereit in drei einfachen Schritten</h2>
+
         <p data-i18n="stepsSub">Connect. Pair. Monitor. In drei Schritten startklar.</p>
+
       </header>
+
       <div class="grid steps__grid">
+
         <article class="card reveal">
-          <h3 data-i18n="step1Title">1. AnschlieÃen</h3>
-          <p data-i18n="step1Text">AquaSense wird zwischen Wasserleitung und GerÃ¤t montiert.</p>
+
+          <h3 data-i18n="step1Title">1. Anschließen</h3>
+
+          <p data-i18n="step1Text">AquaSense wird zwischen Wasserleitung und Gerät montiert.</p>
+
         </article>
+
         <article class="card reveal">
+
           <h3 data-i18n="step2Title">2. Verbinden</h3>
-          <p data-i18n="step2Text">In Sekunden mit der App koppeln â via WLAN oder Bluetooth.</p>
+
+          <p data-i18n="step2Text">In Sekunden mit der App koppeln - via WLAN oder Bluetooth.</p>
+
         </article>
+
         <article class="card reveal">
-          <h3 data-i18n="step3Title">3. Ãberwachen</h3>
+
+          <h3 data-i18n="step3Title">3. Überwachen</h3>
+
           <p data-i18n="step3Text">Live-Werte sehen, Alerts erhalten und Empfehlungen direkt umsetzen.</p>
+
         </article>
+
       </div>
+
     </section>
+
     <section class="section container">
+
       <div class="cta-banner">
+
         <div class="cta-banner__text">
+
           <p class="eyebrow">Preisumfrage</p>
+
           <p class="lead">Hilf uns, einen fairen Preis f&uuml;r AquaSense zu finden. Deine Einsch&auml;tzung dauert nur 1 Minute.</p>
+
         </div>
+
         <a class="button" href="pricing.html">Zur Preisumfrage</a>
+
       </div>
+
     </section>
+
     <section id="waitlist" class="section container">
+
       <header class="section__header">
+
         <h2 data-i18n="waitlistTitle">Warteliste &amp; Updates</h2>
+
         <p data-i18n="waitlistSub">Erhalte Updates zur Entwicklung, Beta-Einladungen und das Produkt-PDF.</p>
+
       </header>
+
       <form class="form" data-form="waitlist" action="https://formsubmit.co/service.aquasense@gmail.com" method="POST" aria-live="polite">
+
         <input type="hidden" name="_subject" value="AquaSense Newsletter">
+
         <input type="hidden" name="_captcha" value="false">
+
         <input type="hidden" name="_next" value="index.html#waitlist">
+
         <input type="text" name="_honey" aria-hidden="true" tabindex="-1" autocomplete="off" style="display:none">
+
         <div class="form__grid">
+
           <label for="waitlist-email">
+
             <span data-i18n="labelEmail">E-Mail-Adresse *</span>
+
             <input type="email" id="waitlist-email" name="email" placeholder="du@example.de" data-i18n-placeholder="placeholderEmail" required autocomplete="email">
+
           </label>
+
           <label class="checkbox">
+
             <input type="checkbox" id="waitlist-consent" name="consent" required>
+
             <span data-i18n-html="consentText">Ich stimme der Verarbeitung meiner Daten laut <button type="button" class="link-button" data-modal="privacy">Datenschutzhinweis</button> zu.</span>
+
           </label>
-          <p class="form__hint" data-i18n="doubleOpt">Double-Opt-In: Du erhÃ¤ltst eine BestÃ¤tigung per E-Mail.</p>
+
+          <p class="form__hint" data-i18n="doubleOpt">Double-Opt-In: Du erhältst eine Bestätigung per E-Mail.</p>
+
           <div class="form__actions">
+
             <button class="button" type="submit" data-i18n="submitBtn">Zum Newsletter anmelden</button>
+
             <p class="status" role="status" aria-live="polite"></p>
+
           </div>
+
         </div>
+
       </form>
+
     </section>
+
   </main>
+
   <footer class="footer" role="contentinfo">
+
     <div class="container footer__grid">
+
       <div class="footer__brand">
-        <p class="footer__eyebrow" data-i18n="footerTagline">AquaSense Â· Sauberes Wasser. Klar im Blick.</p>
-        <p class="footer__text" data-i18n="footerSummary">Echtzeit-Monitoring mit Alerts, Trends und Profilen â fÃ¼r Haushalt, Kaffee &amp; Tee und Aquaristik. Datenschutz by Design.</p>
+
+        <p class="footer__eyebrow" data-i18n="footerTagline">AquaSense · Sauberes Wasser. Klar im Blick.</p>
+
+        <p class="footer__text" data-i18n="footerSummary">Echtzeit-Monitoring mit Alerts, Trends und Profilen – für Haushalt, Kaffee &amp; Tee und Aquaristik. Datenschutz by Design.</p>
+
       </div>
+
       <div class="footer__col">
+
         <h3 data-i18n="footerContactTitle">Kontakt</h3>
+
         <a class="footer__link" href="mailto:service.aquasense@gmail.com" data-i18n="footerContactMail">service.aquasense@gmail.com</a>
+
         <p class="footer__text" data-i18n="footerContactHours">Mo-Fr, 9-17 Uhr</p>
+
       </div>
+
       <div class="footer__col">
+
         <h3 data-i18n="footerLinksTitle">Direktlinks</h3>
+
         <a class="footer__link" href="#top" data-i18n="footerLinkHome">Start</a>
+
         <a class="footer__link" href="app.html" data-i18n="footerLinkApp">App</a>
+
         <a class="footer__link" href="shop.html" data-i18n="footerLinkShop">Shop</a>
+
         <a class="footer__link" href="faq.html" data-i18n="footerLinkFaq">FAQ</a>
+
       </div>
+
       <div class="footer__col footer__col--highlight">
+
         <h3 data-i18n="footerAnalyticsTitle">Transparenz</h3>
+
         <p class="footer__text" data-i18n="footerAnalyticsText">Wir nutzen Google Analytics, um die Nutzung anonymisiert
+
           zu messen und die Seite zu verbessern.</p>
+
       </div>
+
     </div>
+
     <div class="footer__bottom">
+
       <p class="footer__note"><span id="year"></span> &copy; AquaSense. <span data-i18n="footerRights">Alle Rechte vorbehalten.</span></p>
+
     </div>
+
   </footer>
+
   <div class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie Hinweis">
+
     <div class="cookie-banner__text">
+
       <p class="cookie-banner__title" data-i18n="cookieTitle">Cookies &amp; Analytics</p>
+
       <p class="cookie-banner__body" data-i18n="cookieText">Wir verwenden Google Analytics (Cookies), um die Nutzung der
+
         Website anonymisiert auszuwerten. Bitte stimme zu, wenn das fuer dich in Ordnung ist.</p>
+
     </div>
+
     <div class="cookie-banner__actions">
+
       <button class="button button--ghost" type="button" id="cookie-decline" data-i18n="cookieDecline">Ablehnen</button>
+
       <button class="button" type="button" id="cookie-accept" data-i18n="cookieAccept">Akzeptieren</button>
+
     </div>
+
   </div>
+
   <div class="modal" id="feature-modal" role="dialog" aria-modal="true" aria-labelledby="feature-modal-title" hidden>
+
     <div class="modal__backdrop" data-close="feature-modal"></div>
+
     <div class="modal__dialog" role="document" tabindex="-1">
+
       <header class="modal__header">
+
         <h2 id="feature-modal-title" data-feature-title>Mehr erfahren</h2>
-        <button type="button" class="icon-button" data-close="feature-modal" aria-label="SchlieÃen"
-          data-i18n-aria="closeLabel">â</button>
+
+        <button type="button" class="icon-button" data-close="feature-modal" aria-label="Schließen"
+
+          data-i18n-aria="closeLabel">âœ•</button>
+
       </header>
+
       <div class="modal__body">
+
         <div class="feature-modal__content"></div>
+
       </div>
+
     </div>
+
   </div>
+
   <section id="whitepaper" hidden aria-hidden="true">
+
     <article class="whitepaper">
-      <h1 data-i18n="wpTitle">AquaSense â ProduktÃ¼berblick (Kurzfassung)</h1>
+
+      <h1 data-i18n="wpTitle">AquaSense – Produktüberblick (Kurzfassung)</h1>
+
       <h2 data-i18n="wpProblemTitle">Problem &amp; Motivation</h2>
-      <p data-i18n="wpProblemText">Die WasserqualitÃ¤t zuhause schwankt durch Aufbereitung, Rohrzustand oder Filteralter. Unsichtbare Ãnderungen bei pH, Mineralien und Klarheit beeinflussen Geschmack, Sicherheit, GerÃ¤te und Aquarien.</p>
-      <h2 data-i18n="wpArchTitle">ArchitekturÃ¼berblick</h2>
+
+      <p data-i18n="wpProblemText">Die Wasserqualität zuhause schwankt durch Aufbereitung, Rohrzustand oder Filteralter. Unsichtbare Änderungen bei pH, Mineralien und Klarheit beeinflussen Geschmack, Sicherheit, Geräte und Aquarien.</p>
+
+      <h2 data-i18n="wpArchTitle">Architekturüberblick</h2>
+
       <ul>
-        <li data-i18n="wpArch1">Sensorik: pH, elektrische LeitfÃ¤higkeit, Temperatur, TrÃ¼bung; modulare Slots fÃ¼r Erweiterungen.</li>
+
+        <li data-i18n="wpArch1">Sensorik: pH, elektrische Leitfähigkeit, Temperatur, Trübung; modulare Slots für Erweiterungen.</li>
+
         <li data-i18n="wpArch2">Firmware: Edge-Analytics, Grenzwertlogik, sichere Updates.</li>
+
         <li data-i18n="wpArch3">App: Live-Werte, Alerts, Profile, Historie &amp; Export.</li>
+
         <li data-i18n="wpArch4">Optionale Cloud: Opt-in Sync, Remote-Zugriff und Backups.</li>
+
       </ul>
+
       <h2 data-i18n="wpPrivacyTitle">Datenschutzprinzipien</h2>
-      <p data-i18n="wpPrivacyText">Local First: Daten bleiben auf dem GerÃ¤t. Cloud-Sync ist optional, verschlÃ¼sselt und nur mit klarer Einwilligung.</p>
-      <h2 data-i18n="wpSpecsTitle">VorlÃ¤ufige Spezifikationen</h2>
-      <p data-i18n="wpSpecsText">WLAN 2.4 GHz, Bluetooth LE, 5V USB-C, 0â50Â°C, IPX4-Ziel, 90 Ã 45 mm (aktueller Prototyp).</p>
+
+      <p data-i18n="wpPrivacyText">Local First: Daten bleiben auf dem Gerät. Cloud-Sync ist optional, verschlüsselt und nur mit klarer Einwilligung.</p>
+
+      <h2 data-i18n="wpSpecsTitle">Vorläufige Spezifikationen</h2>
+
+      <p data-i18n="wpSpecsText">WLAN 2.4 GHz, Bluetooth LE, 5V USB-C, 0–50°C, IPX4-Ziel, 90 × 45 mm (aktueller Prototyp).</p>
+
       <h2 data-i18n="wpRoadmapTitle">Roadmap &amp; Validierung</h2>
+
       <ol>
+
         <li data-i18n="wpRoadmap1">Phase 1: Laborvalidierung der Sensorik</li>
+
         <li data-i18n="wpRoadmap2">Phase 2: Private Beta mit Haushalten und Enthusiasten</li>
+
         <li data-i18n="wpRoadmap3">Phase 3: App- &amp; Feature-Iteration basierend auf Feedback</li>
-        <li data-i18n="wpRoadmap4">Phase 4: Early Access &amp; Pre-Orders fÃ¼r die Warteliste</li>
+
+        <li data-i18n="wpRoadmap4">Phase 4: Early Access &amp; Pre-Orders für die Warteliste</li>
+
       </ol>
+
       <svg viewBox="0 0 500 200" aria-hidden="true">
+
         <rect x="30" y="60" width="100" height="60" rx="12" fill="#1E90FF" opacity="0.8" />
+
         <rect x="190" y="60" width="100" height="60" rx="12" fill="#00C2FF" opacity="0.8" />
+
         <rect x="350" y="60" width="100" height="60" rx="12" fill="#0B1220" opacity="0.1" stroke="#1E90FF"
+
           stroke-width="3" />
+
         <path d="M130 90h60" stroke="#1E90FF" stroke-width="6" marker-end="url(#arrow)" />
+
         <path d="M290 90h60" stroke="#1E90FF" stroke-width="6" marker-end="url(#arrow)" />
+
         <defs>
+
           <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto">
+
             <path d="M0 0l10 5-10 5z" fill="#1E90FF" />
+
           </marker>
+
         </defs>
+
         <text x="50" y="100" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+
           font-size="14">Sensor</text>
+
         <text x="208" y="100" fill="#0B1220" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+
           font-size="14">Firmware</text>
+
         <text x="366" y="100" fill="#0B1220" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+
           font-size="14">App/Cloud</text>
+
       </svg>
+
     </article>
+
   </section>
+
   <div class="modal" id="imprint" role="dialog" aria-modal="true" aria-labelledby="imprint-title" hidden>
+
     <div class="modal__backdrop" data-close="imprint"></div>
+
     <div class="modal__dialog" role="document" tabindex="-1">
+
       <header class="modal__header">
+
         <h2 id="imprint-title" data-i18n="imprintTitle">Impressum</h2>
-        <button type="button" class="icon-button" data-close="imprint" aria-label="SchlieÃen"
-          data-i18n-aria="closeLabel">â</button>
+
+        <button type="button" class="icon-button" data-close="imprint" aria-label="Schließen"
+
+          data-i18n-aria="closeLabel">âœ•</button>
+
       </header>
+
       <div class="modal__body">
+
         <p data-i18n="imprintLine1">[Firma/Name]</p>
-        <p data-i18n="imprintLine2">[StraÃe Hausnummer]</p>
+
+        <p data-i18n="imprintLine2">[Straße Hausnummer]</p>
+
         <p data-i18n="imprintLine3">[PLZ Ort]</p>
+
         <p data-i18n="imprintLine4">[E-Mail: placeholder@example.com]</p>
+
         <p data-i18n="imprintLine5">Vertretungsberechtigte: [Platzhalter]</p>
+
         <p data-i18n="imprintLine6">USt-IdNr.: [Platzhalter]</p>
+
       </div>
+
     </div>
+
   </div>
+
   <div class="modal" id="privacy" role="dialog" aria-modal="true" aria-labelledby="privacy-title" hidden>
+
     <div class="modal__backdrop" data-close="privacy"></div>
+
     <div class="modal__dialog" role="document" tabindex="-1">
+
       <header class="modal__header">
+
         <h2 id="privacy-title" data-i18n="privacyTitle">Datenschutz</h2>
-        <button type="button" class="icon-button" data-close="privacy" aria-label="SchlieÃen"
+
+        <button type="button" class="icon-button" data-close="privacy" aria-label="Schließen"
+
           data-i18n-aria="closeLabel">&times;</button>
+
       </header>
+
       <div class="modal__body">
+
         <p data-i18n="privacyLine1"><strong>Verantwortlich</strong>: AquaSense, E-Mail: service.aquasense@gmail.com.</p>
-        <p data-i18n="privacyLine2"><strong>Zweck und Umfang</strong>: Wir erheben deine E-Mail-Adresse (und ggf. freiwillige Angaben), um dir unseren Newsletter zuzusenden und dich Ã¼ber Neuigkeiten zu AquaSense zu informieren.</p>
-        <p data-i18n="privacyLine3"><strong>Einsatz von FormSubmit</strong>: Wir nutzen FormSubmit (FormSubmit.co) fÃ¼r die technische Bereitstellung und Ãbermittlung. FormSubmit leitet deine Eingaben per E-Mail an uns weiter und verarbeitet sie nur zur Ãbermittlung. Details: <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener">https://formsubmit.co/privacy.pdf</a></p>
-        <p data-i18n="privacyLine4"><strong>Rechtsgrundlage</strong>: Deine Einwilligung gemÃ¤Ã Art. 6 Abs. 1 lit. a DSGVO durch Ankreuzen der Checkbox und Absenden des Formulars.</p>
+
+        <p data-i18n="privacyLine2"><strong>Zweck und Umfang</strong>: Wir erheben deine E-Mail-Adresse (und ggf. freiwillige Angaben), um dir unseren Newsletter zuzusenden und dich über Neuigkeiten zu AquaSense zu informieren.</p>
+
+        <p data-i18n="privacyLine3"><strong>Einsatz von FormSubmit</strong>: Wir nutzen FormSubmit (FormSubmit.co) für die technische Bereitstellung und Übermittlung. FormSubmit leitet deine Eingaben per E-Mail an uns weiter und verarbeitet sie nur zur Übermittlung. Details: <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener">https://formsubmit.co/privacy.pdf</a></p>
+
+        <p data-i18n="privacyLine4"><strong>Rechtsgrundlage</strong>: Deine Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO durch Ankreuzen der Checkbox und Absenden des Formulars.</p>
+
         <p data-i18n="privacyLine5"><strong>Speicherdauer</strong>: Wir speichern deine Daten, bis du den Newsletter abbestellst oder deine Einwilligung widerrufst, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
-        <p data-i18n="privacyLine6"><strong>Widerruf &amp; Rechte</strong>: Du kannst deine Einwilligung jederzeit widerrufen (z. B. Ã¼ber den Abmeldelink oder per E-Mail an uns). Du hast Rechte auf Auskunft, Berichtigung, LÃ¶schung, EinschrÃ¤nkung der Verarbeitung, DatenÃ¼bertragbarkeit und Beschwerde bei einer AufsichtsbehÃ¶rde.</p>
+
+        <p data-i18n="privacyLine6"><strong>Widerruf &amp; Rechte</strong>: Du kannst deine Einwilligung jederzeit widerrufen (z. B. über den Abmeldelink oder per E-Mail an uns). Du hast Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Beschwerde bei einer Aufsichtsbehörde.</p>
+
       </div>
+
     </div>
+
   </div>
+
   <script src="script.js"></script>
+
   <script>
+
     (function () {
+
       var form = document.querySelector('[data-form="waitlist"]');
+
       if (!form || window.asWaitlistFormBound || !window.fetch) return;
+
       var status = form.querySelector('.status');
+
       var emailField = form.querySelector('input[name="email"]');
+
       var consent = form.querySelector('input[name="consent"]');
+
       var submitBtn = form.querySelector('button[type="submit"]');
+
       var defaultLabel = submitBtn ? submitBtn.textContent : '';
+
       var honeypot = form.querySelector('input[name="_honey"]');
+
       function setStatus(text) {
+
         if (!status) return;
+
         status.textContent = text;
+
       }
+
       form.addEventListener('submit', function (e) {
+
         e.preventDefault();
+
         if (honeypot && honeypot.value) return;
+
         if (!emailField || !emailField.checkValidity() || (consent && !consent.checked)) {
+
           setStatus('Bitte E-Mail und Zustimmung pruefen.');
+
           if (emailField) emailField.focus();
+
           return;
+
         }
+
         if (submitBtn) {
+
           submitBtn.disabled = true;
+
           submitBtn.textContent = 'Sende...';
+
         }
+
         setStatus('Sende...');
+
         fetch(form.action, {
+
           method: 'POST',
+
           headers: { 'Accept': 'application/json' },
+
           body: new FormData(form)
+
         }).then(function (response) {
+
           if (!response.ok) throw new Error('Request failed');
-          setStatus('Danke! Du erhÃ¤ltst gleich eine BestÃ¤tigung.');
+
+          setStatus('Danke! Du erhältst gleich eine Bestätigung.');
+
           form.reset();
+
         }).catch(function () {
+
           setStatus('Fehler beim Senden. Bitte erneut versuchen.');
+
         }).finally(function () {
+
           if (submitBtn) {
+
             submitBtn.disabled = false;
+
             submitBtn.textContent = defaultLabel || 'Zum Newsletter anmelden';
+
           }
+
         });
+
       });
+
     })();
+
   </script>
+
   <script>
+
     (function () {
+
       var btn = document.querySelector('[data-modal="privacy"]');
+
       var modal = document.getElementById('privacy');
+
       if (!btn || !modal || window.asModalFallbackBound) return;
+
       window.asModalFallbackBound = true;
+
       btn.addEventListener('click', function () {
+
         modal.hidden = false;
+
       });
+
       modal.addEventListener('click', function (e) {
+
         if (e.target.dataset.close === 'privacy' || e.target === modal) {
+
           modal.hidden = true;
+
         }
+
       });
+
     })();
+
   </script>
+
 </body>
+
 </html>
+

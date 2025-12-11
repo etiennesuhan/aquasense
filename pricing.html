@@ -1,155 +1,310 @@
 <!DOCTYPE html>
+
 <html lang="de">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>AquaSense Preisumfrage</title>
-  <meta name="description" content="Van-Westendorp Preisumfrage fÃ¼r AquaSense â hilf uns, einen fairen Preis zu finden.">
+
+  <meta name="description" content="Van-Westendorp Preisumfrage für AquaSense – hilf uns, einen fairen Preis zu finden.">
+
   <link rel="preload" as="style" href="styles.css">
+
   <link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body data-page="pricing">
+
   <a href="#main" class="skip-link">Zum Inhalt springen</a>
+
   <header class="header" role="banner">
+
     <div class="container header__inner">
+
       <a class="brand" href="index.html#top" aria-label="AquaSense Start">
+
         <img src="assets/logo.png" alt="AquaSense Logo" width="200" height="50">
+
       </a>
+
       <nav aria-label="Hauptnavigation">
+
         <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+
           <span class="nav-toggle__icon" aria-hidden="true"><span></span></span>
+
           <span class="visually-hidden" data-i18n="menu">Men&uuml;</span>
+
         </button>
+
         <ul id="nav-links" class="nav__list">
+
           <li><a href="index.html#top" data-home="index.html#top" data-nav="home">Start</a></li>
+
           <li><a href="app.html" data-nav="app">App</a></li>
+
           <li><a href="shop.html" data-nav="shop">Shop</a></li>
+
           <li><a href="faq.html" data-nav="faq">FAQ</a></li>
+
         </ul>
+
       </nav>
+
     </div>
+
   </header>
+
   <main id="main" role="main">
+
     <section class="section container">
+
       <header class="section__header">
+
         <h1>Hilf uns bei der Preisfindung</h1>
-        <p>AquaSense befindet sich noch in der Konzeptphase. Deine anonyme EinschÃ¤tzung hilft uns, einen fairen Preis zu bestimmen.</p>
+
+        <p>AquaSense befindet sich noch in der Konzeptphase. Deine anonyme Einschätzung hilft uns, einen fairen Preis zu bestimmen.</p>
+
       </header>
+
       <form class="form pricing-form" action="https://formsubmit.co/service.aquasense@gmail.com" method="POST">
+
         <input type="hidden" name="_subject" value="AquaSense: Van-Westendorp Preisfeedback">
+
         <input type="hidden" name="_template" value="table">
+
         <input type="hidden" name="_captcha" value="false">
+
         <div class="form__grid">
+
           <div class="field">
-            <label for="usage">WofÃ¼r wÃ¼rdest du AquaSense voraussichtlich nutzen?</label>
+
+            <label for="usage">Wofür würdest du AquaSense voraussichtlich nutzen?</label>
+
             <select id="usage" name="usage">
-              <option value="">Bitte auswÃ¤hlen (optional)</option>
+
+              <option value="">Bitte auswählen (optional)</option>
+
               <option value="Haushalt">Haushalt / Trinkwasser</option>
+
               <option value="Baby_Familie">Babywasser &amp; Familie</option>
-              <option value="Kaffee_Tee">Kaffee &amp; Tee / SiebtrÃ¤ger</option>
+
+              <option value="Kaffee_Tee">Kaffee &amp; Tee / Siebträger</option>
+
               <option value="Aquaristik">Aquaristik / Terraristik</option>
-              <option value="Garten">Garten / BewÃ¤sserung</option>
-              <option value="Buero">BÃ¼ro / Praxis</option>
-              <option value="Gastro">Gastronomie / CafÃ©</option>
+
+              <option value="Garten">Garten / Bewässerung</option>
+
+              <option value="Buero">Büro / Praxis</option>
+
+              <option value="Gastro">Gastronomie / Café</option>
+
               <option value="Sonstiges">Sonstiges</option>
+
             </select>
+
           </div>
-          <p><strong>Bitte gib jeweils einen einmaligen Kaufpreis in Euro an (nur Zahl, ohne â¬-Zeichen).</strong></p>
+
+          <p><strong>Bitte gib jeweils einen einmaligen Kaufpreis in Euro an (nur Zahl, ohne â‚¬-Zeichen).</strong></p>
+
           <div class="field">
-            <label for="too-cheap">1. Ab welchem Preis wÃ¤re AquaSense so gÃ¼nstig, dass du die QualitÃ¤t anzweifeln wÃ¼rdest? (zu billig)</label>
+
+            <label for="too-cheap">1. Ab welchem Preis wäre AquaSense so günstig, dass du die Qualität anzweifeln würdest? (zu billig)</label>
+
             <div class="field-inline">
+
               <input type="number" id="too-cheap" name="price_too_cheap" min="0" step="1" required placeholder="z. B. 99">
-              <span>â¬</span>
+
+              <span>â‚¬</span>
+
             </div>
+
           </div>
+
           <div class="field">
-            <label for="cheap">2. Ab welchem Preis empfindest du AquaSense als gÃ¼nstig, aber noch glaubwÃ¼rdig und attraktiv?</label>
+
+            <label for="cheap">2. Ab welchem Preis empfindest du AquaSense als günstig, aber noch glaubwürdig und attraktiv?</label>
+
             <div class="field-inline">
+
               <input type="number" id="cheap" name="price_cheap" min="0" step="1" required placeholder="z. B. 149">
-              <span>â¬</span>
+
+              <span>â‚¬</span>
+
             </div>
+
           </div>
+
           <div class="field">
+
             <label for="expensive">3. Ab welchem Preis empfindest du AquaSense als teuer, aber gerade noch akzeptabel?</label>
+
             <div class="field-inline">
+
               <input type="number" id="expensive" name="price_expensive" min="0" step="1" required placeholder="z. B. 249">
-              <span>â¬</span>
+
+              <span>â‚¬</span>
+
             </div>
+
           </div>
+
           <div class="field">
-            <label for="too-expensive">4. Ab welchem Preis wÃ¤re AquaSense so teuer, dass du es auf keinen Fall kaufen wÃ¼rdest? (zu teuer)</label>
+
+            <label for="too-expensive">4. Ab welchem Preis wäre AquaSense so teuer, dass du es auf keinen Fall kaufen würdest? (zu teuer)</label>
+
             <div class="field-inline">
+
               <input type="number" id="too-expensive" name="price_too_expensive" min="0" step="1" required placeholder="z. B. 399">
-              <span>â¬</span>
+
+              <span>â‚¬</span>
+
             </div>
+
           </div>
-          <p class="privacy-hint">Deine Angaben werden nur zur Auswertung der Preisstudie fÃ¼r AquaSense genutzt. Es werden keine personenbezogenen Daten wie Name oder Adresse erfasst.</p>
+
+          <p class="privacy-hint">Deine Angaben werden nur zur Auswertung der Preisstudie für AquaSense genutzt. Es werden keine personenbezogenen Daten wie Name oder Adresse erfasst.</p>
+
           <div class="form__actions">
+
             <button class="button" type="submit">Preisfeedback senden</button>
+
             <p class="status" role="status" aria-live="polite"></p>
+
           </div>
+
         </div>
+
       </form>
+
     </section>
+
   </main>
+
   <footer class="footer" role="contentinfo">
+
     <div class="container footer__grid">
+
       <div class="footer__brand">
-        <p class="footer__eyebrow">AquaSense â Sauberes Wasser. Klar im Blick.</p>
+
+        <p class="footer__eyebrow">AquaSense - Sauberes Wasser. Klar im Blick.</p>
+
         <p class="footer__text">Echtzeit-Monitoring mit Alerts, Trends und Profilen.</p>
+
       </div>
+
       <div class="footer__col">
+
         <h3>Kontakt</h3>
+
         <a class="footer__link" href="mailto:service.aquasense@gmail.com">service.aquasense@gmail.com</a>
+
       </div>
+
       <div class="footer__col">
+
         <h3>Direktlinks</h3>
+
         <a class="footer__link" href="index.html#top">Start</a>
+
         <a class="footer__link" href="app.html">App</a>
+
         <a class="footer__link" href="shop.html">Shop</a>
+
         <a class="footer__link" href="faq.html">FAQ</a>
+
       </div>
+
     </div>
+
     <div class="footer__bottom">
+
       <p class="footer__note"><span id="year"></span> &copy; AquaSense.</p>
+
     </div>
+
   </footer>
+
   <script src="script.js" defer></script>
+
   <script>
+
     (function () {
+
       var form = document.querySelector('.pricing-form');
+
       if (!form || window.asPricingFormBound || !window.fetch) return;
+
       var status = form.querySelector('.status');
+
       var submitBtn = form.querySelector('button[type="submit"]');
+
       var defaultLabel = submitBtn ? submitBtn.textContent : '';
+
       function setStatus(text) {
+
         if (status) status.textContent = text;
+
       }
+
       form.addEventListener('submit', function (e) {
+
         e.preventDefault();
+
         if (submitBtn) {
+
           submitBtn.disabled = true;
+
           submitBtn.textContent = 'Sende...';
+
         }
+
         setStatus('Sende...');
+
         fetch(form.action, {
+
           method: 'POST',
+
           headers: { 'Accept': 'application/json' },
+
           body: new FormData(form)
+
         }).then(function (response) {
+
           if (!response.ok) throw new Error('Request failed');
+
           setStatus('Danke! Deine Preisangaben wurden gesendet.');
+
           form.reset();
+
         }).catch(function () {
+
           setStatus('Fehler beim Senden. Bitte versuche es erneut.');
+
         }).finally(function () {
+
           if (submitBtn) {
+
             submitBtn.disabled = false;
+
             submitBtn.textContent = defaultLabel || 'Preisfeedback senden';
+
           }
+
         });
+
       });
+
     })();
+
   </script>
+
 </body>
+
 </html>
+
