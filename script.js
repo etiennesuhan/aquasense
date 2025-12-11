@@ -273,7 +273,7 @@
       appHeroEyebrow: 'App & dashboard',
       appHeroTitle: 'AquaSense app – your water, always in view',
       appHeroLead: 'Monitor pH, conductivity, temperature and more in real time, get alerts and share profiles.',
-      appHeroCta: 'Join the waitlist',
+      appHeroCta: 'Test the app',
       appHeroSecondary: 'View shop',
       appCtaTitle: 'Ready to go?',
       appCtaSub: 'Get early access to the app and the next prototypes.',
