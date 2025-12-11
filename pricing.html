@@ -36,6 +36,7 @@
       <form class="form pricing-form" action="https://formsubmit.co/service.aquasense@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="AquaSense: Van-Westendorp Preisfeedback">
         <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
 
         <div class="form__grid">
           <div class="field">
@@ -43,11 +44,13 @@
             <select id="usage" name="usage">
               <option value="">Bitte auswählen (optional)</option>
               <option value="Haushalt">Haushalt / Trinkwasser</option>
+              <option value="Baby_Familie">Babywasser &amp; Familie</option>
+              <option value="Kaffee_Tee">Kaffee &amp; Tee / Siebträger</option>
               <option value="Aquaristik">Aquaristik / Terraristik</option>
-              <option value="Kaffee_Tee">Kaffee &amp; Tee / Siebtr&auml;ger</option>
-              <option value="Garten">Garten / Bew&auml;sserung</option>
-                            <option value="Buero">B&uuml;ro / Praxis</option>
-                            <option value="Gastro">Gastronomie / Caf&eacute;</option>\n              <option value="Sonstiges">Sonstiges</option>
+              <option value="Garten">Garten / Bewässerung</option>
+              <option value="Buero">Büro / Praxis</option>
+              <option value="Gastro">Gastronomie / Café</option>
+              <option value="Sonstiges">Sonstiges</option>
             </select>
           </div>
 
@@ -120,5 +123,46 @@
   </footer>
 
   <script src="script.js" defer></script>
+  <script>
+    (function () {
+      var form = document.querySelector('.pricing-form');
+      if (!form || window.asPricingFormBound || !window.fetch) return;
+
+      var status = form.querySelector('.status');
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var defaultLabel = submitBtn ? submitBtn.textContent : '';
+
+      function setStatus(text) {
+        if (status) status.textContent = text;
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Sende...';
+        }
+        setStatus('Sende...');
+
+        fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        }).then(function (response) {
+          if (!response.ok) throw new Error('Request failed');
+          setStatus('Danke! Deine Preisangaben wurden gesendet.');
+          form.reset();
+        }).catch(function () {
+          setStatus('Fehler beim Senden. Bitte versuche es erneut.');
+        }).finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = defaultLabel || 'Preisfeedback senden';
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

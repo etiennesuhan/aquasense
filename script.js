@@ -1048,6 +1048,7 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
 
   // Pricing form (Van-Westendorp) handling
   if (pricingForm && window.fetch) {
+    window.asPricingFormBound = true;
     const pricingSubmitBtn = pricingForm.querySelector('button[type="submit"]');
     const defaultPricingLabel = pricingSubmitBtn?.textContent || '';
 
@@ -1177,7 +1178,6 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     link.remove();
   });
 })();
-
 
 
 
