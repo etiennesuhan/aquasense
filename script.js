@@ -994,6 +994,7 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     const consent = waitlistForm.querySelector('input[name="consent"]');
     const submitBtn = waitlistForm.querySelector('button[type="submit"]');
     const defaultSubmitLabel = submitBtn?.textContent || '';
+    const requiresConsent = Boolean(consent);
 
     const submitLabel = (lang) => {
       if (lang === 'en') return translations.en?.submitBtn || defaultSubmitLabel;
@@ -1017,8 +1018,9 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
       const honeypot = waitlistForm.querySelector('input[name="_honey"]');
       if (honeypot?.value) return;
 
-      if (!emailField?.checkValidity() || !consent?.checked) {
-        setStatus('statusInvalid', 'Bitte E-Mail und Zustimmung pruefen.');
+      const consentValid = !requiresConsent || consent?.checked;
+      if (!emailField?.checkValidity() || !consentValid) {
+        setStatus('statusInvalid', requiresConsent ? 'Bitte E-Mail und Zustimmung pruefen.' : 'Bitte E-Mail prufen.');
         emailField?.focus();
         return;
       }
@@ -1135,7 +1137,6 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     link.remove();
   });
 })();
-
 
 
 
