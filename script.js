@@ -40,6 +40,35 @@
   const featureModalContent = featureModal?.querySelector('.feature-modal__content');
   const featureContentEls = document.querySelectorAll('[data-feature-content]');
   let analyticsLoaded = false;
+
+  // Mobile nav: hide only after JS bound, keep fallback visible otherwise
+  initNav();
+  function initNav() {
+    if (!navToggle || !navList) return;
+    let navOverlay = document.querySelector('.nav-overlay');
+    if (!navOverlay) {
+      navOverlay = document.createElement('div');
+      navOverlay.className = 'nav-overlay';
+      document.body.appendChild(navOverlay);
+    }
+    const closeNav = () => {
+      navList.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('nav-open');
+    };
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      const nextState = !expanded;
+      navToggle.setAttribute('aria-expanded', String(nextState));
+      navList.classList.toggle('open', nextState);
+      document.body.classList.toggle('nav-open', nextState);
+    });
+    navList.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeNav));
+    navOverlay?.addEventListener('click', closeNav);
+    window.addEventListener('resize', () => { if (window.innerWidth > 960) closeNav(); });
+    document.body.classList.add('nav-ready');
+  }
+
   const smoothScrollTo = (targetY, duration = 900) => {
     const startY = window.scrollY;
     const delta = targetY - startY;
@@ -470,19 +499,6 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     if (link.dataset.nav === page && page !== 'home') {
       link.addEventListener('click', (e) => e.preventDefault());
     }
-  });
-
-  // Mobile nav
-  navToggle?.addEventListener('click', () => {
-    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-    navToggle.setAttribute('aria-expanded', String(!expanded));
-    navList.classList.toggle('open');
-  });
-  navList?.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      navList.classList.remove('open');
-      navToggle?.setAttribute('aria-expanded', 'false');
-    });
   });
 
   langToggle?.addEventListener('click', () => {
@@ -1127,6 +1143,11 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
       if (cartPanel && !cartPanel.hidden) {
         closeCart();
       }
+      if (navList?.classList.contains('open')) {
+        navList.classList.remove('open');
+        navToggle?.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('nav-open');
+      }
       modals.forEach((modal) => {
         if (!modal.hidden) closeModal(modal.id);
       });
@@ -1178,9 +1199,5 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     link.remove();
   });
 })();
-
-
-
-
 
 

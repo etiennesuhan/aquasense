@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AquaSense – FAQ</title>
+  <title>AquaSense â FAQ</title>
   <meta name="description" content="Antworten auf die h\u00e4ufigsten Fragen rund um AquaSense, Funktionen, Datenschutz und Verf\u00fcgbarkeit.">
   <link rel="preload" as="style" href="styles.css">
   <link rel="stylesheet" href="styles.css">
@@ -16,7 +16,10 @@
         <img src="assets/logo.png" alt="AquaSense Logo" width="200" height="50">
       </a>
       <nav aria-label="Hauptnavigation">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" data-i18n="menu">Menü</button>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+          <span class="nav-toggle__icon" aria-hidden="true"><span></span></span>
+          <span class="visually-hidden" data-i18n="menu">Men&uuml;</span>
+        </button>
         <ul id="nav-links" class="nav__list">
           <li><a href="index.html#top" data-home="index.html#top" data-nav="home" data-i18n="navStart">Start</a></li>
           <li><a href="app.html" data-nav="app" data-i18n="navApp">App</a></li>
@@ -27,11 +30,10 @@
       </nav>
     </div>
   </header>
-
   <main id="main" role="main">
     <section class="section container">
       <header class="section__header">
-        <h1 data-i18n="faqTitle">Häufige Fragen</h1>
+        <h1 data-i18n="faqTitle">HÃ¤ufige Fragen</h1>
       </header>
       <div class="accordion">
         <details class="accordion__item">
@@ -51,8 +53,8 @@
           <div class="accordion__content" data-i18n="faq4A">Standard-Empfehlungen + individuelle Anpassung in der App.</div>
         </details>
         <details class="accordion__item">
-          <summary data-i18n="faq5Q">Warteliste – was passiert danach?</summary>
-          <div class="accordion__content" data-i18n="faq5A">Wir informieren über Prototyp-Tests, Early-Access &amp; Updates.</div>
+          <summary data-i18n="faq5Q">Warteliste â was passiert danach?</summary>
+          <div class="accordion__content" data-i18n="faq5A">Wir informieren Ã¼ber Prototyp-Tests, Early-Access &amp; Updates.</div>
         </details>
         <details class="accordion__item">
           <summary data-i18n="faq6Q">Wie erfahre ich von Warnungen?</summary>
@@ -61,13 +63,12 @@
       </div>
     </section>
   </main>
-
   <footer class="footer" role="contentinfo">
     <div class="container footer__grid">
       <div class="footer__brand">
-        <p class="footer__eyebrow" data-i18n="footerTagline">AquaSense ¶ú Wasserqualität im Blick</p>
-        <p class="footer__text" data-i18n="footerSummary">Echtzeit-Monitoring für pH, Leitfähigkeit, Temperatur und mehr
-          für Haushalte, Coffee Bars und Aquaristik.</p>
+        <p class="footer__eyebrow" data-i18n="footerTagline">AquaSense Â¶Ãº WasserqualitÃ¤t im Blick</p>
+        <p class="footer__text" data-i18n="footerSummary">Echtzeit-Monitoring fÃ¼r pH, LeitfÃ¤higkeit, Temperatur und mehr
+          fÃ¼r Haushalte, Coffee Bars und Aquaristik.</p>
       </div>
       <div class="footer__col">
         <h3 data-i18n="footerContactTitle">Kontakt</h3>
@@ -91,7 +92,6 @@
       <p class="footer__note"><span id="year"></span> &copy; AquaSense. <span data-i18n="footerRights">Alle Rechte vorbehalten.</span></p>
     </div>
   </footer>
-
   <div class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie Hinweis">
     <div class="cookie-banner__text">
       <p class="cookie-banner__title" data-i18n="cookieTitle">Cookies &amp; Analytics</p>
@@ -103,7 +103,6 @@
       <button class="button" type="button" id="cookie-accept" data-i18n="cookieAccept">Akzeptieren</button>
     </div>
   </div>
-
   <script src="script.js" defer></script>
 </body>
 </html>

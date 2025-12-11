@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AquaSense Shop – Wähle dein Design</title>
+  <title>AquaSense Shop â WÃ¤hle dein Design</title>
   <meta name="description" content="Entdecke AquaSense in drei Farbvarianten. Preise und Lieferzeiten werden noch bekanntgegeben.">
   <link rel="preload" as="style" href="styles.css">
   <link rel="stylesheet" href="styles.css">
@@ -16,7 +16,10 @@
         <img src="assets/logo.png" alt="AquaSense Logo" width="200" height="50">
       </a>
       <nav aria-label="Hauptnavigation">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" data-i18n="menu">Menü</button>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+          <span class="nav-toggle__icon" aria-hidden="true"><span></span></span>
+          <span class="visually-hidden" data-i18n="menu">Men&uuml;</span>
+        </button>
         
         <ul id="nav-links" class="nav__list">
           <li><a href="index.html#top" data-home="index.html#top" data-nav="home" data-i18n="navStart">Start</a></li>
@@ -28,57 +31,53 @@
       </nav>
     </div>
   </header>
-
   <main id="main" role="main">
     
-
     <section class="section container" id="shop-grid">
       <header class="section__header">
         <h2 data-i18n="shopGridTitle">Alle Farben auf einen Blick</h2>
-        <p data-i18n="shopGridSub">Klicke auf "Auswählen", um dein bevorzugtes Design zu sichern.</p>
+        <p data-i18n="shopGridSub">Klicke auf "AuswÃ¤hlen", um dein bevorzugtes Design zu sichern.</p>
       </header>
       <div class="grid shop__grid">
-        <article class="card product" data-color="Weiß">
-          <div class="product__badge" data-i18n="productColor1">Weiß</div>
+        <article class="card product" data-color="WeiÃ">
+          <div class="product__badge" data-i18n="productColor1">WeiÃ</div>
           <figure class="product__media">
-            <img src="assets/color3/white.png" alt="AquaSense in Weiß" loading="lazy" class="product__image">
+            <img src="assets/color3/white.png" alt="AquaSense in WeiÃ" loading="lazy" class="product__image">
           </figure>
-          <h3 data-i18n="product1Title">AquaSense – Weiß</h3>
-          <p class="product__desc" data-i18n="product1Desc">Helle, puristische Variante für moderne Küchen und Labor-Setups.</p>
+          <h3 data-i18n="product1Title">AquaSense â WeiÃ</h3>
+          <p class="product__desc" data-i18n="product1Desc">Helle, puristische Variante fÃ¼r moderne KÃ¼chen und Labor-Setups.</p>
           <p class="product__desc" aria-label="Preis" data-i18n="product1Price">Preis wird noch bekanntgegeben</p>
-          <a class="button" href="product.html?variant=color1" aria-label="Weiß auswählen" data-i18n="productCta">Auswählen</a>
+          <a class="button" href="product.html?variant=color1" aria-label="WeiÃ auswÃ¤hlen" data-i18n="productCta">AuswÃ¤hlen</a>
         </article>
         <article class="card product" data-color="Obsidian">
           <div class="product__badge" data-i18n="productColor2">Obsidian</div>
           <figure class="product__media">
             <img src="assets/color2/obsidian.png" alt="AquaSense in Obsidian" loading="lazy" class="product__image">
           </figure>
-          <h3 data-i18n="product2Title">AquaSense – Obsidian</h3>
-          <p class="product__desc" data-i18n="product2Desc">Obsidian-Look mit markanten Akzenten, ideal für Coffee- und Bar-Umgebungen.</p>
+          <h3 data-i18n="product2Title">AquaSense â Obsidian</h3>
+          <p class="product__desc" data-i18n="product2Desc">Obsidian-Look mit markanten Akzenten, ideal fÃ¼r Coffee- und Bar-Umgebungen.</p>
           <p class="product__desc" aria-label="Preis" data-i18n="product2Price">Preis wird noch bekanntgegeben</p>
-          <a class="button" href="product.html?variant=color2" aria-label="Obsidian auswählen" data-i18n="productCta">Auswählen</a>
+          <a class="button" href="product.html?variant=color2" aria-label="Obsidian auswÃ¤hlen" data-i18n="productCta">AuswÃ¤hlen</a>
         </article>
         <article class="card product" data-color="Graphit">
           <div class="product__badge" data-i18n="productColor3">Graphit</div>
           <figure class="product__media">
             <img src="assets/color1/graphit.png" alt="AquaSense in Graphit" loading="lazy" class="product__image">
           </figure>
-          <h3 data-i18n="product3Title">AquaSense – Graphit</h3>
-          <p class="product__desc" data-i18n="product3Desc">Graphitgrau, robust und zeitlos – perfekt für Werkstatt, Labor oder Utility-Raum.</p>
+          <h3 data-i18n="product3Title">AquaSense â Graphit</h3>
+          <p class="product__desc" data-i18n="product3Desc">Graphitgrau, robust und zeitlos â perfekt fÃ¼r Werkstatt, Labor oder Utility-Raum.</p>
           <p class="product__desc" aria-label="Preis" data-i18n="product3Price">Preis wird noch bekanntgegeben</p>
-          <a class="button" href="product.html?variant=color3" aria-label="Graphit auswählen" data-i18n="productCta">Auswählen</a>
+          <a class="button" href="product.html?variant=color3" aria-label="Graphit auswÃ¤hlen" data-i18n="productCta">AuswÃ¤hlen</a>
         </article>
       </div>
     </section>
-
     
   </main>
-
   <footer class="footer" role="contentinfo">
     <div class="container footer__grid">
       <div class="footer__brand">
-        <p class="footer__eyebrow" data-i18n="footerTagline">AquaSense · Wasserqualität im Blick</p>
-        <p class="footer__text" data-i18n="footerSummary">Echtzeit-Monitoring fuer pH, Leitfähigkeit, Temperatur und mehr
+        <p class="footer__eyebrow" data-i18n="footerTagline">AquaSense Â· WasserqualitÃ¤t im Blick</p>
+        <p class="footer__text" data-i18n="footerSummary">Echtzeit-Monitoring fuer pH, LeitfÃ¤higkeit, Temperatur und mehr
           fuer Haushalte, Coffee Bars und Aquaristik.</p>
       </div>
       <div class="footer__col">
@@ -103,7 +102,6 @@
       <p class="footer__note"><span id="year"></span> &copy; AquaSense. <span data-i18n="footerRights">Alle Rechte vorbehalten.</span></p>
     </div>
   </footer>
-
   <div class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie Hinweis">
     <div class="cookie-banner__text">
       <p class="cookie-banner__title" data-i18n="cookieTitle">Cookies &amp; Analytics</p>
@@ -115,29 +113,28 @@
       <button class="button" type="button" id="cookie-accept" data-i18n="cookieAccept">Akzeptieren</button>
     </div>
   </div>
-
   <section id="whitepaper" hidden aria-hidden="true">
     <article class="whitepaper">
-      <h1 data-i18n="wpTitle">AquaSense – Technisches Konzept (Kurzfassung)</h1>
+      <h1 data-i18n="wpTitle">AquaSense â Technisches Konzept (Kurzfassung)</h1>
       <h2 data-i18n="wpProblemTitle">Problem &amp; Motivation</h2>
-      <p data-i18n="wpProblemText">Wasserwerte schwanken oft unbemerkt. Haushalte, Kaffee-Setups und Aquarien benötigen
+      <p data-i18n="wpProblemText">Wasserwerte schwanken oft unbemerkt. Haushalte, Kaffee-Setups und Aquarien benÃ¶tigen
         Transparenz, um Geschmack, Sicherheit und Langlebigkeit zu sichern.</p>
-      <h2 data-i18n="wpArchTitle">Architekturüberblick</h2>
+      <h2 data-i18n="wpArchTitle">ArchitekturÃ¼berblick</h2>
       <ul>
-        <li data-i18n="wpArch1">Sensorik: pH, Leitfähigkeit, Temperatur, Trübung.</li>
+        <li data-i18n="wpArch1">Sensorik: pH, LeitfÃ¤higkeit, Temperatur, TrÃ¼bung.</li>
         <li data-i18n="wpArch2">Firmware: Edge-Analytics, Grenzwertlogik, sichere Updates.</li>
         <li data-i18n="wpArch3">App: Live-Werte, Warnungen, Profile, Historie.</li>
         <li data-i18n="wpArch4">Optionale Cloud: Opt-in Sync, Team-Shares, Remote-Alerts.</li>
       </ul>
       <h2 data-i18n="wpPrivacyTitle">Datenschutzprinzipien</h2>
-      <p data-i18n="wpPrivacyText">Privacy by Design, lokale Speicherung, verschlüsselte Verbindungen, transparente
+      <p data-i18n="wpPrivacyText">Privacy by Design, lokale Speicherung, verschlÃ¼sselte Verbindungen, transparente
         Einwilligungen.</p>
-      <h2 data-i18n="wpSpecsTitle">Vorläufige Spezifikationen</h2>
-      <p data-i18n="wpSpecsText">USB-C 5V, WLAN 2.4 GHz/BLE, IPX4-Ziel, 90 × 45 mm Prototyp, modulare Sensor-Slots.</p>
+      <h2 data-i18n="wpSpecsTitle">VorlÃ¤ufige Spezifikationen</h2>
+      <p data-i18n="wpSpecsText">USB-C 5V, WLAN 2.4 GHz/BLE, IPX4-Ziel, 90 Ã 45 mm Prototyp, modulare Sensor-Slots.</p>
       <h2 data-i18n="wpRoadmapTitle">Roadmap &amp; Validierung</h2>
       <ol>
         <li data-i18n="wpRoadmap1">Laborvalidierung der Sensoren</li>
-        <li data-i18n="wpRoadmap2">Beta mit ausgewählten Haushalten</li>
+        <li data-i18n="wpRoadmap2">Beta mit ausgewÃ¤hlten Haushalten</li>
         <li data-i18n="wpRoadmap3">App-Iterationen &amp; Export</li>
         <li data-i18n="wpRoadmap4">Cloud-Opt-in Tests</li>
       </ol>
@@ -162,18 +159,17 @@
       </svg>
     </article>
   </section>
-
   <div class="modal" id="imprint" role="dialog" aria-modal="true" aria-labelledby="imprint-title" hidden>
     <div class="modal__backdrop" data-close="imprint"></div>
     <div class="modal__dialog" role="document" tabindex="-1">
       <header class="modal__header">
         <h2 id="imprint-title" data-i18n="imprintTitle">Impressum</h2>
-        <button type="button" class="icon-button" data-close="imprint" aria-label="Schließen"
-          data-i18n-aria="closeLabel">✕</button>
+        <button type="button" class="icon-button" data-close="imprint" aria-label="SchlieÃen"
+          data-i18n-aria="closeLabel">â</button>
       </header>
       <div class="modal__body">
         <p data-i18n="imprintLine1">[Firma/Name]</p>
-        <p data-i18n="imprintLine2">[Straße Hausnummer]</p>
+        <p data-i18n="imprintLine2">[StraÃe Hausnummer]</p>
         <p data-i18n="imprintLine3">[PLZ Ort]</p>
         <p data-i18n="imprintLine4">[E-Mail: placeholder@example.com]</p>
         <p data-i18n="imprintLine5">Vertretungsberechtigte: [Platzhalter]</p>
@@ -181,7 +177,6 @@
       </div>
     </div>
   </div>
-
   <div class="modal" id="privacy" role="dialog" aria-modal="true" aria-labelledby="privacy-title" hidden>
     <div class="modal__backdrop" data-close="privacy"></div>
     <div class="modal__dialog" role="document" tabindex="-1">
@@ -200,7 +195,6 @@
       </div>
     </div>
   </div>
-
   
   <script src="script.js" defer></script>
 </body>
