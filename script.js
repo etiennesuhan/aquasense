@@ -1081,6 +1081,26 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     window.asPricingFormBound = true;
     const pricingSubmitBtn = pricingForm.querySelector('button[type="submit"]');
     const defaultPricingLabel = pricingSubmitBtn?.textContent || '';
+    const pricingNumberFields = pricingForm.querySelectorAll('input[type="number"]');
+
+    // Allow only digits (mobile keyboards show numeric layout via attributes in HTML)
+    pricingNumberFields.forEach((input) => {
+      input.setAttribute('inputmode', 'decimal');
+      input.setAttribute('pattern', '[0-9]*');
+      input.addEventListener('keydown', (e) => {
+        const allowedKeys = ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab', 'Home', 'End'];
+        const isShortcut = e.ctrlKey || e.metaKey;
+        if (allowedKeys.includes(e.key) || isShortcut) return;
+        if (!/^[0-9]$/.test(e.key)) {
+          e.preventDefault();
+        }
+      });
+      input.addEventListener('wheel', (e) => e.preventDefault(), { passive: false });
+      input.addEventListener('input', () => {
+        const digits = input.value.replace(/[^0-9]/g, '');
+        if (digits !== input.value) input.value = digits;
+      });
+    });
 
     const setPricingStatus = (text) => {
       if (!pricingStatusEl) return;
@@ -1213,5 +1233,3 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     link.remove();
   });
 })();
-
-
