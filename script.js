@@ -990,6 +990,7 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
 
 // Form handling (uses formsubmit.co endpoint)
   if (waitlistForm && window.fetch) {
+    window.asWaitlistFormBound = true;
     const emailField = waitlistForm.querySelector('input[name="email"]');
     const consent = waitlistForm.querySelector('input[name="consent"]');
     const submitBtn = waitlistForm.querySelector('button[type="submit"]');
@@ -1033,7 +1034,7 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
           body: new FormData(waitlistForm)
         });
         if (!res.ok) throw new Error('Request failed');
-        setStatus('statusSuccess', 'Danke! Du erhaeltst gleich eine Bestaetigung.');
+        setStatus('statusSuccess', 'Danke! Du erhältst gleich eine Bestätigung.');
         waitlistForm.reset();
       } catch (err) {
         setStatus('statusError', 'Fehler beim Senden. Bitte erneut versuchen.');
@@ -1135,7 +1136,6 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     link.remove();
   });
 })();
-
 
 
 

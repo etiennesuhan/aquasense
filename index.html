@@ -375,7 +375,59 @@
     </div>
   </div>
 
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var form = document.querySelector('[data-form="waitlist"]');
+      if (!form || window.asWaitlistFormBound || !window.fetch) return;
+
+      var status = form.querySelector('.status');
+      var emailField = form.querySelector('input[name="email"]');
+      var consent = form.querySelector('input[name="consent"]');
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var defaultLabel = submitBtn ? submitBtn.textContent : '';
+      var honeypot = form.querySelector('input[name="_honey"]');
+
+      function setStatus(text) {
+        if (!status) return;
+        status.textContent = text;
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (honeypot && honeypot.value) return;
+
+        if (!emailField || !emailField.checkValidity() || (consent && !consent.checked)) {
+          setStatus('Bitte E-Mail und Zustimmung pruefen.');
+          if (emailField) emailField.focus();
+          return;
+        }
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Sende...';
+        }
+        setStatus('Sende...');
+
+        fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        }).then(function (response) {
+          if (!response.ok) throw new Error('Request failed');
+          setStatus('Danke! Du erhältst gleich eine Bestätigung.');
+          form.reset();
+        }).catch(function () {
+          setStatus('Fehler beim Senden. Bitte erneut versuchen.');
+        }).finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = defaultLabel || 'Zum Newsletter anmelden';
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 
 </html>
