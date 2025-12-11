@@ -8,6 +8,8 @@
   const langToggle = document.querySelector('.lang-toggle');
   const waitlistForm = document.querySelector('[data-form="waitlist"]');
   const statusEl = waitlistForm?.querySelector('.status');
+  const pricingForm = document.querySelector('.pricing-form');
+  const pricingStatusEl = pricingForm?.querySelector('.status');
   const yearEl = document.getElementById('year');
   const modals = document.querySelectorAll('.modal');
   const whitepaperBtn = document.getElementById('whitepaper-btn');
@@ -1044,6 +1046,45 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     });
   }
 
+  // Pricing form (Van-Westendorp) handling
+  if (pricingForm && window.fetch) {
+    const pricingSubmitBtn = pricingForm.querySelector('button[type="submit"]');
+    const defaultPricingLabel = pricingSubmitBtn?.textContent || '';
+
+    const setPricingStatus = (text) => {
+      if (!pricingStatusEl) return;
+      pricingStatusEl.textContent = text;
+    };
+
+    pricingForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      if (pricingSubmitBtn) {
+        pricingSubmitBtn.disabled = true;
+        pricingSubmitBtn.textContent = 'Sende...';
+      }
+      setPricingStatus('Sende...');
+
+      try {
+        const res = await fetch(pricingForm.action, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(pricingForm)
+        });
+        if (!res.ok) throw new Error('Request failed');
+        setPricingStatus('Danke! Deine Preisangaben wurden gesendet.');
+        pricingForm.reset();
+      } catch (err) {
+        setPricingStatus('Fehler beim Senden. Bitte versuche es erneut.');
+      } finally {
+        if (pricingSubmitBtn) {
+          pricingSubmitBtn.disabled = false;
+          pricingSubmitBtn.textContent = defaultPricingLabel || 'Preisfeedback senden';
+        }
+      }
+    });
+  }
+
 // Show thank you when returning via _next
   if (location.hash === '#thank-you') {
     const thank = document.getElementById('thank-you');
@@ -1136,7 +1177,6 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     link.remove();
   });
 })();
-
 
 
 

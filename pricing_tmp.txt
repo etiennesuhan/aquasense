@@ -42,12 +42,10 @@
             <label for="usage">Wofür würdest du AquaSense voraussichtlich nutzen?</label>
             <select id="usage" name="usage">
               <option value="">Bitte auswählen (optional)</option>
-              <option value="Haushalt">Haushalt / Trinkwasser</option>
-              <option value="Aquaristik">Aquaristik / Terraristik</option>
-              <option value="Kaffee_Tee">Kaffee &amp; Tee / Siebtr&auml;ger</option>
-              <option value="Garten">Garten / Bew&auml;sserung</option>
-                            <option value="Buero">B&uuml;ro / Praxis</option>
-                            <option value="Gastro">Gastronomie / Caf&eacute;</option>\n              <option value="Sonstiges">Sonstiges</option>
+              <option value="Haushalt">Haushalt</option>
+              <option value="Aquaristik">Aquaristik</option>
+              <option value="Kaffee_Tee">Kaffee &amp; Tee</option>
+              <option value="Sonstiges">Sonstiges</option>
             </select>
           </div>
 
@@ -100,25 +98,3 @@
     <div class="container footer__grid">
       <div class="footer__brand">
         <p class="footer__eyebrow">AquaSense – Sauberes Wasser. Klar im Blick.</p>
-        <p class="footer__text">Echtzeit-Monitoring mit Alerts, Trends und Profilen.</p>
-      </div>
-      <div class="footer__col">
-        <h3>Kontakt</h3>
-        <a class="footer__link" href="mailto:service.aquasense@gmail.com">service.aquasense@gmail.com</a>
-      </div>
-      <div class="footer__col">
-        <h3>Direktlinks</h3>
-        <a class="footer__link" href="index.html#top">Start</a>
-        <a class="footer__link" href="app.html">App</a>
-        <a class="footer__link" href="shop.html">Shop</a>
-        <a class="footer__link" href="faq.html">FAQ</a>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <p class="footer__note"><span id="year"></span> &copy; AquaSense.</p>
-    </div>
-  </footer>
-
-  <script src="script.js" defer></script>
-</body>
-</html>
