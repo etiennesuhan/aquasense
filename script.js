@@ -780,6 +780,7 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     }
   };
 
+  
   function populateProductDetail(langOverride) {
     if (page !== 'product') return;
     const lang = langOverride || currentLang || 'de';
@@ -799,17 +800,20 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
       stock: { ...baseVariant.stock, ...(override.stock || {}) }
     } : baseVariant;
     localStorage.setItem('as-last-variant', variantKey);
+
     const pick = (obj) => (typeof obj === 'string' ? obj : obj?.[lang] || obj?.de || '');
-        const priceFmt = (value) => {
+    const priceFmt = (value) => {
+      const amount = Number(value);
+      const numeric = Number.isFinite(amount) ? amount : 0;
       try {
-        return new Intl.NumberFormat(lang === "en" ? "en-US" : "de-DE", { style: "currency", currency: "EUR" }).format(value);
+        return new Intl.NumberFormat(lang === 'en' ? 'en-US' : 'de-DE', { style: 'currency', currency: 'EUR' }).format(numeric);
       } catch (err) {
-        return `${value?.toFixed ? value.toFixed(2) : value} �`;
+        return `${numeric.toFixed(2)} €`;
       }
     };
     const priceText = (value) => {
-      if (typeof value === "number" && value > 0) return priceFmt(value);
-      return translations[currentLang]?.priceTbd || "Preis wird noch festgelegt";
+      if (typeof value === 'number' && value > 0) return priceFmt(value);
+      return translations[currentLang]?.priceTbd || 'Preis wird noch festgelegt';
     };
 
     document.title = `${pick(variant.title)} | AquaSense`;
@@ -837,8 +841,8 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     const boxSavingEl = document.getElementById('detail-saving');
     const addBtn = document.getElementById('add-to-cart-detail');
 
-    const saving = variant.uvp > variant.price ? variant.uvp - variant.price : 0;
-    const savingPct = variant.uvp > variant.price ? Math.round((saving / variant.uvp) * 100) : 0;
+    const saving = variant.uvp && variant.price ? Math.max(0, variant.uvp - variant.price) : 0;
+    const savingPct = saving && variant.uvp ? Math.round((saving / variant.uvp) * 100) : 0;
 
     if (breadcrumb) breadcrumb.textContent = pick(variant.title);
     if (badge) badge.textContent = pick(variant.color);
@@ -847,7 +851,7 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
     if (priceEl) priceEl.textContent = priceText(variant.price);
     if (uvpEl) uvpEl.hidden = true;
     if (stockEl) stockEl.textContent = pick(variant.stock);
-    if (deliveryEl) deliveryEl.textContent = pick(variant.delivery) || (translations[currentLang]?.deliveryTbd || "Lieferzeit wird noch bekanntgegeben.");
+    if (deliveryEl) deliveryEl.textContent = pick(variant.delivery) || (translations[currentLang]?.deliveryTbd || 'Lieferzeit wird noch bekanntgegeben.');
     if (skuEl) skuEl.textContent = variant.sku;
     if (imageEl) {
       imageEl.src = variant.image;
@@ -862,19 +866,29 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
       });
     }
     if (ratingEl) ratingEl.setAttribute('aria-label', `${lang === 'en' ? 'Rating' : 'Bewertung'} ${variant.rating} / 5`);
-    if (ratingStarsEl) ratingStarsEl.textContent = '★★★★★'.slice(0, Math.round(variant.rating)) + '☆'.repeat(5 - Math.round(variant.rating));
+    if (ratingStarsEl) {
+      const filled = Math.min(5, Math.max(0, Math.round(variant.rating || 0)));
+      ratingStarsEl.textContent = '★'.repeat(filled).padEnd(5, '☆');
+    }
     if (ratingCountEl) ratingCountEl.textContent = `(${variant.reviews})`;
 
     if (boxPriceEl) boxPriceEl.textContent = priceText(variant.price);
     if (boxUvpEl) boxUvpEl.hidden = true;
     if (boxStockEl) boxStockEl.textContent = pick(variant.stock);
     if (boxDeliveryEl) boxDeliveryEl.textContent = pick(variant.delivery) || (translations[currentLang]?.deliveryTbd || 'Lieferzeit wird noch bekanntgegeben.');
-    if (boxSavingEl) boxSavingEl.hidden = true;
-    if (addBtn) addBtn.hidden = true;
+    if (boxSavingEl) {
+      if (saving > 0 && savingPct > 0) {
+        boxSavingEl.hidden = false;
+        boxSavingEl.textContent = `${priceFmt(saving)} (${savingPct}%)`;
+      } else {
+        boxSavingEl.hidden = true;
+      }
     }
+    if (addBtn) addBtn.hidden = true;
   }
 
-    // Cart (shop)
+  // Cart (shop)
+// Cart (shop)
   const cart = [];
   const cartUIAvailable = Boolean(cartPanel || addToCartButtons.length);
   const currencyLocale = currentLang === 'en' ? 'en-US' : 'de-DE';
