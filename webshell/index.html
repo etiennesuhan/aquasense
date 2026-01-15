@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AquaSense - Live Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="shell-header">
+      <!-- Update title text here -->
+      <span class="shell-title">AquaSense - Live Demo</span>
+    </header>
+
+    <aside class="companion-card" aria-live="polite">
+      <div class="companion-label">Companion</div>
+      <div class="companion-row">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span class="status-text">Status Online</span>
+      </div>
+      <div class="companion-meta">Letzte Aktualisierung: vor 2 Min</div>
+    </aside>
+
+    <main class="phone-stage" role="main">
+      <div class="phone" role="presentation">
+        <div class="phone-screen">
+          <!-- Update src if the Flutter build folder name changes -->
+          <iframe
+            src="../app/"
+            title="AquaSense Live Demo"
+            aria-label="AquaSense Web App"
+            allow="clipboard-read; clipboard-write"
+          ></iframe>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Mobile redirect behavior lives in script.js -->
+  <script src="script.js" defer></script>
+</body>
+</html>

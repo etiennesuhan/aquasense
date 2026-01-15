@@ -1,0 +1,243 @@
+:root {
+  /* Palette tuning */
+  --bg-base: #f3f7fb;
+  --bg-dot: rgba(52, 80, 110, 0.12);
+  --ink: #233447;
+  --accent: #2b8f7f;
+
+  /* Phone sizing (screen is 390x844 CSS px) */
+  --phone-w: 390;
+  --phone-h: 844;
+  --bezel: 18px;
+  --bezel-radius: 46px;
+  /* Lower this to allow a taller phone inside the viewport. */
+  --shell-padding: 160px;
+
+  /* Dot grid spacing */
+  --dot-size: 22px;
+  --dot-radius: 1px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: "Avenir Next", "Avenir", "Futura", "Gill Sans", sans-serif;
+  /* Prevent the shell from scrolling; iframe stays scrollable. */
+  overflow: hidden;
+  background-color: var(--bg-base);
+  background-image:
+    radial-gradient(circle at 20% 12%, rgba(255, 255, 255, 0.92) 0%, rgba(236, 242, 248, 0.95) 45%, rgba(220, 230, 242, 0.98) 70%, rgba(210, 221, 234, 1) 100%),
+    radial-gradient(var(--bg-dot) var(--dot-radius), transparent var(--dot-radius));
+  background-size: 100% 100%, var(--dot-size) var(--dot-size);
+  background-position: center, center;
+}
+
+.shell {
+  position: relative;
+  min-height: 100vh;
+}
+
+.shell-header {
+  position: absolute;
+  top: 26px;
+  left: 32px;
+  z-index: 3;
+  animation: fade-in 650ms ease-out 120ms both;
+}
+
+.shell-title {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #516274;
+}
+
+.companion-card {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  z-index: 3;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(205, 214, 224, 0.9);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 36px rgba(30, 45, 70, 0.15), 0 6px 12px rgba(30, 45, 70, 0.08);
+  display: grid;
+  gap: 8px;
+  min-width: 200px;
+  font-size: 13px;
+  animation: fade-in 700ms ease-out 200ms both;
+}
+
+@supports (backdrop-filter: blur(6px)) {
+  .companion-card {
+    backdrop-filter: blur(6px);
+  }
+}
+
+.companion-label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #73869b;
+}
+
+.companion-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #2bb673;
+  box-shadow: 0 0 0 4px rgba(43, 182, 115, 0.16);
+}
+
+.companion-meta {
+  color: #73869b;
+}
+
+.phone-stage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 96px 24px 72px;
+}
+
+.phone {
+  /* Bezel + screen sizing */
+  --screen-w: min(calc(var(--phone-w) * 1px), 86vw, calc((100vh - var(--shell-padding)) * var(--phone-w) / var(--phone-h)));
+  --screen-h: calc(var(--screen-w) * var(--phone-h) / var(--phone-w));
+
+  width: calc(var(--screen-w) + (var(--bezel) * 2));
+  height: calc(var(--screen-h) + (var(--bezel) * 2));
+  padding: var(--bezel);
+  border-radius: var(--bezel-radius);
+  background: linear-gradient(160deg, #fafbfd, #e6edf4);
+  border: 1px solid rgba(203, 212, 224, 0.9);
+  box-shadow: 0 45px 90px rgba(26, 42, 68, 0.22), 0 18px 30px rgba(26, 42, 68, 0.15);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: phone-rise 700ms ease-out both;
+}
+
+.phone::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--bezel) - 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 18px;
+  background: #dfe5ec;
+  border-radius: 0 0 14px 14px;
+  box-shadow: inset 0 -1px 3px rgba(255, 255, 255, 0.9);
+  z-index: 2;
+}
+
+.phone::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: calc(var(--bezel-radius) - 8px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+}
+
+.phone-screen {
+  width: var(--screen-w);
+  height: var(--screen-h);
+  border-radius: calc(var(--bezel-radius) - 12px);
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(214, 223, 233, 0.9);
+  position: relative;
+  z-index: 1;
+}
+
+.phone-screen iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: inherit;
+  display: block;
+  background: #ffffff;
+}
+
+@keyframes phone-rise {
+  from {
+    transform: translateY(18px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    transform: translateY(6px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .companion-card {
+    display: none;
+  }
+
+  .shell-header {
+    top: 20px;
+    left: 24px;
+  }
+
+  .phone-stage {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .shell-title {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+}
+
+@media (max-height: 760px) {
+  :root {
+    --shell-padding: 120px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .phone,
+  .companion-card,
+  .shell-header {
+    animation: none;
+  }
+}
