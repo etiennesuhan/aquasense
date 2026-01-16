@@ -283,10 +283,10 @@
       shopRequest: 'Custom request',
       shopGridTitle: 'All colors at a glance',
       shopGridSub: 'Click “Select” to save your preferred design.',
-      productColor1: 'White',
+      productColor1: 'Silver',
       productColor2: 'Obsidian',
       productColor3: 'Graphite',
-      product1Title: 'AquaSense – White',
+      product1Title: 'AquaSense – Silver',
       product1Desc: 'Bright, minimal look for modern kitchens and labs.',
       product1Price: 'Pricing to be announced',
       product2Title: 'AquaSense – Obsidian',
@@ -603,8 +603,8 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
   // Produktdetail: Varianten-Daten und Befüllung
   const productVariants = {
     color1: {
-      title: { de: 'AquaSense – Weiß', en: 'AquaSense – White' },
-      color: { de: 'Weiß', en: 'White' },
+      title: { de: 'AquaSense – Weiß', en: 'AquaSense – Silver' },
+      color: { de: 'Weiß', en: 'Silver' },
       image: 'assets/color3/white.png',
       price: null,
       uvp: null,
@@ -690,8 +690,8 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
 
   const variantOverrides = {
     color1: {
-      title: { de: 'AquaSense - Weiss', en: 'AquaSense - White' },
-      color: { de: 'Weiss', en: 'White' },
+      title: { de: 'AquaSense - Silber', en: 'AquaSense - Silver' },
+      color: { de: 'Silber', en: 'Silver' },
       desc: {
         de: 'Intelligent gesteuertes Wasseraufbereitungs- und Analysegerät für Hygiene, Geschmack und Sicherheit im Haushalt.',
         en: 'Intelligent water treatment and analysis device for hygiene, taste and safety at home.'
