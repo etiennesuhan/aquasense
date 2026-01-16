@@ -9,12 +9,11 @@
     return;
   }
 
-  const isMobileUA =
-    (navigator.userAgentData && navigator.userAgentData.mobile) ||
-    /Android|iPhone|iPad|iPod|Windows Phone|IEMobile|BlackBerry/i.test(navigator.userAgent);
-  const isIpadOS = !isMobileUA && /Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1;
+  const isCompactScreen = window.matchMedia
+    ? window.matchMedia("(max-width: 900px)").matches
+    : window.innerWidth <= 900;
 
-  if (isMobileUA || isIpadOS) {
+  if (isCompactScreen) {
     // Load the fullscreen Flutter app on phones instead of the webshell.
     window.location.replace("../app/");
   }
