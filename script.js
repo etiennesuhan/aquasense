@@ -159,12 +159,12 @@
     en: {
       skip: 'Skip to content',
       menu: 'Menu',
-      docTitle: 'AquaSense – Clean water. Clearly in sight.',
-      docDesc: 'AquaSense measures your water quality (pH, conductivity, temperature, turbidity) in real time and sends smart alerts. Concept phase, Made in Germany.',
+      docTitle: 'AquaSense - Safe water. Invisibly integrated.',
+      docDesc: 'AquaSense is an under-sink system with sensors, filtration and optional mineralization. Real-time app data provides transparency and replaces bottled water sustainably.',
       docTitleApp: 'AquaSense App – your water in view',
       docDescApp: 'Experience the AquaSense app: live values, alerts, history and profiles in a modern interface.',
-      docTitleShop: 'AquaSense Shop – choose your design',
-      docDescShop: 'Explore AquaSense in three color variants and add your favourite design to the cart.',
+      docTitleShop: 'AquaSense Shop - under-sink system designs',
+      docDescShop: 'Explore AquaSense under-sink system variants with real-time sensors, multi-stage filtration and optional mineralization. Choose your finish.',
       docTitleRequest: 'AquaSense – Custom request',
       docDescRequest: 'Send us your custom AquaSense request for projects or collaborations.',
       docTitleFaq: 'AquaSense – Frequently asked questions',
@@ -178,39 +178,39 @@
       navShop: 'Shop',
       navCart: 'Cart',
       navCta: 'Join the waitlist',
-      heroEyebrow: 'Concept phase • Made in Germany',
-      heroTitle: 'Clean water. Clearly in sight.',
-      heroLead: 'AquaSense measures your water quality at the line in real time – with smart alerts when values shift.',
+      heroEyebrow: 'Under-sink system in concept phase | Made in Germany',
+      heroTitle: 'Safe water. Invisibly integrated.',
+      heroLead: 'AquaSense moves the tech under the sink, measures and filters tap water in real time, and shows every parameter in the app. Optional mineralization brings comfort without bottles.',
       heroPrimaryCta: 'Join the waitlist',
       heroRequestCta: 'Send custom request',
       heroSecondaryCta: 'Download product whitepaper',
       heroImgAlt: 'AquaSense product image',
       badgeConcept: 'Concept phase',
       badgeMade: 'Made in Germany',
-      badgeUsecases: 'Home • Aquatics • Coffee & Tea',
-      featuresTitle: 'Features for clarity and peace of mind',
-      featuresSub: 'Real-time data, alerts, dashboard, history & trends.',
+      badgeUsecases: 'Sensors / Filtration / Mineralization',
+      featuresTitle: 'Four building blocks for trust and comfort',
+      featuresSub: 'Sensors, filtration, mineralization and under-sink integration secure the last mile.',
       featMore: 'Learn more',
-      feat1Title: 'Real-time monitoring',
-      feat1Text: 'pH, conductivity (µS/cm), temperature, turbidity, dissolved oxygen, ORP; expandable platform.',
-      feat2Title: 'Intelligent alerts',
-      feat2Text: 'Push/email the moment a value crosses your thresholds.',
-      feat3Title: 'Live dashboard',
-      feat3Text: 'All values and trends in one place, including export.',
-      feat4Title: 'History & trends',
-      feat4Text: 'Weekly and monthly insights to spot changes early.',
+      feat1Title: 'Transparency through sensors',
+      feat1Text: 'Real-time analysis of water parameters in the app so you can see what is happening.',
+      feat2Title: 'Multi-stage filtration',
+      feat2Text: 'Removes potential contaminants and taste-altering substances from the home installation.',
+      feat3Title: 'Functional personalization',
+      feat3Text: 'Optional mineralization tailors your water; complex additives are reviewed for hygiene.',
+      feat4Title: 'Under-sink integration',
+      feat4Text: 'The technology disappears under the sink, saves space, and makes bottles and extra devices unnecessary.',
       feat5Title: 'Profiles for every use',
       feat5Text: 'Profiles for coffee & tea, baby bottle, aquarium, household.',
       feat6Title: 'Privacy by design',
       feat6Text: 'Local first; optional encrypted cloud sync with opt-in.',
-      stepsTitle: 'Ready in three simple steps',
-      stepsSub: 'Connect. Pair. Monitor.',
-      step1Title: '1. Connect',
-      step1Text: 'Mount AquaSense between water line and device.',
-      step2Title: '2. Pair',
-      step2Text: 'Pair with the app via Wi-Fi or Bluetooth in seconds.',
-      step3Title: '3. Monitor',
-      step3Text: 'See live values, get alerts, act on recommendations.',
+      stepsTitle: 'Personalized water in three steps',
+      stepsSub: 'Integrate under the sink. Connect the app. See and enjoy.',
+      step1Title: '1. Integrate under the sink',
+      step1Text: 'A professional places AquaSense in the under-sink cavity.',
+      step2Title: '2. Connect the app',
+      step2Text: 'Pair via Wi-Fi or Bluetooth in minutes and set profiles.',
+      step3Title: '3. Measure, filter, personalize',
+      step3Text: 'See live data, use filtration, and mineralize to your needs.',
       appTitle: 'The app – clear, fast, helpful',
       appSub: 'All relevant data, alerts and profiles in one modern interface.',
       screenLive: 'Live values',
@@ -312,19 +312,29 @@
       shopLead: 'Three colorways, the same sensing. Pick your favourite.',
       shopWaitlist: 'Join the waitlist',
       shopRequest: 'Custom request',
-      shopGridTitle: 'All colors at a glance',
-      shopGridSub: 'Click “Select” to save your preferred design.',
-      productColor1: 'Silver',
+      shopIntroTitle: 'Under-sink system for the last mile',
+      shopIntroLead: 'AquaSense moves the technology into the under-sink cavity, measures and filters tap water in real time, and shows the values in the app. Multi-stage filtration replaces bottled water sustainably; optional mineralization tailors your water.',
+      shopMeasureTitle: 'Real-time measurement',
+      shopMeasureList: '<li>Flow/consumption</li><li>Temperature</li><li>Pressure</li><li>Conductivity / TDS</li><li>Water hardness</li><li>Turbidity</li><li>pH value</li><li>Chlorine</li><li>Nitrate / TOC</li><li>Bacteria and germs</li><li>Heavy metals</li><li>Particle count</li><li>Total dissolved salts</li><li>Phosphate</li>',
+      shopMeasureNote: 'Currently not measurable: microplastics, potassium.',
+      shopFilterTitle: 'Filtration (multi-stage)',
+      shopFilterList: '<li>Heavy metals</li><li>Hormone residues</li><li>Pharmaceutical residues</li><li>PFAS</li><li>PFC</li><li>Microplastics ≥ 10 µm</li><li>Pesticides ≥ 20 µm</li><li>Fungicides ≥ 20 µm</li><li>Asbestos</li><li>Chlorine</li><li>Limescale</li><li>Bacteria and germs</li>',
+      shopEnrichTitle: 'Enrichment (optional)',
+      shopEnrichList: '<li>Calcium</li><li>Magnesium</li><li>Sodium</li><li>Potassium</li><li>Electrolytes</li><li>Essentials</li><li>Zinc</li><li>Vitamins A, B, C, D, E</li><li>Creatine</li>',
+      shopEnrichNote: 'Complex additives such as creatine are reviewed critically for hygiene.',
+      shopGridTitle: 'Under-sink system in three finishes',
+      shopGridSub: 'Choose your finish - sensors, filtration and mineralization are identical.',
+      productColor1: 'White',
       productColor2: 'Obsidian',
       productColor3: 'Graphite',
-      product1Title: 'AquaSense – Silver',
-      product1Desc: 'Bright, minimal look for modern kitchens and labs.',
+      product1Title: 'AquaSense under-sink system - White',
+      product1Desc: 'Under-sink system with real-time sensors, filtration and optional mineralization in clean white.',
       product1Price: 'Pricing to be announced',
-      product2Title: 'AquaSense – Obsidian',
-      product2Desc: 'Obsidian look with bold accents, ideal for coffee bars.',
+      product2Title: 'AquaSense under-sink system - Obsidian',
+      product2Desc: 'Under-sink system with real-time sensors, filtration and optional mineralization in bold obsidian.',
       product2Price: 'Pricing to be announced',
-      product3Title: 'AquaSense – Graphite',
-      product3Desc: 'Graphite grey, robust and timeless for workshop or utility rooms.',
+      product3Title: 'AquaSense under-sink system - Graphite',
+      product3Desc: 'Under-sink system with real-time sensors, filtration and optional mineralization in robust graphite.',
       product3Price: 'Pricing to be announced',
       productCta: 'Select',
       priceTbd: 'Pricing to be announced',
@@ -341,8 +351,8 @@
       requestEmail: 'Email *',
       requestMessage: 'Your request',
       requestSubmit: 'Send request',
-      footerTagline: 'AquaSense · Clean water. Clearly in sight.',
-      footerSummary: 'Real-time monitoring with alerts, trends and profiles for home, coffee & tea and aquatics. Privacy by design.',
+      footerTagline: 'AquaSense · Safe water. Invisibly integrated.',
+      footerSummary: 'Under-sink integration with real-time sensors, filtration and mineralization - sustainable without bottles. Privacy by design.',
       footerContactTitle: 'Contact',
       footerContactMail: 'service.aquasense@gmail.com',
       footerContactHours: 'Mon–Fri, 9am–5pm CET',
@@ -621,26 +631,30 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
   // Produktdetail: Varianten-Daten und Befüllung
   const productVariants = {
     color1: {
-      title: { de: 'AquaSense – Weiß', en: 'AquaSense – Silver' },
-      color: { de: 'Weiß', en: 'Silver' },
+      title: { de: 'AquaSense Untertischgerät – Weiß', en: 'AquaSense under-sink system - White' },
+      color: { de: 'Weiß', en: 'White' },
       image: 'assets/color3/white.png',
       price: null,
       uvp: null,
       sku: 'AS-C1',
       desc: {
-        de: 'Helle, puristische Variante für moderne Küchen und Labor-Setups.',
-        en: 'Bright, minimal look for modern kitchens and labs.'
+        de: 'Untertischgerät mit Echtzeit-Sensorik, Filtration und optionaler Mineralisierung in Weiß.',
+        en: 'Under-sink system with real-time sensors, filtration and optional mineralization in white.'
       },
       highlights: {
         de: [
-          'Live-Messungen (pH, Leitfähigkeit, Temperatur, Trübung)',
-          'Schwellenalarme und Trend-Insights in der App',
-          'USB-C Stromversorgung, WLAN 2.4 GHz/BLE'
+          'Untertisch-Integration im Totraum für eine aufgeräumte Arbeitsfläche',
+          'Echtzeit-Sensorik mit App-Visualisierung für Transparenz',
+          'Mehrstufige Filtration reduziert Schadstoffe und Geschmackseinflüsse',
+          'Optionale Mineralisierung für personalisierte Wasserprofile',
+          'Nachhaltig: ersetzt Flaschenwasser, reduziert Plastikmüll und Transportemissionen'
         ],
         en: [
-          'Live readings (pH, conductivity, temperature, turbidity)',
-          'Threshold alerts and trend insights in the app',
-          'USB-C power, Wi-Fi 2.4 GHz/BLE'
+          'Under-sink integration for a clean, uncluttered workspace',
+          'Real-time sensors with app visualization for transparency',
+          'Multi-stage filtration reduces contaminants and taste impacts',
+          'Optional mineralization for personalized water profiles',
+          'Sustainable: replaces bottled water, reduces plastic and transport emissions'
         ]
       },
       delivery: { de: 'Lieferzeit wird noch bekanntgegeben.', en: 'Delivery timing will be announced.' },
@@ -649,26 +663,30 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
       reviews: 128
     },
     color2: {
-      title: { de: 'AquaSense – Obsidian', en: 'AquaSense – Obsidian' },
+      title: { de: 'AquaSense Untertischgerät – Obsidian', en: 'AquaSense under-sink system - Obsidian' },
       color: { de: 'Obsidian', en: 'Obsidian' },
       image: 'assets/color2/obsidian.png',
       price: null,
       uvp: null,
       sku: 'AS-C2',
       desc: {
-        de: 'Obsidian-Look mit markanten Akzenten, ideal für Coffee- und Bar-Umgebungen.',
-        en: 'Obsidian look with bold accents, ideal for coffee and bar setups.'
+        de: 'Untertischgerät mit Echtzeit-Sensorik, Filtration und optionaler Mineralisierung in Obsidian.',
+        en: 'Under-sink system with real-time sensors, filtration and optional mineralization in obsidian.'
       },
       highlights: {
         de: [
-          'Robustes Gehäuse, leicht zu reinigen',
-          'App-Profile für Espresso, Pour-Over und Tee',
-          'Grenzwerte anpassbar für Specialty Coffee'
+          'Untertisch-Integration im Totraum für eine aufgeräumte Arbeitsfläche',
+          'Echtzeit-Sensorik mit App-Visualisierung für Transparenz',
+          'Mehrstufige Filtration reduziert Schadstoffe und Geschmackseinflüsse',
+          'Optionale Mineralisierung für personalisierte Wasserprofile',
+          'Nachhaltig: ersetzt Flaschenwasser, reduziert Plastikmüll und Transportemissionen'
         ],
         en: [
-          'Durable housing, easy to wipe clean',
-          'App profiles for espresso, pour-over and tea',
-          'Adjustable thresholds for specialty coffee'
+          'Under-sink integration for a clean, uncluttered workspace',
+          'Real-time sensors with app visualization for transparency',
+          'Multi-stage filtration reduces contaminants and taste impacts',
+          'Optional mineralization for personalized water profiles',
+          'Sustainable: replaces bottled water, reduces plastic and transport emissions'
         ]
       },
       delivery: { de: 'Lieferzeit wird noch bekanntgegeben.', en: 'Delivery timing will be announced.' },
@@ -677,26 +695,30 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
       reviews: 96
     },
     color3: {
-      title: { de: 'AquaSense – Graphit', en: 'AquaSense – Graphite' },
+      title: { de: 'AquaSense Untertischgerät – Graphit', en: 'AquaSense under-sink system - Graphite' },
       color: { de: 'Graphit', en: 'Graphite' },
       image: 'assets/color1/graphit.png',
       price: null,
       uvp: null,
       sku: 'AS-C3',
       desc: {
-        de: 'Graphitgrau, robust und zeitlos – perfekt für Werkstatt, Labor oder Utility-Raum.',
-        en: 'Graphite gray, robust and timeless – perfect for workshop, lab or utility room.'
+        de: 'Untertischgerät mit Echtzeit-Sensorik, Filtration und optionaler Mineralisierung in Graphit.',
+        en: 'Under-sink system with real-time sensors, filtration and optional mineralization in graphite.'
       },
       highlights: {
         de: [
-          'IPX4-Ziel, spritzwassergeschützt für raue Umgebungen',
-          'Kalibrierhinweise in der App',
-          'Optionale Cloud-Sync (Opt-in) für Teams'
+          'Untertisch-Integration im Totraum für eine aufgeräumte Arbeitsfläche',
+          'Echtzeit-Sensorik mit App-Visualisierung für Transparenz',
+          'Mehrstufige Filtration reduziert Schadstoffe und Geschmackseinflüsse',
+          'Optionale Mineralisierung für personalisierte Wasserprofile',
+          'Nachhaltig: ersetzt Flaschenwasser, reduziert Plastikmüll und Transportemissionen'
         ],
         en: [
-          'Targeting IPX4 splash resistance for tougher spaces',
-          'Calibration guidance inside the app',
-          'Optional cloud sync (opt-in) for teams'
+          'Under-sink integration for a clean, uncluttered workspace',
+          'Real-time sensors with app visualization for transparency',
+          'Multi-stage filtration reduces contaminants and taste impacts',
+          'Optional mineralization for personalized water profiles',
+          'Sustainable: replaces bottled water, reduces plastic and transport emissions'
         ]
       },
       delivery: { de: 'Lieferzeit wird noch bekanntgegeben.', en: 'Delivery timing will be announced.' },
@@ -708,73 +730,73 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
 
   const variantOverrides = {
     color1: {
-      title: { de: 'AquaSense - Silber', en: 'AquaSense - Silver' },
-      color: { de: 'Silber', en: 'Silver' },
+      title: { de: 'AquaSense Untertischgerät – Weiß', en: 'AquaSense under-sink system - White' },
+      color: { de: 'Weiß', en: 'White' },
       desc: {
-        de: 'Intelligent gesteuertes Wasseraufbereitungs- und Analysegerät für Hygiene, Geschmack und Sicherheit im Haushalt.',
-        en: 'Intelligent water treatment and analysis device for hygiene, taste and safety at home.'
+        de: 'Untertischgerät mit Echtzeit-Sensorik, Filtration und optionaler Mineralisierung in Weiß.',
+        en: 'Under-sink system with real-time sensors, filtration and optional mineralization in white.'
       },
       highlights: {
         de: [
-          'Echtzeit-Wasseranalyse (Trübung, Leitfähigkeit, Temperatur, Verunreinigungen)',
-          'Modulare Filtration gegen Mikroplastik, Chlor, Sedimente u. a.',
-          'Smarte App mit Live-Daten, Warnungen und Empfehlungen',
-          'Energieeffizientes Design mit langlebigen Materialien',
-          'Zwei Eingänge und zwei Ausgänge für flexible Installation'
+          'Untertisch-Integration im Totraum für eine aufgeräumte Arbeitsfläche',
+          'Echtzeit-Sensorik mit App-Visualisierung für Transparenz',
+          'Mehrstufige Filtration reduziert Schadstoffe und Geschmackseinflüsse',
+          'Optionale Mineralisierung für personalisierte Wasserprofile',
+          'Nachhaltig: ersetzt Flaschenwasser, reduziert Plastikmüll und Transportemissionen'
         ],
         en: [
-          'Real-time water analysis (turbidity, conductivity, temperature, impurities)',
-          'Modular filtration for microplastics, chlorine, sediment and more',
-          'Smart app with live data, alerts and recommendations',
-          'Energy-efficient design with durable materials',
-          'Two inputs and two outputs for flexible installs'
+          'Under-sink integration for a clean, uncluttered workspace',
+          'Real-time sensors with app visualization for transparency',
+          'Multi-stage filtration reduces contaminants and taste impacts',
+          'Optional mineralization for personalized water profiles',
+          'Sustainable: replaces bottled water, reduces plastic and transport emissions'
         ]
       }
     },
     color2: {
-      title: { de: 'AquaSense - Obsidian', en: 'AquaSense - Obsidian' },
+      title: { de: 'AquaSense Untertischgerät – Obsidian', en: 'AquaSense under-sink system - Obsidian' },
       desc: {
-        de: 'Premium-Variante mit dunkler Optik, identischer Sensorik und modularer Filtration für maximale Wasserqualität.',
-        en: 'Premium dark look with the same sensing and modular filtration for top water quality.'
+        de: 'Untertischgerät mit Echtzeit-Sensorik, Filtration und optionaler Mineralisierung in Obsidian.',
+        en: 'Under-sink system with real-time sensors, filtration and optional mineralization in obsidian.'
       },
       highlights: {
         de: [
-          'Echtzeit-Wasseranalyse (Trübung, Leitfähigkeit, Temperatur, Verunreinigungen)',
-          'Modulare Filtration gegen Mikroplastik, Chlor, Sedimente u. a.',
-          'Smarte App mit Live-Daten, Warnungen und Empfehlungen',
-          'Energieeffizientes Design mit LED-Statusring',
-          'Zwei Eingänge und zwei Ausgänge für flexible Installation'
+          'Untertisch-Integration im Totraum für eine aufgeräumte Arbeitsfläche',
+          'Echtzeit-Sensorik mit App-Visualisierung für Transparenz',
+          'Mehrstufige Filtration reduziert Schadstoffe und Geschmackseinflüsse',
+          'Optionale Mineralisierung für personalisierte Wasserprofile',
+          'Nachhaltig: ersetzt Flaschenwasser, reduziert Plastikmüll und Transportemissionen'
         ],
         en: [
-          'Real-time water analysis (turbidity, conductivity, temperature, impurities)',
-          'Modular filtration for microplastics, chlorine, sediment and more',
-          'Smart app with live data, alerts and recommendations',
-          'Energy-efficient build with LED status ring',
-          'Two inputs and two outputs for flexible installs'
+          'Under-sink integration for a clean, uncluttered workspace',
+          'Real-time sensors with app visualization for transparency',
+          'Multi-stage filtration reduces contaminants and taste impacts',
+          'Optional mineralization for personalized water profiles',
+          'Sustainable: replaces bottled water, reduces plastic and transport emissions'
         ]
       },
       delivery: { de: 'Lieferzeit wird noch bekanntgegeben.', en: 'Delivery timing will be announced.' }
     },
     color3: {
-      title: { de: 'AquaSense - Graphit', en: 'AquaSense - Graphite' },
+      title: { de: 'AquaSense Untertischgerät – Graphit', en: 'AquaSense under-sink system - Graphite' },
       desc: {
-        de: 'Robuste Graphit-Optik mit vollständiger Sensorik und smarter Filtration für anspruchsvolle Umgebungen.',
-        en: 'Robust graphite look with full sensing and smart filtration for demanding environments.'
+        de: 'Untertischgerät mit Echtzeit-Sensorik, Filtration und optionaler Mineralisierung in Graphit.',
+        en: 'Under-sink system with real-time sensors, filtration and optional mineralization in graphite.'
       },
       highlights: {
         de: [
-          'Echtzeit-Wasseranalyse (Trübung, Leitfähigkeit, Temperatur, Verunreinigungen)',
-          'Modulare Filtration gegen Mikroplastik, Chlor, Sedimente u. a.',
-          'Smarte App mit Live-Daten, Warnungen und Empfehlungen',
-          'Energieeffizientes, robustes Gehäuse',
-          'Zwei Eingänge und zwei Ausgänge für flexible Installation'
+          'Untertisch-Integration im Totraum für eine aufgeräumte Arbeitsfläche',
+          'Echtzeit-Sensorik mit App-Visualisierung für Transparenz',
+          'Mehrstufige Filtration reduziert Schadstoffe und Geschmackseinflüsse',
+          'Optionale Mineralisierung für personalisierte Wasserprofile',
+          'Nachhaltig: ersetzt Flaschenwasser, reduziert Plastikmüll und Transportemissionen'
         ],
         en: [
-          'Real-time water analysis (turbidity, conductivity, temperature, impurities)',
-          'Modular filtration for microplastics, chlorine, sediment and more',
-          'Smart app with live data, alerts and recommendations',
-          'Energy-efficient, robust housing',
-          'Two inputs and two outputs for flexible installs'
+          'Under-sink integration for a clean, uncluttered workspace',
+          'Real-time sensors with app visualization for transparency',
+          'Multi-stage filtration reduces contaminants and taste impacts',
+          'Optional mineralization for personalized water profiles',
+          'Sustainable: replaces bottled water, reduces plastic and transport emissions'
         ]
       }
     }
