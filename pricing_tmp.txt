@@ -52,7 +52,7 @@
           <p><strong>Bitte gib jeweils einen einmaligen Kaufpreis in Euro an (nur Zahl, ohne €-Zeichen).</strong></p>
 
           <div class="field">
-            <label for="too-cheap">1. Ab welchem Preis wäre AquaSense so günstig, dass du die Qualität anzweifeln würdest? (zu billig)</label>
+            <label for="too-cheap">Bis zu welchem Preis wäre AquaSense so günstig, dass du die Qualität anzweifeln würdest? (zu billig)</label>
             <div class="field-inline">
               <input type="number" id="too-cheap" name="price_too_cheap" min="0" step="1" required placeholder="z. B. 99">
               <span>€</span>
@@ -76,7 +76,7 @@
           </div>
 
           <div class="field">
-            <label for="too-expensive">4. Ab welchem Preis wäre AquaSense so teuer, dass du es auf keinen Fall kaufen würdest? (zu teuer)</label>
+            <label for="too-expensive">Ab welchem Preis wäre AquaSense so teuer, dass du es auf keinen Fall kaufen würdest? (zu teuer)</label>
             <div class="field-inline">
               <input type="number" id="too-expensive" name="price_too_expensive" min="0" step="1" required placeholder="z. B. 399">
               <span>€</span>
