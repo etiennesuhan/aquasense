@@ -23,10 +23,10 @@
   <a href="#main" class="skip-link" data-i18n="skip">Zum Inhalt springen</a>
   <header class="header" role="banner">
     <div class="container header__inner">
-      <a class="brand" href="index.html#top" aria-label="AquaSense Start">
-        <img src="assets/logo.png" alt="AquaSense Logo" width="200" height="50">
+      <a class="brand" href="index.html#top" aria-label="AquaSense Start" data-i18n-aria="ariaBrandHome">
+        <img src="assets/logo.png" alt="AquaSense Logo" width="200" height="50" data-i18n-alt="altLogo">
       </a>
-      <nav aria-label="Hauptnavigation">
+      <nav aria-label="Hauptnavigation" data-i18n-aria="ariaPrimaryNav">
         <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
           <span class="nav-toggle__icon" aria-hidden="true"><span></span></span>
           <span class="visually-hidden" data-i18n="menu">Men&uuml;</span>
@@ -36,7 +36,7 @@
           <li><a href="app.html" data-nav="app" data-i18n="navApp">App</a></li>
           <li><a href="shop.html" data-nav="shop" data-i18n="navShop">Shop</a></li>
           <li><a href="faq.html" data-nav="faq" data-i18n="navFaq">FAQ</a></li>
-          <li><button class="lang-toggle" type="button" aria-label="Sprache umschalten">DE / EN</button></li>
+          <li><button class="lang-toggle" type="button" aria-label="Sprache umschalten" data-i18n-aria="ariaLangToggle">DE / EN</button></li>
         </ul>
       </nav>
     </div>
@@ -52,7 +52,7 @@
           <div class="product-detail__image-wrap">
             <img id="detail-image" src="assets/color3/white.png" alt="AquaSense - Weiß" loading="lazy">
           </div>
-          <p class="product-detail__note">Tippen oder klicken zum Vergrössern</p>
+          <p class="product-detail__note" data-i18n="detailZoomHint">Tippen oder klicken zum Vergrössern</p>
         </div>
         <div class="product-detail__info">
           <h1 id="detail-title">AquaSense Untertischgerät – Weiß</h1>
@@ -94,19 +94,19 @@
           <p class="detail-delivery" id="detail-box-delivery" data-i18n="deliveryTbd">Lieferzeit wird noch bekanntgegeben.</p>
           <p class="detail-stock" id="detail-box-stock" data-i18n="stockNote">Vorbestellungen werden vorbereitet.</p>
           <a class="button" href="index.html#waitlist" data-i18n="heroPrimaryCta">Auf die Warteliste</a>
-          <a class="button button--ghost" href="shop.html">Zurück zum Shop</a>
+          <a class="button button--ghost" href="shop.html" data-i18n="backToShop">Zurück zum Shop</a>
         </aside>
       </div>
     </section>
     <section class="section container">
       <header class="section__header">
-        <h2>Untertischgerät für die letzte Meile</h2>
-        <p class="lead">AquaSense verlagert die Technik in den Totraum unter der Spüle, misst und filtert Leitungswasser in Echtzeit und macht die Werte in der App sichtbar. Mehrstufige Filtration ersetzt Flaschenwasser nachhaltig; optional mineralisiert das System dein Wasser.</p>
+        <h2 data-i18n="productLastMileTitle">Untertischgerät für die letzte Meile</h2>
+        <p class="lead" data-i18n="productLastMileLead">AquaSense verlagert die Technik in den Totraum unter der Spüle, misst und filtert Leitungswasser in Echtzeit und macht die Werte in der App sichtbar. Mehrstufige Filtration ersetzt Flaschenwasser nachhaltig; optional mineralisiert das System dein Wasser.</p>
       </header>
       <div class="grid">
         <article class="card">
-          <h3>Messbar in Echtzeit</h3>
-          <ul>
+          <h3 data-i18n="shopMeasureTitle">Messbar in Echtzeit</h3>
+          <ul data-i18n-html="shopMeasureList">
             <li>Durchfluss/Verbrauch</li>
             <li>Temperatur</li>
             <li>Druck</li>
@@ -122,11 +122,11 @@
             <li>Gesamtsalzgehalt</li>
             <li>Phosphat</li>
           </ul>
-          <p>Derzeit nicht messbar: Mikroplastik, Kalium.</p>
+          <p data-i18n="shopMeasureNote">Derzeit nicht messbar: Mikroplastik, Kalium.</p>
         </article>
         <article class="card">
-          <h3>Filtration (mehrstufig)</h3>
-          <ul>
+          <h3 data-i18n="shopFilterTitle">Filtration (mehrstufig)</h3>
+          <ul data-i18n-html="shopFilterList">
             <li>Schwermetalle</li>
             <li>Hormonrückstände</li>
             <li>Medikamentenrückstände</li>
@@ -142,8 +142,8 @@
           </ul>
         </article>
         <article class="card">
-          <h3>Anreicherung (optional)</h3>
-          <ul>
+          <h3 data-i18n="shopEnrichTitle">Anreicherung (optional)</h3>
+          <ul data-i18n-html="shopEnrichList">
             <li>Calcium</li>
             <li>Magnesium</li>
             <li>Natrium</li>
@@ -154,31 +154,31 @@
             <li>Vitamin A, B, C, D, E</li>
             <li>Kreatin</li>
           </ul>
-          <p>Komplexe Additive wie Kreatin werden hygienisch kritisch geprüft.</p>
+          <p data-i18n="shopEnrichNote">Komplexe Additive wie Kreatin werden hygienisch kritisch geprüft.</p>
         </article>
       </div>
     </section>
     <section class="section container">
       <header class="section__header">
-        <h2>Technische Daten</h2>
-        <p>Aktueller Stand des Konzepts; Details können sich ändern.</p>
+        <h2 data-i18n="productSpecsTitle">Technische Daten</h2>
+        <p data-i18n="productSpecsNote">Aktueller Stand des Konzepts; Details können sich ändern.</p>
       </header>
       <div class="table-wrapper">
-        <table aria-label="Technische Daten">
+        <table aria-label="Technische Daten" data-i18n-aria="ariaTechSpecs">
           <tbody>
-            <tr><th>Abmessungen</th><td>ca. 11 x 7 x 3 cm (handflächengross)</td></tr>
-            <tr><th>Gewicht</th><td>ca. 320 g</td></tr>
-            <tr><th>Gehäusematerial</th><td>Premium-ABS, matte Oberfläche in der gewählten Farbe</td></tr>
-            <tr><th>Energieversorgung</th><td>USB-C (5V), integrierter Niedrigenergie-Controller</td></tr>
-            <tr><th>Wasseranschlüsse</th><td>2x Eingang (Warm/Kalt), 2x Ausgang</td></tr>
-            <tr><th>Installation</th><td>Wand- oder Untertischmontage, flexible Schnellkupplungen</td></tr>
-            <tr><th>Filterkompatibilität</th><td>Modularer Filtereinschub, wechselbare Kartuschen</td></tr>
-            <tr><th>Betriebsdruck</th><td>2-6 bar</td></tr>
-            <tr><th>Betriebstemperatur</th><td>5-60 C</td></tr>
-            <tr><th>Datenübertragung</th><td>Bluetooth Low Energy und WLAN</td></tr>
-            <tr><th>App-Unterstützung</th><td>iOS und Android, Echtzeit-Dashboard</td></tr>
-            <tr><th>Speicher</th><td>Lokaler Mikrocontroller für Trend- und Historienaufzeichnung</td></tr>
-            <tr><th>LED-Indikator</th><td>360 Grad Status- und Warnleuchtring (Farbe einstellbar)</td></tr>
+            <tr><th data-i18n="specDetailDimensionsLabel">Abmessungen</th><td data-i18n="specDetailDimensionsValue">ca. 11 x 7 x 3 cm (handflächengross)</td></tr>
+            <tr><th data-i18n="specDetailWeightLabel">Gewicht</th><td data-i18n="specDetailWeightValue">ca. 320 g</td></tr>
+            <tr><th data-i18n="specDetailMaterialLabel">Gehäusematerial</th><td data-i18n="specDetailMaterialValue">Premium-ABS, matte Oberfläche in der gewählten Farbe</td></tr>
+            <tr><th data-i18n="specDetailPowerLabel">Energieversorgung</th><td data-i18n="specDetailPowerValue">USB-C (5V), integrierter Niedrigenergie-Controller</td></tr>
+            <tr><th data-i18n="specDetailConnectionsLabel">Wasseranschlüsse</th><td data-i18n="specDetailConnectionsValue">2x Eingang (Warm/Kalt), 2x Ausgang</td></tr>
+            <tr><th data-i18n="specDetailInstallLabel">Installation</th><td data-i18n="specDetailInstallValue">Wand- oder Untertischmontage, flexible Schnellkupplungen</td></tr>
+            <tr><th data-i18n="specDetailFilterLabel">Filterkompatibilität</th><td data-i18n="specDetailFilterValue">Modularer Filtereinschub, wechselbare Kartuschen</td></tr>
+            <tr><th data-i18n="specDetailPressureLabel">Betriebsdruck</th><td data-i18n="specDetailPressureValue">2-6 bar</td></tr>
+            <tr><th data-i18n="specDetailTempLabel">Betriebstemperatur</th><td data-i18n="specDetailTempValue">5-60 C</td></tr>
+            <tr><th data-i18n="specDetailDataLabel">Datenübertragung</th><td data-i18n="specDetailDataValue">Bluetooth Low Energy und WLAN</td></tr>
+            <tr><th data-i18n="specDetailAppLabel">App-Unterstützung</th><td data-i18n="specDetailAppValue">iOS und Android, Echtzeit-Dashboard</td></tr>
+            <tr><th data-i18n="specDetailStorageLabel">Speicher</th><td data-i18n="specDetailStorageValue">Lokaler Mikrocontroller für Trend- und Historienaufzeichnung</td></tr>
+            <tr><th data-i18n="specDetailLedLabel">LED-Indikator</th><td data-i18n="specDetailLedValue">360 Grad Status- und Warnleuchtring (Farbe einstellbar)</td></tr>
           </tbody>
         </table>
       </div>
@@ -189,7 +189,7 @@
         <p data-i18n="specsNote">Prototyp-Status: Spezifikationen können sich ändern.</p>
       </header>
       <div class="table-wrapper">
-        <table aria-label="Technische Daten">
+        <table aria-label="Technische Daten" data-i18n-aria="ariaTechSpecs">
           <tbody>
             <tr>
               <th data-i18n="specSensorsLabel">Sensoren</th>
@@ -223,8 +223,8 @@
   <footer class="footer" role="contentinfo">
     <div class="container footer__grid">
       <div class="footer__brand">
-        <p class="footer__eyebrow" data-i18n="footerTagline">AquaSense · Sicheres Wasser. Unsichtbar integriert.</p>
-        <p class="footer__text" data-i18n="footerSummary">Untertisch-Integration mit Echtzeit-Sensorik, Filtration und Mineralisierung - nachhaltig ohne Flaschen. Datenschutz by Design.</p>
+        <p class="footer__eyebrow" data-i18n="footerTaglineCore">AquaSense · Sicheres Wasser. Unsichtbar integriert.</p>
+        <p class="footer__text" data-i18n="footerSummaryCore">Untertisch-Integration mit Echtzeit-Sensorik, Filtration und Mineralisierung - nachhaltig ohne Flaschen. Datenschutz by Design.</p>
       </div>
       <div class="footer__col">
         <h3 data-i18n="footerContactTitle">Kontakt</h3>
@@ -248,7 +248,7 @@
       <p class="footer__note"><span id="year"></span> &copy; AquaSense. <span data-i18n="footerRights">Alle Rechte vorbehalten.</span></p>
     </div>
   </footer>
-  <div class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie Hinweis">
+  <div class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie Hinweis" data-i18n-aria="ariaCookieNotice">
     <div class="cookie-banner__text">
       <p class="cookie-banner__title" data-i18n="cookieTitle">Cookies &amp; Analytics</p>
       <p class="cookie-banner__body" data-i18n="cookieText">Wir verwenden Google Analytics (Cookies), um die Nutzung der
@@ -263,16 +263,16 @@
     <div class="modal__backdrop" data-close="imprint"></div>
     <div class="modal__dialog" role="document" tabindex="-1">
       <header class="modal__header">
-        <h2 id="imprint-title">Impressum</h2>
-        <button type="button" class="icon-button" data-close="imprint" aria-label="Schließen">×</button>
+        <h2 id="imprint-title" data-i18n="imprintTitle">Impressum</h2>
+        <button type="button" class="icon-button" data-close="imprint" aria-label="Schließen" data-i18n-aria="closeLabel">×</button>
       </header>
       <div class="modal__body">
-        <p>[Firma/Name]</p>
-        <p>[Straße Hausnummer]</p>
-        <p>[PLZ Ort]</p>
-        <p>[E-Mail: placeholder@example.com]</p>
-        <p>Vertretungsberechtigte: [Platzhalter]</p>
-        <p>USt-IdNr.: [Platzhalter]</p>
+        <p data-i18n="imprintLine1">[Firma/Name]</p>
+        <p data-i18n="imprintLine2">[Straße Hausnummer]</p>
+        <p data-i18n="imprintLine3">[PLZ Ort]</p>
+        <p data-i18n="imprintLine4">[E-Mail: placeholder@example.com]</p>
+        <p data-i18n="imprintLine5">Vertretungsberechtigte: [Platzhalter]</p>
+        <p data-i18n="imprintLine6">USt-IdNr.: [Platzhalter]</p>
       </div>
     </div>
   </div>
@@ -285,12 +285,12 @@
           data-i18n-aria="closeLabel">&times;</button>
       </header>
       <div class="modal__body">
-        <p data-i18n="privacyLine1"><strong>Verantwortlich</strong>: AquaSense, E-Mail: service.aquasense@gmail.com.</p>
-        <p data-i18n="privacyLine2"><strong>Zweck und Umfang</strong>: Wir erheben deine E-Mail-Adresse (und ggf. freiwillige Angaben), um dir unseren Newsletter zuzusenden und dich über Neuigkeiten zu AquaSense zu informieren.</p>
-        <p data-i18n="privacyLine3"><strong>Einsatz von FormSubmit</strong>: Wir nutzen FormSubmit (FormSubmit.co) für die technische Bereitstellung und Übermittlung. FormSubmit leitet deine Eingaben per E-Mail an uns weiter und verarbeitet sie nur zur Übermittlung. Details: <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener">https://formsubmit.co/privacy.pdf</a></p>
-        <p data-i18n="privacyLine4"><strong>Rechtsgrundlage</strong>: Deine Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO durch Ankreuzen der Checkbox und Absenden des Formulars.</p>
-        <p data-i18n="privacyLine5"><strong>Speicherdauer</strong>: Wir speichern deine Daten, bis du den Newsletter abbestellst oder deine Einwilligung widerrufst, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
-        <p data-i18n="privacyLine6"><strong>Widerruf &amp; Rechte</strong>: Du kannst deine Einwilligung jederzeit widerrufen (z. B. über den Abmeldelink oder per E-Mail an uns). Du hast Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Beschwerde bei einer Aufsichtsbehörde.</p>
+        <p data-i18n-html="privacyLine1"><strong>Verantwortlich</strong>: AquaSense, E-Mail: service.aquasense@gmail.com.</p>
+        <p data-i18n-html="privacyLine2"><strong>Zweck und Umfang</strong>: Wir erheben deine E-Mail-Adresse (und ggf. freiwillige Angaben), um dir unseren Newsletter zuzusenden und dich über Neuigkeiten zu AquaSense zu informieren.</p>
+        <p data-i18n-html="privacyLine3"><strong>Einsatz von FormSubmit</strong>: Wir nutzen FormSubmit (FormSubmit.co) für die technische Bereitstellung und Übermittlung. FormSubmit leitet deine Eingaben per E-Mail an uns weiter und verarbeitet sie nur zur Übermittlung. Details: <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener">https://formsubmit.co/privacy.pdf</a></p>
+        <p data-i18n-html="privacyLine4"><strong>Rechtsgrundlage</strong>: Deine Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO durch Ankreuzen der Checkbox und Absenden des Formulars.</p>
+        <p data-i18n-html="privacyLine5"><strong>Speicherdauer</strong>: Wir speichern deine Daten, bis du den Newsletter abbestellst oder deine Einwilligung widerrufst, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+        <p data-i18n-html="privacyLine6"><strong>Widerruf &amp; Rechte</strong>: Du kannst deine Einwilligung jederzeit widerrufen (z. B. über den Abmeldelink oder per E-Mail an uns). Du hast Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Beschwerde bei einer Aufsichtsbehörde.</p>
       </div>
     </div>
   </div>

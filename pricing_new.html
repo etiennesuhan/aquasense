@@ -30,19 +30,19 @@
 
 <body data-page="pricing">
 
-  <a href="#main" class="skip-link">Zum Inhalt springen</a>
+  <a href="#main" class="skip-link" data-i18n="skip">Zum Inhalt springen</a>
 
   <header class="header" role="banner">
 
     <div class="container header__inner">
 
-      <a class="brand" href="index.html#top" aria-label="AquaSense Start">
+      <a class="brand" href="index.html#top" aria-label="AquaSense Start" data-i18n-aria="ariaBrandHome">
 
-        <img src="assets/logo.png" alt="AquaSense Logo" width="200" height="50">
+        <img src="assets/logo.png" alt="AquaSense Logo" width="200" height="50" data-i18n-alt="altLogo">
 
       </a>
 
-      <nav aria-label="Hauptnavigation">
+      <nav aria-label="Hauptnavigation" data-i18n-aria="ariaPrimaryNav">
 
         <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
 
@@ -54,13 +54,15 @@
 
         <ul id="nav-links" class="nav__list">
 
-          <li><a href="index.html#top" data-home="index.html#top" data-nav="home">Start</a></li>
+          <li><a href="index.html#top" data-home="index.html#top" data-nav="home" data-i18n="navStart">Start</a></li>
 
-          <li><a href="app.html" data-nav="app">App</a></li>
+          <li><a href="app.html" data-nav="app" data-i18n="navApp">App</a></li>
 
-          <li><a href="shop.html" data-nav="shop">Shop</a></li>
+          <li><a href="shop.html" data-nav="shop" data-i18n="navShop">Shop</a></li>
 
-          <li><a href="faq.html" data-nav="faq">FAQ</a></li>
+          <li><a href="faq.html" data-nav="faq" data-i18n="navFaq">FAQ</a></li>
+
+          <li><button class="lang-toggle" type="button" aria-label="Sprache umschalten" data-i18n-aria="ariaLangToggle">DE / EN</button></li>
 
         </ul>
 
@@ -76,9 +78,9 @@
 
       <header class="section__header">
 
-        <h1>Hilf uns bei der Preisfindung</h1>
+        <h1 data-i18n="pricingTitle">Hilf uns bei der Preisfindung</h1>
 
-        <p>AquaSense befindet sich noch in der Konzeptphase. Deine anonyme Einschätzung hilft uns, einen fairen Preis zu bestimmen.</p>
+        <p data-i18n="pricingIntro">AquaSense befindet sich noch in der Konzeptphase. Deine anonyme Einschätzung hilft uns, einen fairen Preis zu bestimmen.</p>
 
       </header>
 
@@ -92,23 +94,24 @@
 
           <div class="field">
 
-            <label for="usage">Wofür würdest du AquaSense voraussichtlich nutzen?</label>
+            <label for="usage" data-i18n="pricingUsageLabel">Wofür würdest du AquaSense voraussichtlich nutzen?</label>
 
             <select id="usage" name="usage">
 
-              <option value="">Bitte auswählen (optional)</option>
+              <option value="" data-i18n="pricingSelectPlaceholderOptional">Bitte auswählen (optional)</option>
 
-              <option value="Haushalt">Haushalt / Trinkwasser</option>
+              <option value="Haushalt" data-i18n="pricingUseHousehold">Haushalt / Trinkwasser</option>
 
-              <option value="Aquaristik">Aquaristik / Terraristik</option>
+              <option value="Aquaristik" data-i18n="pricingUseAquarium">Aquaristik / Terraristik</option>
 
-              <option value="Kaffee_Tee">Kaffee &amp; Tee / Siebtr&auml;ger</option>
+              <option value="Kaffee_Tee" data-i18n="pricingUseCoffee">Kaffee &amp; Tee / Siebtr&auml;ger</option>
 
-              <option value="Garten">Garten / Bew&auml;sserung</option>
+              <option value="Garten" data-i18n="pricingUseGarden">Garten / Bew&auml;sserung</option>
 
-                            <option value="Büro">B&uuml;ro / Praxis</option>
+                            <option value="Büro" data-i18n="pricingUseOffice">B&uuml;ro / Praxis</option>
 
-                            <option value="Gastro">Gastronomie / Caf&eacute;</option>\n              <option value="Sonstiges">Sonstiges</option>
+                            <option value="Gastro" data-i18n="pricingUseGastro">Gastronomie / Caf&eacute;</option>
+              <option value="Sonstiges" data-i18n="pricingUseOther">Sonstiges</option>
 
             </select>
 
@@ -116,11 +119,11 @@
 
           <div class="field">
 
-            <label for="too-cheap">Bis zu welchem Preis wäre AquaSense so günstig, dass du die Qualität anzweifeln würdest? (zu billig)</label>
+            <label for="too-cheap" data-i18n="pricingQTooCheap">Bis zu welchem Preis wäre AquaSense so günstig, dass du die Qualität anzweifeln würdest? (zu billig)</label>
 
             <div class="field-inline">
 
-              <input type="number" id="too-cheap" name="price_too_cheap" min="0" step="1" required placeholder="z. B. 99" inputmode="decimal" pattern="[0-9]*">
+              <input type="number" id="too-cheap" name="price_too_cheap" min="0" step="1" required placeholder="z. B. 99" data-i18n-placeholder="pricingPlaceholderCheap" inputmode="decimal" pattern="[0-9]*">
 
             </div>
 
@@ -128,11 +131,11 @@
 
           <div class="field">
 
-            <label for="cheap">2. Ab welchem Preis empfindest du AquaSense als günstig, aber noch glaubwürdig und attraktiv?</label>
+            <label for="cheap" data-i18n="pricingQCheap">2. Ab welchem Preis empfindest du AquaSense als günstig, aber noch glaubwürdig und attraktiv?</label>
 
             <div class="field-inline">
 
-              <input type="number" id="cheap" name="price_cheap" min="0" step="1" required placeholder="z. B. 149" inputmode="decimal" pattern="[0-9]*">
+              <input type="number" id="cheap" name="price_cheap" min="0" step="1" required placeholder="z. B. 149" data-i18n-placeholder="pricingPlaceholderGood" inputmode="decimal" pattern="[0-9]*">
 
             </div>
 
@@ -140,11 +143,11 @@
 
           <div class="field">
 
-            <label for="expensive">3. Ab welchem Preis empfindest du AquaSense als teuer, aber gerade noch akzeptabel?</label>
+            <label for="expensive" data-i18n="pricingQExpensive">3. Ab welchem Preis empfindest du AquaSense als teuer, aber gerade noch akzeptabel?</label>
 
             <div class="field-inline">
 
-              <input type="number" id="expensive" name="price_expensive" min="0" step="1" required placeholder="z. B. 249" inputmode="decimal" pattern="[0-9]*">
+              <input type="number" id="expensive" name="price_expensive" min="0" step="1" required placeholder="z. B. 249" data-i18n-placeholder="pricingPlaceholderExpensive" inputmode="decimal" pattern="[0-9]*">
 
             </div>
 
@@ -152,21 +155,21 @@
 
           <div class="field">
 
-            <label for="too-expensive">Ab welchem Preis wäre AquaSense so teuer, dass du es auf keinen Fall kaufen würdest? (zu teuer)</label>
+            <label for="too-expensive" data-i18n="pricingQTooExpensive">Ab welchem Preis wäre AquaSense so teuer, dass du es auf keinen Fall kaufen würdest? (zu teuer)</label>
 
             <div class="field-inline">
 
-              <input type="number" id="too-expensive" name="price_too_expensive" min="0" step="1" required placeholder="z. B. 399" inputmode="decimal" pattern="[0-9]*">
+              <input type="number" id="too-expensive" name="price_too_expensive" min="0" step="1" required placeholder="z. B. 399" data-i18n-placeholder="pricingPlaceholderTooExpensive" inputmode="decimal" pattern="[0-9]*">
 
             </div>
 
           </div>
 
-          <p class="privacy-hint">Deine Angaben werden nur zur Auswertung der Preisstudie für AquaSense genutzt. Es werden keine personenbezogenen Daten wie Name oder Adresse erfasst.</p>
+          <p class="privacy-hint" data-i18n="pricingPrivacyNote">Deine Angaben werden nur zur Auswertung der Preisstudie für AquaSense genutzt. Es werden keine personenbezogenen Daten wie Name oder Adresse erfasst.</p>
 
           <div class="form__actions">
 
-            <button class="button" type="submit">Preisfeedback senden</button>
+            <button class="button" type="submit" data-i18n="pricingSubmitBtn">Preisfeedback senden</button>
 
             <p class="status" role="status" aria-live="polite"></p>
 
@@ -186,31 +189,31 @@
 
       <div class="footer__brand">
 
-        <p class="footer__eyebrow">AquaSense - Sauberes Wasser. Klar im Blick.</p>
+        <p class="footer__eyebrow" data-i18n="footerTaglinePricing">AquaSense - Sauberes Wasser. Klar im Blick.</p>
 
-        <p class="footer__text">Echtzeit-Monitoring mit Alerts, Trends und Profilen.</p>
-
-      </div>
-
-      <div class="footer__col">
-
-        <h3>Kontakt</h3>
-
-        <a class="footer__link" href="mailto:service.aquasense@gmail.com">service.aquasense@gmail.com</a>
+        <p class="footer__text" data-i18n="footerSummaryPricing">Echtzeit-Monitoring mit Alerts, Trends und Profilen.</p>
 
       </div>
 
       <div class="footer__col">
 
-        <h3>Direktlinks</h3>
+        <h3 data-i18n="footerContactTitle">Kontakt</h3>
 
-        <a class="footer__link" href="index.html#top">Start</a>
+        <a class="footer__link" href="mailto:service.aquasense@gmail.com" data-i18n="footerContactMail">service.aquasense@gmail.com</a>
 
-        <a class="footer__link" href="app.html">App</a>
+      </div>
 
-        <a class="footer__link" href="shop.html">Shop</a>
+      <div class="footer__col">
 
-        <a class="footer__link" href="faq.html">FAQ</a>
+        <h3 data-i18n="footerLinksTitle">Direktlinks</h3>
+
+        <a class="footer__link" href="index.html#top" data-i18n="footerLinkHome">Start</a>
+
+        <a class="footer__link" href="app.html" data-i18n="footerLinkApp">App</a>
+
+        <a class="footer__link" href="shop.html" data-i18n="footerLinkShop">Shop</a>
+
+        <a class="footer__link" href="faq.html" data-i18n="footerLinkFaq">FAQ</a>
 
       </div>
 

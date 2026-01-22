@@ -36,13 +36,13 @@
 
     <div class="container header__inner">
 
-      <a class="brand" href="index.html#top" aria-label="AquaSense Start">
+      <a class="brand" href="index.html#top" aria-label="AquaSense Start" data-i18n-aria="ariaBrandHome">
 
-        <img src="assets/logo.png" alt="AquaSense Logo" width="200" height="50">
+        <img src="assets/logo.png" alt="AquaSense Logo" width="200" height="50" data-i18n-alt="altLogo">
 
       </a>
 
-      <nav aria-label="Hauptnavigation">
+      <nav aria-label="Hauptnavigation" data-i18n-aria="ariaPrimaryNav">
 
         <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
 
@@ -64,7 +64,7 @@
 
           <li><a href="faq.html" data-nav="faq" data-i18n="navFaq">FAQ</a></li>
 
-          <li><button class="lang-toggle" type="button" aria-label="Sprache umschalten">DE / EN</button></li>
+          <li><button class="lang-toggle" type="button" aria-label="Sprache umschalten" data-i18n-aria="ariaLangToggle">DE / EN</button></li>
 
         </ul>
 
@@ -132,9 +132,9 @@
 
       <div class="footer__brand">
 
-        <p class="footer__eyebrow" data-i18n="footerTagline">AquaSense · Wasserqualität im Blick</p>
+        <p class="footer__eyebrow" data-i18n="footerTaglineFocus">AquaSense · Wasserqualität im Blick</p>
 
-        <p class="footer__text" data-i18n="footerSummary">Echtzeit-Monitoring für pH, Leitfähigkeit, Temperatur und mehr
+        <p class="footer__text" data-i18n="footerSummaryMonitoring">Echtzeit-Monitoring für pH, Leitfähigkeit, Temperatur und mehr
 
           für Haushalte, Coffee Bars und Aquaristik.</p>
 
@@ -184,7 +184,7 @@
 
   </footer>
 
-  <div class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie Hinweis">
+  <div class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie Hinweis" data-i18n-aria="ariaCookieNotice">
 
     <div class="cookie-banner__text">
 
@@ -210,11 +210,11 @@
 
     <article class="whitepaper">
 
-      <h1 data-i18n="wpTitle">AquaSense - Technisches Konzept (Kurzfassung)</h1>
+      <h1 data-i18n="wpTitleTech">AquaSense - Technisches Konzept (Kurzfassung)</h1>
 
       <h2 data-i18n="wpProblemTitle">Problem &amp; Motivation</h2>
 
-      <p data-i18n="wpProblemText">Wasserwerte schwanken oft unbemerkt. Haushalte, Kaffee-Setups und Aquarien benötigen
+      <p data-i18n="wpProblemTextTech">Wasserwerte schwanken oft unbemerkt. Haushalte, Kaffee-Setups und Aquarien benötigen
 
         Transparenz, um Geschmack, Sicherheit und Langlebigkeit zu sichern.</p>
 
@@ -222,37 +222,37 @@
 
       <ul>
 
-        <li data-i18n="wpArch1">Sensorik: pH, Leitfähigkeit, Temperatur, Trübung.</li>
+        <li data-i18n="wpArch1Tech">Sensorik: pH, Leitfähigkeit, Temperatur, Trübung.</li>
 
         <li data-i18n="wpArch2">Firmware: Edge-Analytics, Grenzwertlogik, sichere Updates.</li>
 
-        <li data-i18n="wpArch3">App: Live-Werte, Warnungen, Profile, Historie.</li>
+        <li data-i18n="wpArch3Tech">App: Live-Werte, Warnungen, Profile, Historie.</li>
 
-        <li data-i18n="wpArch4">Optionale Cloud: Opt-in Sync, Team-Shares, Remote-Alerts.</li>
+        <li data-i18n="wpArch4Tech">Optionale Cloud: Opt-in Sync, Team-Shares, Remote-Alerts.</li>
 
       </ul>
 
       <h2 data-i18n="wpPrivacyTitle">Datenschutzprinzipien</h2>
 
-      <p data-i18n="wpPrivacyText">Privacy by Design, lokale Speicherung, verschlüsselte Verbindungen, transparente
+      <p data-i18n="wpPrivacyTextTech">Privacy by Design, lokale Speicherung, verschlüsselte Verbindungen, transparente
 
         Einwilligungen.</p>
 
       <h2 data-i18n="wpSpecsTitle">Vorläufige Spezifikationen</h2>
 
-      <p data-i18n="wpSpecsText">USB-C 5V, WLAN 2.4 GHz/BLE, IPX4-Ziel, 90 × 45 mm Prototyp, modulare Sensor-Slots.</p>
+      <p data-i18n="wpSpecsTextTech">USB-C 5V, WLAN 2.4 GHz/BLE, IPX4-Ziel, 90 × 45 mm Prototyp, modulare Sensor-Slots.</p>
 
       <h2 data-i18n="wpRoadmapTitle">Roadmap &amp; Validierung</h2>
 
       <ol>
 
-        <li data-i18n="wpRoadmap1">Laborvalidierung der Sensoren</li>
+        <li data-i18n="wpRoadmap1Tech">Laborvalidierung der Sensoren</li>
 
-        <li data-i18n="wpRoadmap2">Beta mit ausgewählten Haushalten</li>
+        <li data-i18n="wpRoadmap2Tech">Beta mit ausgewählten Haushalten</li>
 
-        <li data-i18n="wpRoadmap3">App-Iterationen &amp; Export</li>
+        <li data-i18n="wpRoadmap3Tech">App-Iterationen &amp; Export</li>
 
-        <li data-i18n="wpRoadmap4">Cloud-Opt-in Tests</li>
+        <li data-i18n="wpRoadmap4Tech">Cloud-Opt-in Tests</li>
 
       </ol>
 
@@ -282,15 +282,15 @@
 
         <text x="50" y="100" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
 
-          font-size="14">Sensor</text>
+          font-size="14" data-i18n="diagramSensor">Sensor</text>
 
         <text x="208" y="100" fill="#0B1220" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
 
-          font-size="14">Firmware</text>
+          font-size="14" data-i18n="diagramFirmware">Firmware</text>
 
         <text x="366" y="100" fill="#0B1220" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
 
-          font-size="14">App/Cloud</text>
+          font-size="14" data-i18n="diagramAppCloud">App/Cloud</text>
 
       </svg>
 
@@ -352,17 +352,17 @@
 
       <div class="modal__body">
 
-        <p data-i18n="privacyLine1"><strong>Verantwortlich</strong>: AquaSense, E-Mail: service.aquasense@gmail.com.</p>
+        <p data-i18n-html="privacyLine1"><strong>Verantwortlich</strong>: AquaSense, E-Mail: service.aquasense@gmail.com.</p>
 
-        <p data-i18n="privacyLine2"><strong>Zweck und Umfang</strong>: Wir erheben deine E-Mail-Adresse (und ggf. freiwillige Angaben), um dir unseren Newsletter zuzusenden und dich über Neuigkeiten zu AquaSense zu informieren.</p>
+        <p data-i18n-html="privacyLine2"><strong>Zweck und Umfang</strong>: Wir erheben deine E-Mail-Adresse (und ggf. freiwillige Angaben), um dir unseren Newsletter zuzusenden und dich über Neuigkeiten zu AquaSense zu informieren.</p>
 
-        <p data-i18n="privacyLine3"><strong>Einsatz von FormSubmit</strong>: Wir nutzen FormSubmit (FormSubmit.co) für die technische Bereitstellung und Übermittlung. FormSubmit leitet deine Eingaben per E-Mail an uns weiter und verarbeitet sie nur zur Übermittlung. Details: <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener">https://formsubmit.co/privacy.pdf</a></p>
+        <p data-i18n-html="privacyLine3"><strong>Einsatz von FormSubmit</strong>: Wir nutzen FormSubmit (FormSubmit.co) für die technische Bereitstellung und Übermittlung. FormSubmit leitet deine Eingaben per E-Mail an uns weiter und verarbeitet sie nur zur Übermittlung. Details: <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener">https://formsubmit.co/privacy.pdf</a></p>
 
-        <p data-i18n="privacyLine4"><strong>Rechtsgrundlage</strong>: Deine Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO durch Ankreuzen der Checkbox und Absenden des Formulars.</p>
+        <p data-i18n-html="privacyLine4"><strong>Rechtsgrundlage</strong>: Deine Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO durch Ankreuzen der Checkbox und Absenden des Formulars.</p>
 
-        <p data-i18n="privacyLine5"><strong>Speicherdauer</strong>: Wir speichern deine Daten, bis du den Newsletter abbestellst oder deine Einwilligung widerrufst, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+        <p data-i18n-html="privacyLine5"><strong>Speicherdauer</strong>: Wir speichern deine Daten, bis du den Newsletter abbestellst oder deine Einwilligung widerrufst, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
 
-        <p data-i18n="privacyLine6"><strong>Widerruf &amp; Rechte</strong>: Du kannst deine Einwilligung jederzeit widerrufen (z. B. über den Abmeldelink oder per E-Mail an uns). Du hast Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Beschwerde bei einer Aufsichtsbehörde.</p>
+        <p data-i18n-html="privacyLine6"><strong>Widerruf &amp; Rechte</strong>: Du kannst deine Einwilligung jederzeit widerrufen (z. B. über den Abmeldelink oder per E-Mail an uns). Du hast Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Beschwerde bei einer Aufsichtsbehörde.</p>
 
       </div>
 

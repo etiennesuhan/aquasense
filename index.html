@@ -114,13 +114,13 @@
 
     <div class="container header__inner">
 
-      <a class="brand" href="index.html#top" aria-label="AquaSense Start">
+      <a class="brand" href="index.html#top" aria-label="AquaSense Start" data-i18n-aria="ariaBrandHome">
 
-        <img src="assets/logo.png" alt="AquaSense Logo" width="200" height="50">
+        <img src="assets/logo.png" alt="AquaSense Logo" width="200" height="50" data-i18n-alt="altLogo">
 
       </a>
 
-      <nav aria-label="Hauptnavigation">
+      <nav aria-label="Hauptnavigation" data-i18n-aria="ariaPrimaryNav">
 
         <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
 
@@ -142,7 +142,7 @@
 
           <li><a href="faq.html" data-nav="faq" data-i18n="navFaq">FAQ</a></li>
 
-          <li><button class="lang-toggle" type="button" aria-label="Sprache umschalten">DE / EN</button></li>
+          <li><button class="lang-toggle" type="button" aria-label="Sprache umschalten" data-i18n-aria="ariaLangToggle">DE / EN</button></li>
 
         </ul>
 
@@ -174,7 +174,7 @@
 
         </div>
 
-        <div class="badges" aria-label="Social Proof">
+        <div class="badges" aria-label="Social Proof" data-i18n-aria="ariaSocialProof">
 
           <span class="badge" data-i18n="badgeConcept">Konzeptphase</span>
 
@@ -188,7 +188,7 @@
 
       <div class="hero__visual reveal">
 
-        <figure aria-label="AquaSense Gerät und App Mockup">
+        <figure aria-label="AquaSense Gerät und App Mockup" data-i18n-aria="ariaHeroFigure">
 
           <picture>
 
@@ -210,7 +210,7 @@
 
     <section class="section container">
 
-      <p class="lead">
+      <p class="lead" data-i18n="introLead">
 
         AquaSense verlagert die Technik in den Totraum unter der Spüle und sichert damit die "letzte Meile" deiner Hausinstallation. Präzise Sensorik liefert eine Echtzeit-Analyse und visualisiert die Wasserparameter in der App - du musst nicht glauben, du kannst es sehen. Eine mehrstufige Filtration entfernt potenzielle Schadstoffe und geschmacksstörende Stoffe, macht Flaschenwasser überflüssig und reduziert Plastikmüll sowie Transportemissionen. Über die Mineralisierung passt du dein Wasser an deinen Bedarf an; komplexe Additive wie Kreatin prüfen wir derzeit kritisch auf hygienische Unbedenklichkeit.
 
@@ -248,7 +248,7 @@
 
           <p data-i18n="feat1Text">Echtzeit-Analyse der Wasserparameter in der App - du siehst sofort, was in deiner Leitung passiert.</p>
 
-          <button class="card__link" type="button" data-modal="feature-modal" data-feature-target="feature-sensorik" data-feature-title="Transparenz durch Sensorik" data-i18n="featMore">Mehr erfahren</button>
+          <button class="card__link" type="button" data-modal="feature-modal" data-feature-target="feature-sensorik" data-feature-title="feat1Title" data-i18n="featMore">Mehr erfahren</button>
 
         </article>
 
@@ -270,7 +270,7 @@
 
           <p data-i18n="feat2Text">Entfernt potenzielle Schadstoffe und geschmacksstörende Stoffe aus der Hausinstallation.</p>
 
-          <button class="card__link" type="button" data-modal="feature-modal" data-feature-target="feature-filtration" data-feature-title="Mehrstufige Filtration" data-i18n="featMore">Mehr erfahren</button>
+          <button class="card__link" type="button" data-modal="feature-modal" data-feature-target="feature-filtration" data-feature-title="feat2Title" data-i18n="featMore">Mehr erfahren</button>
 
         </article>
 
@@ -296,7 +296,7 @@
 
           <p data-i18n="feat3Text">Optional mineralisiert AquaSense dein Wasser nach Bedarf; komplexe Additive prüfen wir hygienisch.</p>
 
-          <button class="card__link" type="button" data-modal="feature-modal" data-feature-target="feature-mineralisierung" data-feature-title="Funktionale Individualisierung" data-i18n="featMore">Mehr erfahren</button>
+          <button class="card__link" type="button" data-modal="feature-modal" data-feature-target="feature-mineralisierung" data-feature-title="feat3Title" data-i18n="featMore">Mehr erfahren</button>
 
         </article>
 
@@ -318,7 +318,7 @@
 
           <p data-i18n="feat4Text">Die Technik verschwindet unter der Spüle, spart Platz und macht Flaschen sowie Zusatzgeräte überflüssig.</p>
 
-          <button class="card__link" type="button" data-modal="feature-modal" data-feature-target="feature-integration" data-feature-title="Untertisch-Integration" data-i18n="featMore">Mehr erfahren</button>
+          <button class="card__link" type="button" data-modal="feature-modal" data-feature-target="feature-integration" data-feature-title="feat4Title" data-i18n="featMore">Mehr erfahren</button>
 
         </article>
 
@@ -328,27 +328,27 @@
 
     <section class="visually-hidden" aria-hidden="true">
 
-      <h2>Feature-Details</h2>
+      <h2 data-i18n="featureDetailsTitle">Feature-Details</h2>
 
-      <p id="feature-sensorik" data-feature-content>
+      <p id="feature-sensorik" data-feature-content data-i18n="featureDetailSensor">
 
         Transparenz durch Sensorik: Echtzeit-Analyse der Wasserparameter direkt in der Leitung. Die App visualisiert alle Werte, damit du Sicherheit nicht glauben musst, sondern sehen kannst.
 
       </p>
 
-      <p id="feature-filtration" data-feature-content>
+      <p id="feature-filtration" data-feature-content data-i18n="featureDetailFiltration">
 
         Mehrstufige Filtration: entfernt potenzielle Schadstoffe und geschmacksstörende Stoffe aus der Hausinstallation. Flaschenwasser wird überflüssig - weniger Plastikmüll und Transportemissionen.
 
       </p>
 
-      <p id="feature-mineralisierung" data-feature-content>
+      <p id="feature-mineralisierung" data-feature-content data-i18n="featureDetailMineral">
 
         Funktionale Individualisierung: Mineralisierung verwandelt Leitungswasser in ein funktionales Getränk und bildet den Komfort von Flaschenwasser am eigenen Hahn ab. Komplexe Additive (z. B. Kreatin) prüfen wir kritisch auf hygienische Unbedenklichkeit.
 
       </p>
 
-      <p id="feature-integration" data-feature-content>
+      <p id="feature-integration" data-feature-content data-i18n="featureDetailIntegration">
 
         Untertisch-Integration: Die Technik wandert in den Totraum unter der Spüle, sichert die letzte Meile und löst das Platzproblem - ohne zusätzliche Geräte.
 
@@ -402,13 +402,13 @@
 
         <div class="cta-banner__text">
 
-          <p class="eyebrow">Preisumfrage</p>
+          <p class="eyebrow" data-i18n="pricingTeaserEyebrow">Preisumfrage</p>
 
-          <p class="lead">Hilf uns, einen fairen Preis f&uuml;r AquaSense zu finden. Deine Einsch&auml;tzung dauert nur 1 Minute.</p>
+          <p class="lead" data-i18n="pricingTeaserLead">Hilf uns, einen fairen Preis f&uuml;r AquaSense zu finden. Deine Einsch&auml;tzung dauert nur 1 Minute.</p>
 
         </div>
 
-        <a class="button" href="pricing.html">Zur Preisumfrage</a>
+        <a class="button" href="pricing.html" data-i18n="pricingTeaserCta">Zur Preisumfrage</a>
 
       </div>
 
@@ -476,9 +476,9 @@
 
       <div class="footer__brand">
 
-        <p class="footer__eyebrow" data-i18n="footerTagline">AquaSense · Sicheres Wasser. Unsichtbar integriert.</p>
+        <p class="footer__eyebrow" data-i18n="footerTaglineCore">AquaSense · Sicheres Wasser. Unsichtbar integriert.</p>
 
-        <p class="footer__text" data-i18n="footerSummary">Untertisch-Integration mit Echtzeit-Sensorik, Filtration und Mineralisierung - nachhaltig ohne Flaschen. Datenschutz by Design.</p>
+        <p class="footer__text" data-i18n="footerSummaryCore">Untertisch-Integration mit Echtzeit-Sensorik, Filtration und Mineralisierung - nachhaltig ohne Flaschen. Datenschutz by Design.</p>
 
       </div>
 
@@ -526,7 +526,7 @@
 
   </footer>
 
-  <div class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie Hinweis">
+  <div class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie Hinweis" data-i18n-aria="ariaCookieNotice">
 
     <div class="cookie-banner__text">
 
@@ -556,7 +556,7 @@
 
       <header class="modal__header">
 
-        <h2 id="feature-modal-title" data-feature-title>Mehr erfahren</h2>
+        <h2 id="feature-modal-title" data-feature-title data-i18n="featureModalTitleDefault">Mehr erfahren</h2>
 
         <button type="button" class="icon-button" data-close="feature-modal" aria-label="Schließen"
 
@@ -646,15 +646,15 @@
 
         <text x="50" y="100" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
 
-          font-size="14">Sensor</text>
+          font-size="14" data-i18n="diagramSensor">Sensor</text>
 
         <text x="208" y="100" fill="#0B1220" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
 
-          font-size="14">Firmware</text>
+          font-size="14" data-i18n="diagramFirmware">Firmware</text>
 
         <text x="366" y="100" fill="#0B1220" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
 
-          font-size="14">App/Cloud</text>
+          font-size="14" data-i18n="diagramAppCloud">App/Cloud</text>
 
       </svg>
 
@@ -716,17 +716,17 @@
 
       <div class="modal__body">
 
-        <p data-i18n="privacyLine1"><strong>Verantwortlich</strong>: AquaSense, E-Mail: service.aquasense@gmail.com.</p>
+        <p data-i18n-html="privacyLine1"><strong>Verantwortlich</strong>: AquaSense, E-Mail: service.aquasense@gmail.com.</p>
 
-        <p data-i18n="privacyLine2"><strong>Zweck und Umfang</strong>: Wir erheben deine E-Mail-Adresse (und ggf. freiwillige Angaben), um dir unseren Newsletter zuzusenden und dich über Neuigkeiten zu AquaSense zu informieren.</p>
+        <p data-i18n-html="privacyLine2"><strong>Zweck und Umfang</strong>: Wir erheben deine E-Mail-Adresse (und ggf. freiwillige Angaben), um dir unseren Newsletter zuzusenden und dich über Neuigkeiten zu AquaSense zu informieren.</p>
 
-        <p data-i18n="privacyLine3"><strong>Einsatz von FormSubmit</strong>: Wir nutzen FormSubmit (FormSubmit.co) für die technische Bereitstellung und Übermittlung. FormSubmit leitet deine Eingaben per E-Mail an uns weiter und verarbeitet sie nur zur Übermittlung. Details: <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener">https://formsubmit.co/privacy.pdf</a></p>
+        <p data-i18n-html="privacyLine3"><strong>Einsatz von FormSubmit</strong>: Wir nutzen FormSubmit (FormSubmit.co) für die technische Bereitstellung und Übermittlung. FormSubmit leitet deine Eingaben per E-Mail an uns weiter und verarbeitet sie nur zur Übermittlung. Details: <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener">https://formsubmit.co/privacy.pdf</a></p>
 
-        <p data-i18n="privacyLine4"><strong>Rechtsgrundlage</strong>: Deine Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO durch Ankreuzen der Checkbox und Absenden des Formulars.</p>
+        <p data-i18n-html="privacyLine4"><strong>Rechtsgrundlage</strong>: Deine Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO durch Ankreuzen der Checkbox und Absenden des Formulars.</p>
 
-        <p data-i18n="privacyLine5"><strong>Speicherdauer</strong>: Wir speichern deine Daten, bis du den Newsletter abbestellst oder deine Einwilligung widerrufst, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+        <p data-i18n-html="privacyLine5"><strong>Speicherdauer</strong>: Wir speichern deine Daten, bis du den Newsletter abbestellst oder deine Einwilligung widerrufst, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
 
-        <p data-i18n="privacyLine6"><strong>Widerruf &amp; Rechte</strong>: Du kannst deine Einwilligung jederzeit widerrufen (z. B. über den Abmeldelink oder per E-Mail an uns). Du hast Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Beschwerde bei einer Aufsichtsbehörde.</p>
+        <p data-i18n-html="privacyLine6"><strong>Widerruf &amp; Rechte</strong>: Du kannst deine Einwilligung jederzeit widerrufen (z. B. über den Abmeldelink oder per E-Mail an uns). Du hast Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Beschwerde bei einer Aufsichtsbehörde.</p>
 
       </div>
 

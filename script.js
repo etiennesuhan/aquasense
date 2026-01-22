@@ -151,7 +151,13 @@
       const targetId = btn.dataset.featureTarget;
       const source = targetId ? document.getElementById(targetId) : null;
       if (featureModalContent) featureModalContent.innerHTML = source?.innerHTML || '';
-      if (featureModalTitle) featureModalTitle.textContent = btn.dataset.featureTitle || btn.textContent || '';
+      if (featureModalTitle) {
+        const titleToken = btn.dataset.featureTitle;
+        const translatedTitle = titleToken
+          ? (translations[currentLang]?.[titleToken] || baseTexts.text?.[titleToken] || titleToken)
+          : '';
+        featureModalTitle.textContent = translatedTitle || btn.textContent || '';
+      }
     });
   });
 
@@ -368,6 +374,133 @@
       cookieText: 'We use Google Analytics (cookies) to evaluate usage anonymously. Please consent if that is okay for you.',
       cookieAccept: 'Accept',
       cookieDecline: 'Decline',
+      ariaBrandHome: 'AquaSense home',
+      ariaPrimaryNav: 'Main navigation',
+      ariaLangToggle: 'Switch language',
+      ariaSocialProof: 'Social proof',
+      ariaHeroFigure: 'AquaSense device and app mockup',
+      ariaAppFigure: 'AquaSense app',
+      ariaCookieNotice: 'Cookie notice',
+      ariaPriceLabel: 'Price',
+      ariaSelectWhite: 'Select white',
+      ariaSelectObsidian: 'Select obsidian',
+      ariaSelectGraphite: 'Select graphite',
+      ariaTechSpecs: 'Technical specifications',
+      altLogo: 'AquaSense logo',
+      altProductWhite: 'AquaSense in white',
+      altProductObsidian: 'AquaSense in obsidian',
+      altProductGraphite: 'AquaSense in graphite',
+      docTitlePricing: 'AquaSense price survey',
+      docDescPricing: 'Van Westendorp price survey for AquaSense - help us find a fair price.',
+      docTitleProduct: 'AquaSense under-sink system - product details',
+      docDescProduct: 'Under-sink system with real-time sensors, multi-stage filtration and optional mineralization. App transparency and a sustainable alternative to bottled water.',
+      introLead: 'AquaSense moves the technology into the under-sink void and secures the last mile of your home installation. Precise sensors deliver a real-time analysis and visualize water parameters in the app - you do not have to believe it, you can see it. Multi-stage filtration removes potential contaminants and taste-altering substances, makes bottled water unnecessary, and reduces plastic waste and transport emissions. Mineralization lets you tailor your water to your needs; complex additives like creatine are currently being reviewed for hygienic safety.',
+      featureDetailsTitle: 'Feature details',
+      featureDetailSensor: 'Transparency through sensors: real-time analysis of water parameters directly in the line. The app visualizes all values so you can see safety instead of just believing it.',
+      featureDetailFiltration: 'Multi-stage filtration: removes potential contaminants and taste-altering substances from the home installation. Bottled water becomes unnecessary - less plastic waste and transport emissions.',
+      featureDetailMineral: 'Functional personalization: mineralization turns tap water into a functional drink and brings bottled-water comfort to your own tap. Complex additives (e.g., creatine) are currently being reviewed for hygiene.',
+      featureDetailIntegration: 'Under-sink integration: the tech moves into the under-sink void, secures the last mile, and solves the space issue - without extra devices.',
+      featureModalTitleDefault: 'Learn more',
+      pricingTeaserEyebrow: 'Price survey',
+      pricingTeaserLead: 'Help us find a fair price for AquaSense. Your input takes only 1 minute.',
+      pricingTeaserCta: 'Go to the price survey',
+      detailZoomHint: 'Tap or click to enlarge',
+      backToShop: 'Back to shop',
+      productLastMileTitle: 'Under-sink system for the last mile',
+      productLastMileLead: 'AquaSense moves the technology into the under-sink void, measures and filters tap water in real time and makes the values visible in the app. Multi-stage filtration replaces bottled water sustainably; optional mineralization tailors your water.',
+      productSpecsTitle: 'Technical specifications',
+      productSpecsNote: 'Current concept status; details may change.',
+      specDetailDimensionsLabel: 'Dimensions',
+      specDetailDimensionsValue: 'approx. 11 x 7 x 3 cm (palm-sized)',
+      specDetailWeightLabel: 'Weight',
+      specDetailWeightValue: 'approx. 320 g',
+      specDetailMaterialLabel: 'Housing material',
+      specDetailMaterialValue: 'Premium ABS, matte finish in the chosen color',
+      specDetailPowerLabel: 'Power supply',
+      specDetailPowerValue: 'USB-C (5V), integrated low-energy controller',
+      specDetailConnectionsLabel: 'Water connections',
+      specDetailConnectionsValue: '2x inlet (hot/cold), 2x outlet',
+      specDetailInstallLabel: 'Installation',
+      specDetailInstallValue: 'Wall or under-sink mounting, flexible quick couplings',
+      specDetailFilterLabel: 'Filter compatibility',
+      specDetailFilterValue: 'Modular filter slot, replaceable cartridges',
+      specDetailPressureLabel: 'Operating pressure',
+      specDetailPressureValue: '2-6 bar',
+      specDetailTempLabel: 'Operating temperature',
+      specDetailTempValue: '5-60 C',
+      specDetailDataLabel: 'Data transfer',
+      specDetailDataValue: 'Bluetooth Low Energy and Wi-Fi',
+      specDetailAppLabel: 'App support',
+      specDetailAppValue: 'iOS and Android, real-time dashboard',
+      specDetailStorageLabel: 'Storage',
+      specDetailStorageValue: 'Local microcontroller for trend and history recording',
+      specDetailLedLabel: 'LED indicator',
+      specDetailLedValue: '360-degree status and warning light ring (color adjustable)',
+      wpTitleTech: 'AquaSense - Technical concept (summary)',
+      wpProblemTextTech: 'Water values often fluctuate unnoticed. Households, coffee setups and aquariums need transparency to secure taste, safety and longevity.',
+      wpArch1Tech: 'Sensors: pH, conductivity, temperature, turbidity.',
+      wpArch3Tech: 'App: live values, warnings, profiles, history.',
+      wpArch4Tech: 'Optional cloud: opt-in sync, team shares, remote alerts.',
+      wpPrivacyTextTech: 'Privacy by design, local storage, encrypted connections, transparent consent.',
+      wpSpecsTextTech: 'USB-C 5V, Wi-Fi 2.4 GHz/BLE, IPX4 target, 90 x 45 mm prototype, modular sensor slots.',
+      wpRoadmap1Tech: 'Lab validation of sensors',
+      wpRoadmap2Tech: 'Beta with selected households',
+      wpRoadmap3Tech: 'App iterations & export',
+      wpRoadmap4Tech: 'Cloud opt-in tests',
+      diagramSensor: 'Sensor',
+      diagramFirmware: 'Firmware',
+      diagramAppCloud: 'App/Cloud',
+      footerTaglineCore: 'AquaSense Â· Safe water. Invisibly integrated.',
+      footerTaglineFocus: 'AquaSense Â· Water quality in view',
+      footerTaglinePricing: 'AquaSense - Clean water. Clear insight.',
+      footerSummaryCore: 'Under-sink integration with real-time sensors, filtration and mineralization - sustainable without bottles. Privacy by design.',
+      footerSummaryMonitoring: 'Real-time monitoring for pH, conductivity, temperature and more for households, coffee bars and aquariums.',
+      footerSummaryPricing: 'Real-time monitoring with alerts, trends and profiles.',
+      pricingTitle: 'Help us find the right price',
+      pricingIntro: 'AquaSense is still in the concept phase. Your anonymous input helps us determine a fair price.',
+      pricingIncomeLabel: 'Do you earn more than 60 thousand euros per year?',
+      pricingSelectPlaceholder: 'Please choose',
+      pricingSelectPlaceholderOptional: 'Please choose (optional)',
+      pricingSelectYes: 'Yes',
+      pricingSelectNo: 'No',
+      pricingSelectNoAnswer: 'Prefer not to say',
+      pricingUsageLabel: 'What would you likely use AquaSense for?',
+      pricingUseHousehold: 'Household / drinking water',
+      pricingUseBaby: 'Baby water & family',
+      pricingUseCoffee: 'Coffee & tea / espresso',
+      pricingUseAquarium: 'Aquarium / terrarium',
+      pricingUseGarden: 'Garden / irrigation',
+      pricingUseOffice: 'Office / practice',
+      pricingUseGastro: 'Gastronomy / cafe',
+      pricingUseOther: 'Other',
+      pricingQTooCheap: 'Up to what price would AquaSense be so inexpensive that you would doubt its quality? (too cheap)',
+      pricingQCheap: 'At what price would you consider AquaSense inexpensive but still credible and attractive?',
+      pricingQExpensive: 'At what price would you consider AquaSense expensive but still acceptable?',
+      pricingQTooExpensive: 'At what price would AquaSense be so expensive that you would not buy it? (too expensive)',
+      pricingPlaceholder: 'Price ...',
+      pricingPlaceholderCheap: 'e.g. 99',
+      pricingPlaceholderGood: 'e.g. 149',
+      pricingPlaceholderExpensive: 'e.g. 249',
+      pricingPlaceholderTooExpensive: 'e.g. 399',
+      pricingPrivacyNote: 'Your answers are used only to evaluate the AquaSense price study. No personal data such as name or address is collected.',
+      pricingSubmitBtn: 'Send price feedback',
+      pricingStatusSending: 'Sending...',
+      pricingStatusSuccess: 'Thanks! Your price inputs were sent.',
+      pricingStatusError: 'Send failed. Please try again.',
+      imprintTitle: 'Legal notice',
+      imprintLine1: '[Company/name]',
+      imprintLine2: '[Street and number]',
+      imprintLine3: '[Postal code, city]',
+      imprintLine4: '[Email: placeholder@example.com]',
+      imprintLine5: 'Authorized representative: [placeholder]',
+      imprintLine6: 'VAT ID: [placeholder]',
+      privacyTitle: 'Privacy',
+      privacyLine1: '<strong>Responsible</strong>: AquaSense, email: service.aquasense@gmail.com.',
+      privacyLine2: '<strong>Purpose and scope</strong>: We collect your email address (and optional details) to send you our newsletter and inform you about AquaSense updates.',
+      privacyLine3: '<strong>Use of FormSubmit</strong>: We use FormSubmit (FormSubmit.co) for delivery. FormSubmit forwards your entries by email and processes them only for transmission. Details: <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener">https://formsubmit.co/privacy.pdf</a>',
+      privacyLine4: '<strong>Legal basis</strong>: Your consent under Art. 6(1)(a) GDPR by checking the box and submitting the form.',
+      privacyLine5: '<strong>Retention</strong>: We store your data until you unsubscribe or withdraw consent unless legal retention obligations apply.',
+      privacyLine6: '<strong>Withdrawal &amp; rights</strong>: You can withdraw your consent at any time (e.g., via the unsubscribe link or by email). You have rights to access, rectification, deletion, restriction of processing, data portability, and to complain to a supervisory authority.',
       closeLabel: 'Close'
     }
   };
@@ -408,7 +541,11 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
           ? 'docTitleRequest'
           : page === 'faq'
             ? 'docTitleFaq'
-            : 'docTitle';
+            : page === 'pricing'
+              ? 'docTitlePricing'
+              : page === 'product'
+                ? 'docTitleProduct'
+                : 'docTitle';
     const descKey = page === 'app'
       ? 'docDescApp'
       : page === 'shop'
@@ -417,7 +554,11 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
           ? 'docDescRequest'
           : page === 'faq'
             ? 'docDescFaq'
-            : 'docDesc';
+            : page === 'pricing'
+              ? 'docDescPricing'
+              : page === 'product'
+                ? 'docDescProduct'
+                : 'docDesc';
     const translatedTitle = dict[titleKey] || baseDocTitle;
     const translatedDesc = dict[descKey] || baseDocDesc;
     document.title = translatedTitle;
@@ -1129,14 +1270,19 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
       pricingStatusEl.textContent = text;
     };
 
+    const pricingText = (key, fallback) => translations[currentLang]?.[key] || fallback;
+    const getPricingSubmitLabel = () => pricingText('pricingSubmitBtn', defaultPricingLabel || 'Preisfeedback senden');
+
     pricingForm.addEventListener('submit', async (event) => {
       event.preventDefault();
 
+      const sendingText = pricingText('pricingStatusSending', 'Sende...');
+
       if (pricingSubmitBtn) {
         pricingSubmitBtn.disabled = true;
-        pricingSubmitBtn.textContent = 'Sende...';
+        pricingSubmitBtn.textContent = sendingText;
       }
-      setPricingStatus('Sende...');
+      setPricingStatus(sendingText);
 
       try {
         const res = await fetch(pricingForm.action, {
@@ -1145,14 +1291,14 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
           body: new FormData(pricingForm)
         });
         if (!res.ok) throw new Error('Request failed');
-        setPricingStatus('Danke! Deine Preisangaben wurden gesendet.');
+        setPricingStatus(pricingText('pricingStatusSuccess', 'Danke! Deine Preisangaben wurden gesendet.'));
         pricingForm.reset();
       } catch (err) {
-        setPricingStatus('Fehler beim Senden. Bitte versuche es erneut.');
+        setPricingStatus(pricingText('pricingStatusError', 'Fehler beim Senden. Bitte versuche es erneut.'));
       } finally {
         if (pricingSubmitBtn) {
           pricingSubmitBtn.disabled = false;
-          pricingSubmitBtn.textContent = defaultPricingLabel || 'Preisfeedback senden';
+          pricingSubmitBtn.textContent = getPricingSubmitLabel();
         }
       }
     });
