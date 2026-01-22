@@ -30,6 +30,7 @@
   const accordionItems = document.querySelectorAll('.accordion__item');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const LANG_KEY = 'as-lang';
+  const LANG_PARAM = 'lang';
   const GA_ID = 'G-EJ352WJJ05';
   const CONSENT_KEY = 'as-cookie-consent';
   const cookieBanner = document.querySelector('.cookie-banner');
@@ -520,7 +521,50 @@ const statusTexts = {
     }
   };
 
-let currentLang = localStorage.getItem(LANG_KEY) || 'de';
+  const normalizeLang = (value) => (value === 'de' || value === 'en' ? value : null);
+  const getLangFromUrl = () => {
+    try {
+      return normalizeLang(new URLSearchParams(window.location.search).get(LANG_PARAM));
+    } catch (err) {
+      return null;
+    }
+  };
+  const setLangParamOnUrl = (lang) => {
+    try {
+      const url = new URL(window.location.href);
+      if (lang) url.searchParams.set(LANG_PARAM, lang);
+      else url.searchParams.delete(LANG_PARAM);
+      window.history.replaceState({}, '', url.toString());
+    } catch (err) {
+      // Ignore if URL parsing fails
+    }
+  };
+  const withLangParam = (href, lang = currentLang) => {
+    if (!href || href.startsWith('#')) return href;
+    try {
+      const url = new URL(href, window.location.href);
+      const isHttp = url.protocol === 'http:' || url.protocol === 'https:';
+      const isFile = url.protocol === 'file:' && window.location.protocol === 'file:';
+      if (!isHttp && !isFile) return href;
+      if (isHttp && url.origin !== window.location.origin) return href;
+      if (!url.pathname.toLowerCase().endsWith('.html')) return href;
+      url.searchParams.set(LANG_PARAM, lang);
+      return url.toString();
+    } catch (err) {
+      return href;
+    }
+  };
+  const updateInternalLinks = () => {
+    document.querySelectorAll('a[href]').forEach((link) => {
+      const href = link.getAttribute('href');
+      if (!href || href.startsWith('#')) return;
+      const updated = withLangParam(href);
+      if (updated && updated !== href) link.setAttribute('href', updated);
+    });
+  };
+
+  const initialLang = getLangFromUrl() || 'de';
+  let currentLang = initialLang;
   applyLanguage(currentLang);
 
   function t(key) {
@@ -593,6 +637,8 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
       if (lang === 'de' && baseTexts.aria[key] !== undefined) el.setAttribute('aria-label', baseTexts.aria[key]);
       else if (dict[key]) el.setAttribute('aria-label', dict[key]);
     });
+    setLangParamOnUrl(lang);
+    updateInternalLinks();
     bindModalTriggers();
   }
 
@@ -617,13 +663,13 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
       const goHome = link.dataset.home && page !== 'home';
       if (goHome) {
         e.preventDefault();
-        window.location.href = link.dataset.home;
+        window.location.href = withLangParam(link.dataset.home);
         return;
       }
       if (!target) {
         if (link.dataset.home) {
           e.preventDefault();
-          window.location.href = link.dataset.home;
+          window.location.href = withLangParam(link.dataset.home);
         }
         return;
       }
@@ -1140,7 +1186,7 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
 
   function openCart() {
     if (!cartPanel) {
-      window.location.href = 'shop.html';
+      window.location.href = withLangParam('shop.html');
       return;
     }
     renderCart();
@@ -1180,7 +1226,7 @@ let currentLang = localStorage.getItem(LANG_KEY) || 'de';
       if (e.target.classList?.contains('cart-panel__backdrop') || e.target.dataset.closeCart) closeCart();
     });
   } else {
-    cartToggle?.addEventListener('click', () => { window.location.href = 'shop.html'; });
+    cartToggle?.addEventListener('click', () => { window.location.href = withLangParam('shop.html'); });
   }
 
 // Form handling (uses formsubmit.co endpoint)
